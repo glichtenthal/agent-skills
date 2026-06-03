@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <linearGradient id="gtBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1F3A"/>
+      <stop offset="1" stop-color="#061426"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="640" fill="url(#gtBg)"/>
+  <rect x="64" y="64" width="1152" height="512" rx="28" fill="none" stroke="#E2F075" stroke-width="2" opacity="0.48"/>
+  <rect x="88" y="88" width="1104" height="464" rx="22" fill="#102B4D" opacity="0.52"/>
+  <line x1="114" y1="148" x2="450" y2="148" stroke="#E2F075" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="1042" cy="170" r="72" fill="#E2F075"/>
+  <circle cx="1042" cy="170" r="34" fill="#0B1F3A"/>
+  <path d="M1016 170 L1035 190 L1073 143" fill="none" stroke="#E2F075" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="114" y="272" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="94" font-weight="800">Ground Truth</text>
+  <text x="118" y="350" fill="#E2F075" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700">Calibrated honesty for agent work</text>
+  <text x="118" y="424" fill="#CFE0FF" font-family="Arial, Helvetica, sans-serif" font-size="30">Stress-test plans, decisions, reviews, and ideas.</text>
+  <rect x="118" y="478" width="358" height="54" rx="27" fill="#E2F075"/>
+  <text x="146" y="514" fill="#0B1F3A" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800">Claude + Codex agent skill</text>
+  <g opacity="0.55">
+    <line x1="782" y1="348" x2="1138" y2="348" stroke="#8AB4F8" stroke-width="2"/>
+    <line x1="782" y1="394" x2="1138" y2="394" stroke="#8AB4F8" stroke-width="2"/>
+    <line x1="782" y1="440" x2="1138" y2="440" stroke="#8AB4F8" stroke-width="2"/>
+    <circle cx="814" cy="348" r="10" fill="#E2F075"/>
+    <circle cx="960" cy="394" r="10" fill="#E2F075"/>
+    <circle cx="1092" cy="440" r="10" fill="#E2F075"/>
+  </g>
+</svg>
