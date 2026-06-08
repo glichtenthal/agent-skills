@@ -55,6 +55,10 @@
       overflow-wrap: anywhere;
     }
 
+    .no-wrap {
+      white-space: nowrap;
+    }
+
     header p {
       color: var(--muted);
       font-size: 1.16rem;
@@ -184,7 +188,7 @@
 <body>
   <main>
     <header>
-      <h1>Agent Skills by Greg Lichtenthal</h1>
+      <h1>Agent Skills by <span class="no-wrap">Greg Lichtenthal</span></h1>
       <p>Portable skills for Claude, Codex, and practical AI workflows.</p>
     </header>
 
