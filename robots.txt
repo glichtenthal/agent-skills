@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://glichtenthal.github.io/agent-skills/sitemap.xml

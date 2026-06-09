@@ -22,33 +22,134 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "Judgment Infrastructure for Human-Led AI",
-      "description": "Portable agent skills by Greg Lichtenthal that help people organize messy context, pressure-test thinking, and deliberate consequential decisions with AI.",
-      "url": "https://glichtenthal.github.io/agent-skills/",
-      "creator": {
-        "@type": "Person",
-        "name": "Greg Lichtenthal",
-        "url": "https://github.com/glichtenthal"
-      },
-      "hasPart": [
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://glichtenthal.github.io/agent-skills/#website",
+          "url": "https://glichtenthal.github.io/agent-skills/",
+          "name": "Judgment Infrastructure for Human-Led AI",
+          "description": "Portable agent skills by Greg Lichtenthal that help people organize messy context, pressure-test thinking, and deliberate consequential decisions with AI.",
+          "publisher": {
+            "@id": "https://glichtenthal.github.io/agent-skills/#person"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://glichtenthal.github.io/agent-skills/#person",
+          "name": "Greg Lichtenthal",
+          "url": "https://github.com/glichtenthal",
+          "sameAs": [
+            "https://github.com/glichtenthal",
+            "https://www.linkedin.com/in/greglichtenthal"
+          ]
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://glichtenthal.github.io/agent-skills/#page",
+          "name": "Judgment Infrastructure for Human-Led AI",
+          "description": "Portable agent skills by Greg Lichtenthal that help people organize messy context, pressure-test thinking, and deliberate consequential decisions with AI.",
+          "url": "https://glichtenthal.github.io/agent-skills/",
+          "isPartOf": {
+            "@id": "https://glichtenthal.github.io/agent-skills/#website"
+          },
+          "about": {
+            "@id": "https://glichtenthal.github.io/agent-skills/#itemlist"
+          }
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://glichtenthal.github.io/agent-skills/#itemlist",
+          "name": "Agent skills catalog",
+          "numberOfItems": 3,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "url": "https://glichtenthal.github.io/agent-skills/briefing-room/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "url": "https://glichtenthal.github.io/agent-skills/ground-truth/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "url": "https://glichtenthal.github.io/agent-skills/the-quorum/"
+            }
+          ]
+        },
         {
           "@type": "SoftwareSourceCode",
+          "@id": "https://glichtenthal.github.io/agent-skills/briefing-room/#skill",
           "name": "The Briefing Room",
           "description": "Turn messy context into a brief you can think with.",
-          "url": "https://github.com/glichtenthal/briefing-room"
+          "url": "https://glichtenthal.github.io/agent-skills/briefing-room/",
+          "codeRepository": "https://github.com/glichtenthal/briefing-room",
+          "author": {
+            "@id": "https://glichtenthal.github.io/agent-skills/#person"
+          },
+          "license": "https://github.com/glichtenthal/briefing-room/blob/main/LICENSE",
+          "keywords": "ai skill, codex skill, claude skill, sensemaking, messy notes, research synthesis, meeting brief",
+          "runtimePlatform": "Claude, Codex"
         },
         {
           "@type": "SoftwareSourceCode",
+          "@id": "https://glichtenthal.github.io/agent-skills/ground-truth/#skill",
           "name": "Ground Truth",
           "description": "Calibrated honesty and anti-sycophancy for plans, decisions, reviews, and ideas.",
-          "url": "https://github.com/glichtenthal/ground-truth"
+          "url": "https://glichtenthal.github.io/agent-skills/ground-truth/",
+          "codeRepository": "https://github.com/glichtenthal/ground-truth",
+          "author": {
+            "@id": "https://glichtenthal.github.io/agent-skills/#person"
+          },
+          "license": "https://github.com/glichtenthal/ground-truth/blob/main/LICENSE",
+          "keywords": "ai skill, codex skill, claude skill, critical thinking, anti sycophancy, review, calibrated honesty",
+          "runtimePlatform": "Claude, Codex"
         },
         {
           "@type": "SoftwareSourceCode",
+          "@id": "https://glichtenthal.github.io/agent-skills/the-quorum/#skill",
           "name": "The Quorum",
           "description": "A five-member expert council that pressure-tests consequential decisions.",
-          "url": "https://github.com/glichtenthal/the-quorum"
+          "url": "https://glichtenthal.github.io/agent-skills/the-quorum/",
+          "codeRepository": "https://github.com/glichtenthal/the-quorum",
+          "author": {
+            "@id": "https://glichtenthal.github.io/agent-skills/#person"
+          },
+          "license": "https://github.com/glichtenthal/the-quorum/blob/main/LICENSE",
+          "keywords": "ai skill, codex skill, claude skill, decision support, strategy, deliberation, build vs buy",
+          "runtimePlatform": "Claude, Codex"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://glichtenthal.github.io/agent-skills/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is judgment infrastructure for human-led AI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It is a set of portable agent skills designed to help people organize messy context, pressure-test their thinking, and deliberate consequential decisions while keeping human judgment in control."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I choose between The Briefing Room, Ground Truth, and The Quorum?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Use The Briefing Room to structure messy context, Ground Truth to challenge a plan or claim, and The Quorum to deliberate a consequential decision with multiple lenses."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I install these skills in Codex?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Each skill page links to a GitHub release download and a repository with Codex installation instructions. The catalog also links directly to each installable .skill file."
+              }
+            }
+          ]
         }
       ]
     }
@@ -212,6 +313,34 @@
       font-size: 0.96rem;
     }
 
+    .faq {
+      display: grid;
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .faq h2 {
+      font-size: 1.8rem;
+    }
+
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      padding: 20px 22px;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 8px;
+      font-size: 1.06rem;
+      line-height: 1.2;
+    }
+
+    .faq-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
     @media (max-width: 760px) {
       main {
         width: 100%;
@@ -260,6 +389,7 @@
           <h2>The Briefing Room</h2>
           <p>Turn messy context into a brief you can think with.</p>
           <div class="actions">
+            <a class="button secondary" href="briefing-room/">Learn more</a>
             <a class="button primary" href="https://github.com/glichtenthal/briefing-room/releases/download/v1.0/briefing-room.skill">Install skill</a>
             <a class="button secondary" href="https://github.com/glichtenthal/briefing-room">View repo</a>
           </div>
@@ -277,6 +407,7 @@
           <h2>Ground Truth</h2>
           <p>Calibrated honesty and anti-sycophancy for plans, decisions, reviews, and ideas.</p>
           <div class="actions">
+            <a class="button secondary" href="ground-truth/">Learn more</a>
             <a class="button primary" href="https://github.com/glichtenthal/ground-truth/releases/download/v1.0/ground-truth.skill">Install skill</a>
             <a class="button secondary" href="https://github.com/glichtenthal/ground-truth">View repo</a>
           </div>
@@ -294,10 +425,27 @@
           <h2>The Quorum</h2>
           <p>A five-member expert council that pressure-tests consequential decisions.</p>
           <div class="actions">
+            <a class="button secondary" href="the-quorum/">Learn more</a>
             <a class="button primary" href="https://github.com/glichtenthal/the-quorum/releases/download/v1.0/the-quorum.skill">Install skill</a>
             <a class="button secondary" href="https://github.com/glichtenthal/the-quorum">View repo</a>
           </div>
         </div>
+      </article>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <article class="faq-item">
+        <h3>What is judgment infrastructure for human-led AI?</h3>
+        <p>It is a set of portable AI skills that help people structure messy information, challenge their own reasoning, and make better decisions without outsourcing human judgment.</p>
+      </article>
+      <article class="faq-item">
+        <h3>When should I use The Briefing Room, Ground Truth, or The Quorum?</h3>
+        <p>Use The Briefing Room when the context is messy, Ground Truth when you want honest critique on a plan or claim, and The Quorum when you need multiple expert lenses on a consequential decision.</p>
+      </article>
+      <article class="faq-item">
+        <h3>How do I install these skills in Codex or Claude?</h3>
+        <p>Each skill has a GitHub repository, a release download for the packaged skill, and installation instructions for Codex and Claude. The catalog links directly to all three install files.</p>
       </article>
     </section>
 
