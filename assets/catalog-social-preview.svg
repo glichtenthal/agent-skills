@@ -8,10 +8,10 @@
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
   <rect x="58" y="58" width="1084" height="514" rx="28" fill="none" stroke="#9EE7FF" stroke-width="2" opacity="0.42"/>
-  <text x="94" y="178" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="800">Agent Skills</text>
-  <text x="94" y="258" fill="#E2F075" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700">by Greg Lichtenthal</text>
-  <text x="98" y="342" fill="#D7F6FF" font-family="Arial, Helvetica, sans-serif" font-size="32">Judgment infrastructure for</text>
-  <text x="98" y="388" fill="#D7F6FF" font-family="Arial, Helvetica, sans-serif" font-size="32">human-led AI work.</text>
+  <text x="94" y="168" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="800">Judgment Infrastructure</text>
+  <text x="94" y="236" fill="#E2F075" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700">for Human-Led AI</text>
+  <text x="98" y="326" fill="#D7F6FF" font-family="Arial, Helvetica, sans-serif" font-size="30">Portable skills by Greg Lichtenthal</text>
+  <text x="98" y="370" fill="#D7F6FF" font-family="Arial, Helvetica, sans-serif" font-size="30">for creativity, judgment, and agency.</text>
   <g transform="translate(744 118)">
     <rect x="0" y="0" width="294" height="104" rx="18" fill="#FFFFFF" opacity="0.14" stroke="#73E6FF" stroke-width="2"/>
     <rect x="48" y="136" width="294" height="104" rx="18" fill="#FFFFFF" opacity="0.12" stroke="#E2F075" stroke-width="2"/>

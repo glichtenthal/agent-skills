@@ -1,6 +1,6 @@
-# Agent Skills by Greg Lichtenthal
+# Judgment Infrastructure for Human-Led AI
 
-Portable skills for Claude, Codex, and practical AI workflows.
+Portable agent skills by Greg Lichtenthal for people who want AI to strengthen human creativity, judgment, and agency.
 
 This catalog is built around judgment infrastructure for human-led AI work: organize messy context, pressure-test the thinking, and deliberate consequential decisions.
 
