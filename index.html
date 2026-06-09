@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Agent Skills by Greg Lichtenthal</title>
-  <meta name="description" content="Portable agent skills for Claude, Codex, and practical AI workflows by Greg Lichtenthal. Install Ground Truth and The Quorum.">
+  <meta name="description" content="Portable agent skills for Claude, Codex, and practical AI workflows by Greg Lichtenthal. Install The Briefing Room, Ground Truth, and The Quorum.">
   <meta name="author" content="Greg Lichtenthal">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://glichtenthal.github.io/agent-skills/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Agent Skills by Greg Lichtenthal">
   <meta property="og:title" content="Agent Skills by Greg Lichtenthal">
-  <meta property="og:description" content="Portable agent skills for Claude, Codex, and practical AI workflows. Install Ground Truth and The Quorum.">
+  <meta property="og:description" content="Portable agent skills for Claude, Codex, and practical AI workflows. Install The Briefing Room, Ground Truth, and The Quorum.">
   <meta property="og:url" content="https://glichtenthal.github.io/agent-skills/">
   <meta property="og:image" content="https://glichtenthal.github.io/agent-skills/assets/catalog-social-preview.svg">
-  <meta property="og:image:alt" content="Agent Skills by Greg Lichtenthal, featuring Ground Truth and The Quorum.">
+  <meta property="og:image:alt" content="Agent Skills by Greg Lichtenthal, featuring The Briefing Room, Ground Truth, and The Quorum.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Agent Skills by Greg Lichtenthal">
-  <meta name="twitter:description" content="Portable agent skills for Claude, Codex, and practical AI workflows. Install Ground Truth and The Quorum.">
+  <meta name="twitter:description" content="Portable agent skills for Claude, Codex, and practical AI workflows. Install The Briefing Room, Ground Truth, and The Quorum.">
   <meta name="twitter:image" content="https://glichtenthal.github.io/agent-skills/assets/catalog-social-preview.svg">
   <script type="application/ld+json">
     {
@@ -32,6 +32,12 @@
         "url": "https://github.com/glichtenthal"
       },
       "hasPart": [
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "The Briefing Room",
+          "description": "Turn messy context into a brief you can think with.",
+          "url": "https://github.com/glichtenthal/briefing-room"
+        },
         {
           "@type": "SoftwareSourceCode",
           "name": "Ground Truth",
@@ -56,6 +62,8 @@
       --line: #d9e1ea;
       --ground: #0b1f3a;
       --lime: #e2f075;
+      --briefing: #0f4c81;
+      --briefing-accent: #73e6ff;
       --quorum: #123c8c;
       --cyan: #9ee7ff;
       --white: #ffffff;
@@ -110,7 +118,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 20px;
     }
 
@@ -178,6 +186,11 @@
       font-weight: 800;
     }
 
+    .briefing a.button.primary {
+      background: var(--briefing);
+      color: var(--briefing-accent);
+    }
+
     .ground a.button.primary {
       background: var(--ground);
       color: var(--lime);
@@ -232,10 +245,27 @@
   <main>
     <header>
       <h1>Agent Skills by <span class="no-wrap">Greg Lichtenthal</span></h1>
-      <p>Portable skills for Claude, Codex, and practical AI workflows.</p>
+      <p>Portable skills for human-led AI work: organize messy context, pressure-test the thinking, and deliberate consequential decisions.</p>
     </header>
 
     <section class="grid" aria-label="Agent skills">
+      <article class="skill briefing">
+        <img src="assets/briefing-room-social-preview.svg" alt="The Briefing Room social preview">
+        <div class="body">
+          <div class="meta">
+            <span class="tag">Claude</span>
+            <span class="tag">Codex</span>
+            <span class="tag">Sensemaking</span>
+          </div>
+          <h2>The Briefing Room</h2>
+          <p>Turn messy context into a brief you can think with.</p>
+          <div class="actions">
+            <a class="button primary" href="https://github.com/glichtenthal/briefing-room/releases/download/v1.0/briefing-room.skill">Install skill</a>
+            <a class="button secondary" href="https://github.com/glichtenthal/briefing-room">View repo</a>
+          </div>
+        </div>
+      </article>
+
       <article class="skill ground">
         <img src="assets/ground-truth-social-preview.svg" alt="Ground Truth social preview">
         <div class="body">

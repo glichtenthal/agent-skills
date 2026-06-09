@@ -2,7 +2,18 @@
 
 Portable skills for Claude, Codex, and practical AI workflows.
 
+This catalog is built around judgment infrastructure for human-led AI work: organize messy context, pressure-test the thinking, and deliberate consequential decisions.
+
 ## Skills
+
+### [The Briefing Room](https://github.com/glichtenthal/briefing-room)
+
+![The Briefing Room preview](assets/briefing-room-social-preview.svg)
+
+Turn messy context into a brief you can think with.
+
+- Install: https://github.com/glichtenthal/briefing-room/releases/download/v1.0/briefing-room.skill
+- Best for: messy notes, transcripts, research dumps, meeting context, customer feedback, and personal sensemaking.
 
 ### [Ground Truth](https://github.com/glichtenthal/ground-truth)
 
@@ -26,6 +37,8 @@ A five-member expert council that pressure-tests consequential decisions.
 
 These skills are designed for Claude and Codex-style agent workflows. Each repository includes its own installation instructions and Codex interface metadata.
 
-## Coming next
+## How they fit together
 
-This catalog is intentionally small. New skills can be added as additional cards with the same structure: what it does, when to use it, and where to install it.
+- **The Briefing Room** organizes messy context into a structured brief.
+- **Ground Truth** pressure-tests the brief, claim, plan, or draft.
+- **The Quorum** convenes multiple expert lenses for consequential decisions.
