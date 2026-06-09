@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1F3A"/>
+      <stop offset="0.55" stop-color="#123C8C"/>
+      <stop offset="1" stop-color="#071B4A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="58" y="58" width="1084" height="514" rx="28" fill="none" stroke="#9EE7FF" stroke-width="2" opacity="0.42"/>
+  <text x="94" y="178" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="800">Agent Skills</text>
+  <text x="94" y="258" fill="#E2F075" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700">by Greg Lichtenthal</text>
+  <text x="98" y="342" fill="#D7F6FF" font-family="Arial, Helvetica, sans-serif" font-size="32">Portable skills for Claude, Codex,</text>
+  <text x="98" y="388" fill="#D7F6FF" font-family="Arial, Helvetica, sans-serif" font-size="32">and practical AI workflows.</text>
+  <g transform="translate(780 162)">
+    <rect x="0" y="0" width="244" height="116" rx="18" fill="#FFFFFF" opacity="0.12" stroke="#E2F075" stroke-width="2"/>
+    <rect x="42" y="154" width="244" height="116" rx="18" fill="#FFFFFF" opacity="0.15" stroke="#9EE7FF" stroke-width="2"/>
+    <text x="28" y="48" fill="#E2F075" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800">Ground Truth</text>
+    <text x="28" y="82" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="17">Calibrated honesty</text>
+    <text x="70" y="202" fill="#9EE7FF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800">The Quorum</text>
+    <text x="70" y="236" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="17">Structured dissent</text>
+  </g>
+  <rect x="98" y="466" width="320" height="56" rx="28" fill="#FFFFFF"/>
+  <text x="124" y="504" fill="#0B1F3A" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800">Claude + Codex skills</text>
+</svg>
