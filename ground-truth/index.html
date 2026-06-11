@@ -100,7 +100,10 @@
     .kicker { color:var(--muted); font-size:0.83rem; font-weight:800; text-transform:uppercase; letter-spacing:0.03em; }
     ul { margin:0; padding-left:18px; }
     .faq-item h3 { margin:0 0 8px; font-size:1.04rem; }
-    @media (max-width:820px) { main { width:100%; padding:32px 14px 48px; } .grid { grid-template-columns:1fr; } }
+    .example { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; }
+    .example-box { border:1px solid var(--line); border-radius:8px; background:var(--panel); padding:18px 20px; }
+    .example-box h3 { margin:0 0 8px; font-size:1rem; }
+    @media (max-width:820px) { main { width:100%; padding:32px 14px 48px; } .grid, .example { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
@@ -140,6 +143,19 @@
         <li>When a review needs stronger epistemics, sharper downside thinking, or clearer uncertainty.</li>
         <li>When you want AI to challenge the premise before optimizing the answer.</li>
       </ul>
+    </section>
+    <section class="section">
+      <h2>Example output shape</h2>
+      <div class="example">
+        <article class="example-box">
+          <h3>Before</h3>
+          <p>"This launch plan feels strong. Can you make it sharper?"</p>
+        </article>
+        <article class="example-box">
+          <h3>After</h3>
+          <p>A critique that names the weakest assumption, separates evidence from enthusiasm, identifies what would disconfirm the plan, and gives a calibrated next step.</p>
+        </article>
+      </div>
     </section>
     <section class="section">
       <h2>Frequently Asked Questions</h2>

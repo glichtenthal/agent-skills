@@ -197,6 +197,21 @@
       margin: 0;
       color: var(--muted);
     }
+    .example {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .example-box {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 18px 20px;
+    }
+    .example-box h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+    }
     ul {
       margin: 0;
       padding-left: 18px;
@@ -211,6 +226,9 @@
         padding: 32px 14px 48px;
       }
       .grid {
+        grid-template-columns: 1fr;
+      }
+      .example {
         grid-template-columns: 1fr;
       }
     }
@@ -264,6 +282,20 @@
     <section class="section">
       <h2>What makes it different from a summary</h2>
       <p>A normal summary compresses. The Briefing Room organizes. It helps people understand what is directly supported, what is being inferred, what is still unknown, and what the material is ready for next.</p>
+    </section>
+
+    <section class="section">
+      <h2>Example output shape</h2>
+      <div class="example">
+        <article class="example-box">
+          <h3>Before</h3>
+          <p>Three meeting notes, two customer complaints, a half-written product idea, and a nagging question about whether the problem is real or just loud.</p>
+        </article>
+        <article class="example-box">
+          <h3>After</h3>
+          <p>A brief that separates customer facts from founder interpretation, names the key assumption, surfaces the unresolved tension, and lists the questions that would clarify the next move.</p>
+        </article>
+      </div>
     </section>
 
     <section class="section faq">

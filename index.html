@@ -80,6 +80,16 @@
           ]
         },
         {
+          "@type": "Article",
+          "@id": "https://glichtenthal.github.io/agent-skills/manifesto/#article",
+          "headline": "Judgment Infrastructure for Human-Led AI",
+          "description": "A short thesis on building AI skills that strengthen human agency instead of replacing judgment.",
+          "url": "https://glichtenthal.github.io/agent-skills/manifesto/",
+          "author": {
+            "@id": "https://glichtenthal.github.io/agent-skills/#person"
+          }
+        },
+        {
           "@type": "SoftwareSourceCode",
           "@id": "https://glichtenthal.github.io/agent-skills/briefing-room/#skill",
           "name": "The Briefing Room",
@@ -319,6 +329,35 @@
       margin-top: 34px;
     }
 
+    .start {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .start-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .route {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      padding: 18px;
+    }
+
+    .route strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .route a {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
     .faq h2 {
       font-size: 1.8rem;
     }
@@ -351,6 +390,10 @@
         grid-template-columns: 1fr;
       }
 
+      .start-grid {
+        grid-template-columns: 1fr;
+      }
+
       header {
         max-width: 100%;
       }
@@ -375,7 +418,28 @@
     <header>
       <h1>Judgment Infrastructure for <span class="no-wrap">Human-Led AI</span></h1>
       <p>Portable agent skills by Greg Lichtenthal for people who want AI to strengthen human creativity, judgment, and agency.</p>
+      <div class="actions">
+        <a class="button secondary" href="manifesto/">Read the thesis</a>
+      </div>
     </header>
+
+    <section class="start" aria-labelledby="start-heading">
+      <h2 id="start-heading">Start Here</h2>
+      <div class="start-grid">
+        <article class="route">
+          <strong>Messy context?</strong>
+          <p>Use <a href="briefing-room/">The Briefing Room</a> to turn notes, transcripts, research, and fragments into a brief.</p>
+        </article>
+        <article class="route">
+          <strong>A claim or plan?</strong>
+          <p>Use <a href="ground-truth/">Ground Truth</a> to pressure-test the thinking before you act on it.</p>
+        </article>
+        <article class="route">
+          <strong>A consequential decision?</strong>
+          <p>Use <a href="the-quorum/">The Quorum</a> to deliberate trade-offs through multiple expert lenses.</p>
+        </article>
+      </div>
+    </section>
 
     <section class="grid" aria-label="Agent skills">
       <article class="skill briefing">

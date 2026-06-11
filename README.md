@@ -4,6 +4,16 @@ Portable agent skills by Greg Lichtenthal for people who want AI to strengthen h
 
 This catalog is built around judgment infrastructure for human-led AI work: organize messy context, pressure-test the thinking, and deliberate consequential decisions.
 
+Read the short thesis: [Judgment Infrastructure for Human-Led AI](https://glichtenthal.github.io/agent-skills/manifesto/)
+
+## Start here
+
+| If you have... | Use... |
+| --- | --- |
+| Messy notes, transcripts, research, or context | [The Briefing Room](https://github.com/glichtenthal/briefing-room) |
+| A claim, plan, draft, or idea that needs honest critique | [Ground Truth](https://github.com/glichtenthal/ground-truth) |
+| A consequential decision with real trade-offs | [The Quorum](https://github.com/glichtenthal/the-quorum) |
+
 ## Skills
 
 ### [The Briefing Room](https://github.com/glichtenthal/briefing-room)
