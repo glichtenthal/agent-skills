@@ -1,0 +1,20 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#071A2F"/>
+  <rect x="64" y="64" width="1072" height="502" rx="28" fill="#0D2D52" stroke="#53D9F5" stroke-width="3"/>
+  <rect x="103" y="103" width="994" height="424" rx="24" fill="#123F70"/>
+  <text x="138" y="207" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="92" font-weight="800">Test Drive</text>
+  <text x="142" y="287" fill="#74E6FF" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="800">Try an idea before you trust it</text>
+  <text x="142" y="364" fill="#D8F7FF" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">Evidence types. Small tests. Connector paths.</text>
+  <rect x="142" y="440" width="310" height="58" rx="29" fill="#74E6FF"/>
+  <text x="181" y="478" fill="#071A2F" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Claude + Codex skill</text>
+  <g transform="translate(724 150)">
+    <rect x="0" y="0" width="280" height="280" rx="32" fill="#235C91"/>
+    <path d="M62 198C96 132 136 92 218 67" stroke="#74E6FF" stroke-width="16" stroke-linecap="round"/>
+    <path d="M68 198H118" stroke="#D8F7FF" stroke-width="12" stroke-linecap="round"/>
+    <path d="M194 74L229 62L217 98" stroke="#74E6FF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="70" cy="198" r="22" fill="#74E6FF"/>
+    <circle cx="145" cy="118" r="16" fill="#D8F7FF"/>
+    <circle cx="217" cy="67" r="18" fill="#74E6FF"/>
+    <rect x="56" y="226" width="168" height="12" rx="6" fill="#D8F7FF" opacity="0.85"/>
+  </g>
+</svg>

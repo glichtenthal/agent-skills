@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Judgment Infrastructure for Human-Led AI | Greg Lichtenthal</title>
-  <meta name="description" content="Portable agent skills by Greg Lichtenthal that help people organize messy context, pressure-test thinking, and deliberate consequential decisions with AI.">
+  <meta name="description" content="Portable agent skills by Greg Lichtenthal that help people organize messy context, pressure-test thinking, deliberate consequential decisions, and test ideas before trusting them.">
   <meta name="author" content="Greg Lichtenthal">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://glichtenthal.github.io/agent-skills/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Judgment Infrastructure for Human-Led AI">
   <meta property="og:title" content="Judgment Infrastructure for Human-Led AI">
-  <meta property="og:description" content="Portable agent skills that help people organize messy context, pressure-test thinking, and deliberate consequential decisions with AI.">
+  <meta property="og:description" content="Portable agent skills that help people organize messy context, pressure-test thinking, deliberate consequential decisions, and test ideas before trusting them.">
   <meta property="og:url" content="https://glichtenthal.github.io/agent-skills/">
   <meta property="og:image" content="https://glichtenthal.github.io/agent-skills/assets/catalog-social-preview.svg">
-  <meta property="og:image:alt" content="Judgment Infrastructure for Human-Led AI, featuring The Briefing Room, Ground Truth, and The Quorum.">
+  <meta property="og:image:alt" content="Judgment Infrastructure for Human-Led AI, featuring The Briefing Room, Ground Truth, The Quorum, and Test Drive.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Judgment Infrastructure for Human-Led AI">
-  <meta name="twitter:description" content="Portable agent skills that help people organize messy context, pressure-test thinking, and deliberate consequential decisions with AI.">
+  <meta name="twitter:description" content="Portable agent skills that help people organize messy context, pressure-test thinking, deliberate consequential decisions, and test ideas before trusting them.">
   <meta name="twitter:image" content="https://glichtenthal.github.io/agent-skills/assets/catalog-social-preview.svg">
   <script type="application/ld+json">
     {
@@ -28,7 +28,7 @@
           "@id": "https://glichtenthal.github.io/agent-skills/#website",
           "url": "https://glichtenthal.github.io/agent-skills/",
           "name": "Judgment Infrastructure for Human-Led AI",
-          "description": "Portable agent skills by Greg Lichtenthal that help people organize messy context, pressure-test thinking, and deliberate consequential decisions with AI.",
+          "description": "Portable agent skills by Greg Lichtenthal that help people organize messy context, pressure-test thinking, deliberate consequential decisions, and test ideas before trusting them.",
           "publisher": {
             "@id": "https://glichtenthal.github.io/agent-skills/#person"
           }
@@ -47,7 +47,7 @@
           "@type": "CollectionPage",
           "@id": "https://glichtenthal.github.io/agent-skills/#page",
           "name": "Judgment Infrastructure for Human-Led AI",
-          "description": "Portable agent skills by Greg Lichtenthal that help people organize messy context, pressure-test thinking, and deliberate consequential decisions with AI.",
+          "description": "Portable agent skills by Greg Lichtenthal that help people organize messy context, pressure-test thinking, deliberate consequential decisions, and test ideas before trusting them.",
           "url": "https://glichtenthal.github.io/agent-skills/",
           "isPartOf": {
             "@id": "https://glichtenthal.github.io/agent-skills/#website"
@@ -60,7 +60,7 @@
           "@type": "ItemList",
           "@id": "https://glichtenthal.github.io/agent-skills/#itemlist",
           "name": "Agent skills catalog",
-          "numberOfItems": 3,
+          "numberOfItems": 4,
           "itemListElement": [
             {
               "@type": "ListItem",
@@ -76,6 +76,11 @@
               "@type": "ListItem",
               "position": 3,
               "url": "https://glichtenthal.github.io/agent-skills/the-quorum/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "url": "https://glichtenthal.github.io/agent-skills/test-drive/"
             }
           ]
         },
@@ -132,6 +137,20 @@
           "runtimePlatform": "Claude, Codex"
         },
         {
+          "@type": "SoftwareSourceCode",
+          "@id": "https://glichtenthal.github.io/agent-skills/test-drive/#skill",
+          "name": "Test Drive",
+          "description": "Try an idea before you trust it.",
+          "url": "https://glichtenthal.github.io/agent-skills/test-drive/",
+          "codeRepository": "https://github.com/glichtenthal/test-drive",
+          "author": {
+            "@id": "https://glichtenthal.github.io/agent-skills/#person"
+          },
+          "license": "https://github.com/glichtenthal/test-drive/blob/main/LICENSE",
+          "keywords": "ai skill, codex skill, claude skill, evidence design, idea validation, test ideas, data analysis, regression, connector path",
+          "runtimePlatform": "Claude, Codex"
+        },
+        {
           "@type": "FAQPage",
           "@id": "https://glichtenthal.github.io/agent-skills/#faq",
           "mainEntity": [
@@ -145,10 +164,10 @@
             },
             {
               "@type": "Question",
-              "name": "How do I choose between The Briefing Room, Ground Truth, and The Quorum?",
+              "name": "How do I choose between The Briefing Room, Ground Truth, The Quorum, and Test Drive?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Use The Briefing Room to structure messy context, Ground Truth to challenge a plan or claim, and The Quorum to deliberate a consequential decision with multiple lenses."
+                "text": "Use The Briefing Room to structure messy context, Ground Truth to challenge a plan or claim, The Quorum to deliberate a consequential decision with multiple lenses, and Test Drive to turn a plausible idea into a small evidence-seeking trial."
               }
             },
             {
@@ -177,6 +196,8 @@
       --briefing-accent: #73e6ff;
       --quorum: #123c8c;
       --cyan: #9ee7ff;
+      --test: #0d2d52;
+      --test-accent: #74e6ff;
       --white: #ffffff;
     }
 
@@ -229,7 +250,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 20px;
     }
 
@@ -312,6 +333,11 @@
       color: var(--cyan);
     }
 
+    .test a.button.primary {
+      background: var(--test);
+      color: var(--test-accent);
+    }
+
     a.button.secondary {
       border: 1px solid var(--line);
       color: var(--ink);
@@ -337,7 +363,7 @@
 
     .start-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 14px;
     }
 
@@ -417,7 +443,7 @@
   <main>
     <header>
       <h1>Judgment Infrastructure for <span class="no-wrap">Human-Led AI</span></h1>
-      <p>Portable agent skills by Greg Lichtenthal for people who want AI to strengthen human creativity, judgment, and agency.</p>
+      <p>Portable agent skills by Greg Lichtenthal for people who want AI to strengthen human creativity, judgment, agency, and evidence-seeking action.</p>
       <div class="actions">
         <a class="button secondary" href="manifesto/">Read the thesis</a>
       </div>
@@ -437,6 +463,10 @@
         <article class="route">
           <strong>A consequential decision?</strong>
           <p>Use <a href="the-quorum/">The Quorum</a> to deliberate trade-offs through multiple expert lenses.</p>
+        </article>
+        <article class="route">
+          <strong>A plausible idea?</strong>
+          <p>Use <a href="test-drive/">Test Drive</a> to turn it into the smallest credible test.</p>
         </article>
       </div>
     </section>
@@ -495,6 +525,24 @@
           </div>
         </div>
       </article>
+
+      <article class="skill test">
+        <img src="assets/test-drive-social-preview.svg" alt="Test Drive social preview">
+        <div class="body">
+          <div class="meta">
+            <span class="tag">Claude</span>
+            <span class="tag">Codex</span>
+            <span class="tag">Evidence design</span>
+          </div>
+          <h2>Test Drive</h2>
+          <p>Try an idea before you trust it.</p>
+          <div class="actions">
+            <a class="button secondary" href="test-drive/">Learn more</a>
+            <a class="button primary" href="https://github.com/glichtenthal/test-drive/releases/download/v1.0/test-drive.skill">Install skill</a>
+            <a class="button secondary" href="https://github.com/glichtenthal/test-drive">View repo</a>
+          </div>
+        </div>
+      </article>
     </section>
 
     <section class="faq" aria-labelledby="faq-heading">
@@ -504,12 +552,12 @@
         <p>It is a set of portable AI skills that help people structure messy information, challenge their own reasoning, and make better decisions without outsourcing human judgment.</p>
       </article>
       <article class="faq-item">
-        <h3>When should I use The Briefing Room, Ground Truth, or The Quorum?</h3>
-        <p>Use The Briefing Room when the context is messy, Ground Truth when you want honest critique on a plan or claim, and The Quorum when you need multiple expert lenses on a consequential decision.</p>
+        <h3>When should I use The Briefing Room, Ground Truth, The Quorum, or Test Drive?</h3>
+        <p>Use The Briefing Room when the context is messy, Ground Truth when you want honest critique on a plan or claim, The Quorum when you need multiple expert lenses on a consequential decision, and Test Drive when you need evidence before committing.</p>
       </article>
       <article class="faq-item">
         <h3>How do I install these skills in Codex or Claude?</h3>
-        <p>Each skill has a GitHub repository, a release download for the packaged skill, and installation instructions for Codex and Claude. The catalog links directly to all three install files.</p>
+        <p>Each skill has a GitHub repository, a release download for the packaged skill, and installation instructions for Codex and Claude. The catalog links directly to all four install files.</p>
       </article>
     </section>
 

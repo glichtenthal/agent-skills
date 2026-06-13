@@ -12,16 +12,19 @@
   <text x="94" y="236" fill="#E2F075" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700">for Human-Led AI</text>
   <text x="98" y="326" fill="#D7F6FF" font-family="Arial, Helvetica, sans-serif" font-size="30">Portable skills by Greg Lichtenthal</text>
   <text x="98" y="370" fill="#D7F6FF" font-family="Arial, Helvetica, sans-serif" font-size="30">for creativity, judgment, and agency.</text>
-  <g transform="translate(744 118)">
-    <rect x="0" y="0" width="294" height="104" rx="18" fill="#FFFFFF" opacity="0.14" stroke="#73E6FF" stroke-width="2"/>
-    <rect x="48" y="136" width="294" height="104" rx="18" fill="#FFFFFF" opacity="0.12" stroke="#E2F075" stroke-width="2"/>
-    <rect x="0" y="272" width="294" height="104" rx="18" fill="#FFFFFF" opacity="0.15" stroke="#9EE7FF" stroke-width="2"/>
-    <text x="28" y="42" fill="#73E6FF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800">The Briefing Room</text>
-    <text x="28" y="74" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="17">Organize the mess</text>
-    <text x="76" y="178" fill="#E2F075" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800">Ground Truth</text>
-    <text x="76" y="210" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="17">Pressure-test thinking</text>
-    <text x="28" y="314" fill="#9EE7FF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800">The Quorum</text>
-    <text x="28" y="346" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="17">Deliberate decisions</text>
+  <g transform="translate(744 88)">
+    <rect x="0" y="0" width="294" height="86" rx="18" fill="#FFFFFF" opacity="0.14" stroke="#73E6FF" stroke-width="2"/>
+    <rect x="48" y="108" width="294" height="86" rx="18" fill="#FFFFFF" opacity="0.12" stroke="#E2F075" stroke-width="2"/>
+    <rect x="0" y="216" width="294" height="86" rx="18" fill="#FFFFFF" opacity="0.15" stroke="#9EE7FF" stroke-width="2"/>
+    <rect x="48" y="324" width="294" height="86" rx="18" fill="#FFFFFF" opacity="0.13" stroke="#74E6FF" stroke-width="2"/>
+    <text x="24" y="36" fill="#73E6FF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800">The Briefing Room</text>
+    <text x="24" y="64" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="16">Organize the mess</text>
+    <text x="72" y="144" fill="#E2F075" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800">Ground Truth</text>
+    <text x="72" y="172" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="16">Pressure-test thinking</text>
+    <text x="24" y="252" fill="#9EE7FF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800">The Quorum</text>
+    <text x="24" y="280" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="16">Deliberate decisions</text>
+    <text x="72" y="360" fill="#74E6FF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800">Test Drive</text>
+    <text x="72" y="388" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="16">Try before trust</text>
   </g>
   <rect x="98" y="466" width="320" height="56" rx="28" fill="#FFFFFF"/>
   <text x="124" y="504" fill="#0B1F3A" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800">Claude + Codex skills</text>

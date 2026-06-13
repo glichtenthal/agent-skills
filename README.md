@@ -2,7 +2,7 @@
 
 Portable agent skills by Greg Lichtenthal for people who want AI to strengthen human creativity, judgment, and agency.
 
-This catalog is built around judgment infrastructure for human-led AI work: organize messy context, pressure-test the thinking, and deliberate consequential decisions.
+This catalog is built around judgment infrastructure for human-led AI work: organize messy context, pressure-test the thinking, deliberate consequential decisions, and test ideas before trusting them.
 
 Read the short thesis: [Judgment Infrastructure for Human-Led AI](https://glichtenthal.github.io/agent-skills/manifesto/)
 
@@ -13,6 +13,7 @@ Read the short thesis: [Judgment Infrastructure for Human-Led AI](https://glicht
 | Messy notes, transcripts, research, or context | [The Briefing Room](https://github.com/glichtenthal/briefing-room) |
 | A claim, plan, draft, or idea that needs honest critique | [Ground Truth](https://github.com/glichtenthal/ground-truth) |
 | A consequential decision with real trade-offs | [The Quorum](https://github.com/glichtenthal/the-quorum) |
+| A plausible idea that needs evidence before commitment | [Test Drive](https://github.com/glichtenthal/test-drive) |
 
 ## Skills
 
@@ -43,6 +44,15 @@ A five-member expert council that pressure-tests consequential decisions.
 - Install: https://github.com/glichtenthal/the-quorum/releases/download/v1.0/the-quorum.skill
 - Best for: strategy calls, hiring decisions, build-vs-buy choices, and other consequential trade-offs.
 
+### [Test Drive](https://github.com/glichtenthal/test-drive)
+
+![Test Drive preview](assets/test-drive-social-preview.svg)
+
+Try an idea before you trust it.
+
+- Install: https://github.com/glichtenthal/test-drive/releases/download/v1.0/test-drive.skill
+- Best for: testing ideas, messages, prompts, skills, strategies, decisions, and data claims before overcommitting.
+
 ## Compatibility
 
 These skills are designed for Claude and Codex-style agent workflows. Each repository includes its own installation instructions and Codex interface metadata.
@@ -52,3 +62,4 @@ These skills are designed for Claude and Codex-style agent workflows. Each repos
 - **The Briefing Room** organizes messy context into a structured brief.
 - **Ground Truth** pressure-tests the brief, claim, plan, or draft.
 - **The Quorum** convenes multiple expert lenses for consequential decisions.
+- **Test Drive** turns plausible ideas into small evidence-seeking trials.

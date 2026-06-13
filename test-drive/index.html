@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test Drive | Try an Idea Before You Trust It</title>
+  <meta name="description" content="Test Drive is a Claude and Codex skill for turning plausible ideas, decisions, prompts, skills, strategies, data claims, and artifacts into small evidence-seeking tests.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://glichtenthal.github.io/agent-skills/test-drive/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Test Drive">
+  <meta property="og:description" content="Try an idea before you trust it.">
+  <meta property="og:url" content="https://glichtenthal.github.io/agent-skills/test-drive/">
+  <meta property="og:image" content="https://glichtenthal.github.io/agent-skills/assets/test-drive-social-preview.svg">
+  <meta property="og:image:alt" content="Test Drive social preview">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Test Drive">
+  <meta name="twitter:description" content="A portable Claude and Codex skill for turning plausible ideas into small evidence-seeking trials.">
+  <meta name="twitter:image" content="https://glichtenthal.github.io/agent-skills/assets/test-drive-social-preview.svg">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://glichtenthal.github.io/agent-skills/test-drive/#page",
+          "url": "https://glichtenthal.github.io/agent-skills/test-drive/",
+          "name": "Test Drive",
+          "description": "A Claude and Codex skill for turning plausible ideas into small evidence-seeking trials.",
+          "isPartOf": {
+            "@id": "https://glichtenthal.github.io/agent-skills/#website"
+          }
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "@id": "https://glichtenthal.github.io/agent-skills/test-drive/#skill",
+          "name": "Test Drive",
+          "description": "Try an idea before you trust it.",
+          "codeRepository": "https://github.com/glichtenthal/test-drive",
+          "url": "https://glichtenthal.github.io/agent-skills/test-drive/",
+          "author": {
+            "@type": "Person",
+            "name": "Greg Lichtenthal",
+            "url": "https://github.com/glichtenthal"
+          },
+          "license": "https://github.com/glichtenthal/test-drive/blob/main/LICENSE",
+          "keywords": "test drive, codex skill, claude skill, evidence design, idea validation, test ideas, data analysis, regression, connector path",
+          "runtimePlatform": "Claude, Codex",
+          "downloadUrl": "https://github.com/glichtenthal/test-drive/releases/download/v1.0/test-drive.skill"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://glichtenthal.github.io/agent-skills/test-drive/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is Test Drive?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Test Drive is an AI skill for Codex and Claude that turns a plausible idea, belief, strategy, decision, prompt, skill, message, or artifact into a small evidence-seeking trial."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "When should I use Test Drive?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Use Test Drive when something sounds plausible but needs evidence before commitment, such as a product idea, message, hiring read, data claim, prompt, skill, or strategy."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can Test Drive recommend connectors?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Test Drive identifies connectors, tools, data access, permissions, and manual fallbacks needed to run a test, and it asks for approval before external action."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #f6f8fb;
+      --ink: #102033;
+      --muted: #526070;
+      --line: #d9e1ea;
+      --brand: #0d2d52;
+      --accent: #74e6ff;
+      --panel: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    main {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 56px 0 64px;
+    }
+    a { color: inherit; }
+    .crumb {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .hero {
+      display: grid;
+      gap: 18px;
+      margin-bottom: 32px;
+      max-width: 780px;
+    }
+    .hero h1, .section h2, .faq h2 { margin: 0; }
+    .hero h1 {
+      font-size: clamp(2.1rem, 4.8vw, 4.2rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+    .hero-actions, .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .button.primary {
+      background: var(--brand);
+      color: var(--accent);
+    }
+    .button.secondary {
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+    .card, .faq-item, .example-box, .matrix-item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      overflow: hidden;
+    }
+    .card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 2 / 1;
+      object-fit: cover;
+      background: var(--brand);
+    }
+    .card-body {
+      padding: 22px;
+      display: grid;
+      gap: 14px;
+    }
+    .list, .faq-list, .matrix {
+      display: grid;
+      gap: 14px;
+    }
+    .list-item, .faq-item, .matrix-item {
+      padding: 18px 20px;
+    }
+    .kicker {
+      color: var(--muted);
+      font-size: 0.83rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .section {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .section p, .section li, .faq-item p, .matrix-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .example {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .example-box {
+      padding: 18px 20px;
+    }
+    .example-box h3, .matrix-item h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+    }
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .faq-item h3 {
+      margin: 0 0 8px;
+      font-size: 1.06rem;
+      line-height: 1.2;
+    }
+    footer {
+      margin-top: 30px;
+      color: var(--muted);
+    }
+    @media (max-width: 760px) {
+      main {
+        width: min(100%, calc(100% - 28px));
+        padding: 34px 0 48px;
+      }
+      .grid, .example {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="crumb" href="../">← Agent skills catalog</a>
+    <section class="hero">
+      <p class="kicker">Claude + Codex agent skill</p>
+      <h1>Test Drive</h1>
+      <p>Try an idea before you trust it. Test Drive turns plausible ideas, decisions, prompts, skills, strategies, data claims, and artifacts into small evidence-seeking trials.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="https://github.com/glichtenthal/test-drive/releases/download/v1.0/test-drive.skill">Install skill</a>
+        <a class="button secondary" href="https://github.com/glichtenthal/test-drive">View GitHub repo</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <img src="../assets/test-drive-social-preview.svg" alt="Test Drive social preview">
+        <div class="card-body">
+          <p class="kicker">What it does</p>
+          <p>Test Drive identifies what kind of evidence would matter, chooses the smallest credible test, creates or recommends the artifact needed, and names any connector or approval gate required.</p>
+        </div>
+      </article>
+      <aside class="list" aria-label="Best use cases">
+        <div class="list-item">
+          <p class="kicker">Best for</p>
+          <ul>
+            <li>Testing product or strategy ideas</li>
+            <li>Validating messages before publishing</li>
+            <li>Evaluating prompts and skills before reuse</li>
+            <li>Designing data analysis or regression tests</li>
+            <li>Identifying connectors needed for action</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <h2>Evidence Types</h2>
+      <p>Test Drive is horizontal because it routes by evidence type, not domain.</p>
+      <div class="matrix">
+        <article class="matrix-item">
+          <h3>Human Reaction</h3>
+          <p>Use interviews, surveys, posts, messages, or prototype feedback when the idea depends on what people understand, want, remember, or choose.</p>
+        </article>
+        <article class="matrix-item">
+          <h3>Behavioral / Data</h3>
+          <p>Use cohort analysis, funnel analysis, segmentation, correlation, regression, or before/after readouts when the claim depends on observed behavior.</p>
+        </article>
+        <article class="matrix-item">
+          <h3>Reasoning And Expert Judgment</h3>
+          <p>Use Ground Truth, The Quorum, pre-mortems, counterexample searches, or stakeholder lenses when the question depends on logic and trade-offs.</p>
+        </article>
+        <article class="matrix-item">
+          <h3>Artifact And Operational Performance</h3>
+          <p>Use dry runs, eval cases, rubric scoring, connector checks, permission reviews, or pilot workflows when the thing itself has to work in practice.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Example Output Shape</h2>
+      <div class="example">
+        <article class="example-box">
+          <h3>Before</h3>
+          <p>"I think this positioning is right, but I do not know if I am overfitting to language I personally like."</p>
+        </article>
+        <article class="example-box">
+          <h3>After</h3>
+          <p>Test Drive classifies the uncertainty as Human Reaction plus Artifact Performance, drafts two message variants, defines resonance and failure signals, recommends a manual or connector-assisted posting path, and sets a learning loop.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Install</h2>
+      <p>Download the packaged skill from the release, or ask Codex to install it from GitHub.</p>
+      <div class="links">
+        <a class="button primary" href="https://github.com/glichtenthal/test-drive/releases/download/v1.0/test-drive.skill">Download .skill</a>
+        <a class="button secondary" href="https://github.com/glichtenthal/test-drive">Repository instructions</a>
+      </div>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 id="faq-heading">FAQ</h2>
+      <div class="faq-list">
+        <article class="faq-item">
+          <h3>How is Test Drive different from Ground Truth?</h3>
+          <p>Ground Truth challenges the reasoning. Test Drive designs the evidence-seeking trial that would make the idea more or less trustworthy.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Can Test Drive run statistical analysis?</h3>
+          <p>It can recommend and structure analytical tests such as cohort analysis, segmentation, funnel analysis, correlation, or regression. It can run analysis when the environment has approved data access and tooling.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Can Test Drive take action?</h3>
+          <p>It can draft or build safe artifacts. It should ask for explicit approval before sending, posting, publishing, querying sensitive systems, or changing external state.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      Part of Greg Lichtenthal's Judgment Infrastructure for Human-Led AI catalog.
+    </footer>
+  </main>
+</body>
+</html>
