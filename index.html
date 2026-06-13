@@ -54,7 +54,21 @@
           },
           "about": {
             "@id": "https://glichtenthal.github.io/agent-skills/#itemlist"
-          }
+          },
+          "hasPart": [
+            {
+              "@id": "https://glichtenthal.github.io/agent-skills/briefing-room/#skill"
+            },
+            {
+              "@id": "https://glichtenthal.github.io/agent-skills/ground-truth/#skill"
+            },
+            {
+              "@id": "https://glichtenthal.github.io/agent-skills/the-quorum/#skill"
+            },
+            {
+              "@id": "https://glichtenthal.github.io/agent-skills/test-drive/#skill"
+            }
+          ]
         },
         {
           "@type": "ItemList",
@@ -106,7 +120,8 @@
           },
           "license": "https://github.com/glichtenthal/briefing-room/blob/main/LICENSE",
           "keywords": "ai skill, codex skill, claude skill, sensemaking, messy notes, research synthesis, meeting brief",
-          "runtimePlatform": "Claude, Codex"
+          "runtimePlatform": "Claude, Codex",
+          "downloadUrl": "https://github.com/glichtenthal/briefing-room/releases/download/v1.0/briefing-room.skill"
         },
         {
           "@type": "SoftwareSourceCode",
@@ -120,7 +135,8 @@
           },
           "license": "https://github.com/glichtenthal/ground-truth/blob/main/LICENSE",
           "keywords": "ai skill, codex skill, claude skill, critical thinking, anti sycophancy, review, calibrated honesty",
-          "runtimePlatform": "Claude, Codex"
+          "runtimePlatform": "Claude, Codex",
+          "downloadUrl": "https://github.com/glichtenthal/ground-truth/releases/download/v1.0/ground-truth.skill"
         },
         {
           "@type": "SoftwareSourceCode",
@@ -134,7 +150,8 @@
           },
           "license": "https://github.com/glichtenthal/the-quorum/blob/main/LICENSE",
           "keywords": "ai skill, codex skill, claude skill, decision support, strategy, deliberation, build vs buy",
-          "runtimePlatform": "Claude, Codex"
+          "runtimePlatform": "Claude, Codex",
+          "downloadUrl": "https://github.com/glichtenthal/the-quorum/releases/download/v1.0/the-quorum.skill"
         },
         {
           "@type": "SoftwareSourceCode",
@@ -148,7 +165,8 @@
           },
           "license": "https://github.com/glichtenthal/test-drive/blob/main/LICENSE",
           "keywords": "ai skill, codex skill, claude skill, evidence design, idea validation, test ideas, data analysis, regression, connector path",
-          "runtimePlatform": "Claude, Codex"
+          "runtimePlatform": "Claude, Codex",
+          "downloadUrl": "https://github.com/glichtenthal/test-drive/releases/download/v1.1/test-drive.skill"
         },
         {
           "@type": "FAQPage",
@@ -160,6 +178,22 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "It is a set of portable agent skills designed to help people organize messy context, pressure-test their thinking, and deliberate consequential decisions while keeping human judgment in control."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is an agent skill?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An agent skill is a portable set of instructions, examples, and metadata that helps an AI agent perform a specialized workflow more reliably than a one-off prompt."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is evidence design?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Evidence design is the practice of identifying what kind of signal would make an idea more or less trustworthy, then creating the smallest useful test to gather that signal."
               }
             },
             {
@@ -250,7 +284,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 20px;
     }
 
@@ -361,6 +395,35 @@
       margin-bottom: 28px;
     }
 
+    .workflow {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .workflow-track {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .step {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      padding: 16px;
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .step span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
     .start-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -416,7 +479,8 @@
         grid-template-columns: 1fr;
       }
 
-      .start-grid {
+      .start-grid,
+      .workflow-track {
         grid-template-columns: 1fr;
       }
 
@@ -467,6 +531,32 @@
         <article class="route">
           <strong>A plausible idea?</strong>
           <p>Use <a href="test-drive/">Test Drive</a> to turn it into the smallest credible test.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="workflow" aria-labelledby="workflow-heading">
+      <h2 id="workflow-heading">The Judgment Loop</h2>
+      <div class="workflow-track">
+        <article class="step">
+          <strong>Mess</strong>
+          <span>raw context, uncertainty, fragments</span>
+        </article>
+        <article class="step">
+          <strong>Brief</strong>
+          <span>The Briefing Room makes it legible</span>
+        </article>
+        <article class="step">
+          <strong>Critique</strong>
+          <span>Ground Truth challenges the thinking</span>
+        </article>
+        <article class="step">
+          <strong>Deliberate</strong>
+          <span>The Quorum surfaces trade-offs</span>
+        </article>
+        <article class="step">
+          <strong>Test</strong>
+          <span>Test Drive creates evidence</span>
         </article>
       </div>
     </section>
@@ -538,7 +628,7 @@
           <p>Try an idea before you trust it.</p>
           <div class="actions">
             <a class="button secondary" href="test-drive/">Learn more</a>
-            <a class="button primary" href="https://github.com/glichtenthal/test-drive/releases/download/v1.0/test-drive.skill">Install skill</a>
+            <a class="button primary" href="https://github.com/glichtenthal/test-drive/releases/download/v1.1/test-drive.skill">Install skill</a>
             <a class="button secondary" href="https://github.com/glichtenthal/test-drive">View repo</a>
           </div>
         </div>
@@ -550,6 +640,14 @@
       <article class="faq-item">
         <h3>What is judgment infrastructure for human-led AI?</h3>
         <p>It is a set of portable AI skills that help people structure messy information, challenge their own reasoning, and make better decisions without outsourcing human judgment.</p>
+      </article>
+      <article class="faq-item">
+        <h3>What is an agent skill?</h3>
+        <p>An agent skill is a portable set of instructions, examples, and metadata that helps an AI agent perform a specialized workflow more reliably than a one-off prompt.</p>
+      </article>
+      <article class="faq-item">
+        <h3>What is evidence design?</h3>
+        <p>Evidence design means identifying what kind of signal would make an idea more or less trustworthy, then creating the smallest useful test to gather that signal.</p>
       </article>
       <article class="faq-item">
         <h3>When should I use The Briefing Room, Ground Truth, The Quorum, or Test Drive?</h3>
