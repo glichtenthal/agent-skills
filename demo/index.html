@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Judgment Infrastructure Demo | Four Agent Skills in One Workflow</title>
+  <meta name="description" content="A concrete demo showing how The Briefing Room, Ground Truth, The Quorum, and Test Drive work together on one strategic decision.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://glichtenthal.github.io/agent-skills/demo/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Judgment Infrastructure Demo">
+  <meta property="og:description" content="One scenario across four agent skills: brief, critique, deliberate, and test before commitment.">
+  <meta property="og:url" content="https://glichtenthal.github.io/agent-skills/demo/">
+  <meta property="og:image" content="https://glichtenthal.github.io/agent-skills/assets/catalog-social-preview.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": "https://glichtenthal.github.io/agent-skills/demo/#article",
+      "headline": "Judgment Infrastructure Demo",
+      "description": "A concrete demo showing how four portable agent skills work together on one strategic decision.",
+      "url": "https://glichtenthal.github.io/agent-skills/demo/",
+      "author": {
+        "@type": "Person",
+        "name": "Greg Lichtenthal",
+        "url": "https://github.com/glichtenthal"
+      }
+    }
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #f6f8fb;
+      --ink: #102033;
+      --muted: #526070;
+      --line: #d9e1ea;
+      --panel: #ffffff;
+      --navy: #0b1f3a;
+      --cyan: #74e6ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.58;
+    }
+    main {
+      width: min(920px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 52px 0 64px;
+    }
+    a { color: inherit; }
+    .crumb {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 750;
+    }
+    header {
+      display: grid;
+      gap: 16px;
+      margin: 28px 0 30px;
+    }
+    h1, h2, h3, p { margin: 0; }
+    h1 {
+      font-size: clamp(2.15rem, 5vw, 4rem);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+    header p, .section p, li {
+      color: var(--muted);
+    }
+    .section {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 24px;
+      margin-bottom: 18px;
+    }
+    .section h2 {
+      margin-bottom: 10px;
+      font-size: 1.45rem;
+    }
+    .scenario {
+      background: var(--navy);
+      color: #eaf8ff;
+      border-color: transparent;
+    }
+    .scenario p {
+      color: #d8f7ff;
+    }
+    pre {
+      margin: 14px 0;
+      overflow-x: auto;
+      border-radius: 8px;
+      background: #0c2038;
+      color: #e9f7ff;
+      padding: 16px;
+      font-size: 0.94rem;
+      line-height: 1.45;
+      white-space: pre-wrap;
+    }
+    ul {
+      margin: 10px 0 0;
+      padding-left: 20px;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      padding: 10px 14px;
+      text-decoration: none;
+      font-weight: 850;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .button.primary {
+      background: var(--navy);
+      color: var(--cyan);
+      border-color: var(--navy);
+    }
+    @media (max-width: 760px) {
+      main { width: min(100% - 28px, 640px); padding-top: 34px; }
+      h1 { font-size: 2.05rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="crumb" href="../">← Agent skills catalog</a>
+    <header>
+      <h1>One Scenario, Four Skills</h1>
+      <p>This demo shows the full judgment loop: make the mess legible, challenge the thinking, deliberate the decision, and create evidence before commitment.</p>
+      <div class="actions">
+        <a class="button primary" href="../start-here/">Start with the guide</a>
+        <a class="button" href="https://github.com/glichtenthal/agent-skills/blob/main/examples/judgment-infrastructure-demo.md">View on GitHub</a>
+      </div>
+    </header>
+
+    <section class="section scenario">
+      <h2>Scenario</h2>
+      <p>Our team thinks onboarding is too complicated. Sales says prospects ask for simpler setup. Support says new customers are confused by permissions. Product says activation is stable. Data says the problem may only affect enterprise customers. Leadership wants to know whether we should rebuild onboarding next quarter or focus on segmentation and targeted setup help.</p>
+    </section>
+
+    <section class="section">
+      <h2>1. Make the Mess Legible</h2>
+      <p>Use <a href="../briefing-room/">The Briefing Room</a> to separate the raw context into facts, claims, assumptions, tensions, open questions, and next use.</p>
+      <pre>Use The Briefing Room on this messy context. Separate facts, claims, assumptions, tensions, contradictions, open questions, and the best next use.</pre>
+      <ul>
+        <li>Facts separate from claims.</li>
+        <li>The activation-versus-confusion tension becomes visible.</li>
+        <li>The brief identifies what kind of thinking should happen next.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>2. Challenge the Thinking</h2>
+      <p>Use <a href="../ground-truth/">Ground Truth</a> to challenge the diagnosis before the team commits to a solution.</p>
+      <pre>Use Ground Truth on this brief. Do not validate the current diagnosis by default. Identify the weakest assumption, strongest counterargument, missing evidence, and what should happen before we commit roadmap time.</pre>
+      <ul>
+        <li>The jump from "users are confused" to "rebuild onboarding" gets tested.</li>
+        <li>Alternative explanations become visible.</li>
+        <li>The recommendation shifts toward evidence before commitment.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>3. Deliberate the Decision</h2>
+      <p>Use <a href="../the-quorum/">The Quorum</a> if leadership needs a real decision with visible trade-offs.</p>
+      <pre>Use The Quorum on this decision: should we rebuild onboarding next quarter, or run a targeted diagnostic path around segment-specific onboarding friction first? Preserve disagreement and give me a calibrated recommendation with a pre-mortem.</pre>
+      <ul>
+        <li>Multiple lenses independently assess the trade-off.</li>
+        <li>The council distinguishes urgency, reversibility, execution cost, and political pressure.</li>
+        <li>The chairman gives a calibrated recommendation and preserves dissent.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>4. Create Evidence</h2>
+      <p>Use <a href="../test-drive/">Test Drive</a> to design the smallest credible evidence loop.</p>
+      <pre>Use Test Drive to design the smallest credible test for whether onboarding complexity is the real problem. Include evidence type, smallest credible test, artifact needed, connector path, approval gate, support signals, weaken signals, and learning loop.</pre>
+      <ul>
+        <li>The skill identifies the evidence type.</li>
+        <li>It proposes a small test and names connector needs or manual fallbacks.</li>
+        <li>It defines what would support, weaken, or change the plan.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>What This Shows</h2>
+      <p>The bundle is not a chain of prompts. It is a judgment loop: make context readable, keep reasoning honest, deliberate consequential trade-offs, and create evidence before commitment. Use the smallest part of the loop that matches the situation.</p>
+    </section>
+  </main>
+</body>
+</html>

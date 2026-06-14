@@ -6,6 +6,10 @@ This catalog is built around judgment infrastructure for human-led AI work: orga
 
 Read the short thesis: [Judgment Infrastructure for Human-Led AI](https://glichtenthal.github.io/agent-skills/manifesto/)
 
+Start with the guided workflow: [Start Here](https://glichtenthal.github.io/agent-skills/start-here/)
+
+See the full loop in one scenario: [Judgment Infrastructure Demo](https://glichtenthal.github.io/agent-skills/demo/) ([Markdown source](examples/judgment-infrastructure-demo.md))
+
 ## Start here
 
 | If you have... | Use... |
@@ -23,8 +27,9 @@ Read the short thesis: [Judgment Infrastructure for Human-Led AI](https://glicht
 
 Turn messy context into a brief you can think with.
 
-- Install: https://github.com/glichtenthal/briefing-room/releases/download/v1.0/briefing-room.skill
+- Install: https://github.com/glichtenthal/briefing-room/releases/download/v1.1/briefing-room.skill
 - Best for: messy notes, transcripts, research dumps, meeting context, customer feedback, and personal sensemaking.
+- Quick demo: https://github.com/glichtenthal/briefing-room/blob/main/examples/quick-demo.md
 
 ### [Ground Truth](https://github.com/glichtenthal/ground-truth)
 
@@ -32,8 +37,9 @@ Turn messy context into a brief you can think with.
 
 Calibrated honesty and anti-sycophancy for plans, decisions, reviews, and ideas.
 
-- Install: https://github.com/glichtenthal/ground-truth/releases/download/v1.0/ground-truth.skill
+- Install: https://github.com/glichtenthal/ground-truth/releases/download/v1.1/ground-truth.skill
 - Best for: pressure-testing ideas, reviewing work, avoiding easy validation.
+- Quick demo: https://github.com/glichtenthal/ground-truth/blob/main/examples/quick-demo.md
 
 ### [The Quorum](https://github.com/glichtenthal/the-quorum)
 
@@ -41,8 +47,9 @@ Calibrated honesty and anti-sycophancy for plans, decisions, reviews, and ideas.
 
 A five-member expert council that pressure-tests consequential decisions.
 
-- Install: https://github.com/glichtenthal/the-quorum/releases/download/v1.0/the-quorum.skill
+- Install: https://github.com/glichtenthal/the-quorum/releases/download/v1.1/the-quorum.skill
 - Best for: strategy calls, hiring decisions, build-vs-buy choices, and other consequential trade-offs.
+- Quick demo: https://github.com/glichtenthal/the-quorum/blob/main/examples/quick-demo.md
 
 ### [Test Drive](https://github.com/glichtenthal/test-drive)
 
@@ -50,8 +57,9 @@ A five-member expert council that pressure-tests consequential decisions.
 
 Test an idea before you trust it.
 
-- Install: https://github.com/glichtenthal/test-drive/releases/download/v1.3/test-drive.skill
+- Install: https://github.com/glichtenthal/test-drive/releases/download/v1.4/test-drive.skill
 - Best for: testing ideas, messages, prompts, skills, strategies, decisions, and data claims before overcommitting.
+- Quick demo: https://github.com/glichtenthal/test-drive/blob/main/examples/quick-demo.md
 
 ## Compatibility
 

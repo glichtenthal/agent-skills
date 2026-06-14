@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Start Here | Judgment Infrastructure for Human-Led AI</title>
+  <meta name="description" content="A practical workflow for using The Briefing Room, Ground Truth, The Quorum, and Test Drive as judgment infrastructure for human-led AI work.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://glichtenthal.github.io/agent-skills/start-here/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Start Here: Judgment Infrastructure for Human-Led AI">
+  <meta property="og:description" content="Use four portable agent skills to organize messy context, pressure-test thinking, deliberate decisions, and create evidence before commitment.">
+  <meta property="og:url" content="https://glichtenthal.github.io/agent-skills/start-here/">
+  <meta property="og:image" content="https://glichtenthal.github.io/agent-skills/assets/catalog-social-preview.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://glichtenthal.github.io/agent-skills/start-here/#page",
+          "url": "https://glichtenthal.github.io/agent-skills/start-here/",
+          "name": "Start Here: Judgment Infrastructure for Human-Led AI",
+          "description": "A practical workflow for using four portable agent skills to support human judgment.",
+          "isPartOf": {
+            "@id": "https://glichtenthal.github.io/agent-skills/#website"
+          }
+        },
+        {
+          "@type": "HowTo",
+          "@id": "https://glichtenthal.github.io/agent-skills/start-here/#howto",
+          "name": "How to use judgment infrastructure skills",
+          "description": "A four-step workflow for human-led AI judgment work.",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "name": "Make the mess legible",
+              "text": "Use The Briefing Room to turn scattered context into a structured brief."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Challenge the thinking",
+              "text": "Use Ground Truth to identify weak assumptions, missing evidence, and counterarguments."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Deliberate the decision",
+              "text": "Use The Quorum when the choice has real trade-offs and needs multiple expert lenses."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Create evidence",
+              "text": "Use Test Drive to design the smallest credible test before commitment."
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #f6f8fb;
+      --ink: #102033;
+      --muted: #526070;
+      --line: #d9e1ea;
+      --panel: #ffffff;
+      --navy: #0b1f3a;
+      --cyan: #74e6ff;
+      --lime: #e2f075;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    main {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 52px 0 64px;
+    }
+    a { color: inherit; }
+    .crumb {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 750;
+    }
+    header {
+      display: grid;
+      gap: 16px;
+      max-width: 820px;
+      margin: 28px 0 34px;
+    }
+    h1, h2, h3, p { margin: 0; }
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4.3rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+    header p, .lead {
+      color: var(--muted);
+      font-size: 1.12rem;
+      max-width: 720px;
+    }
+    .actions, .prompt-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      padding: 10px 14px;
+      text-decoration: none;
+      font-weight: 850;
+    }
+    .button.primary {
+      background: var(--navy);
+      color: var(--cyan);
+    }
+    .button.secondary {
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+    .panel, .step, .path-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+    .panel {
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 22px 0 28px;
+    }
+    .step {
+      display: grid;
+      gap: 8px;
+      padding: 18px;
+    }
+    .step span {
+      width: 34px;
+      height: 34px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--navy);
+      color: var(--lime);
+      font-weight: 900;
+    }
+    .step p, .path-card p, .panel p, li {
+      color: var(--muted);
+    }
+    .paths {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .path-card {
+      padding: 18px;
+    }
+    .path-card h3 {
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+    }
+    pre {
+      margin: 16px 0 0;
+      overflow-x: auto;
+      border-radius: 8px;
+      background: #0c2038;
+      color: #e9f7ff;
+      padding: 16px;
+      font-size: 0.94rem;
+      line-height: 1.45;
+      white-space: pre-wrap;
+    }
+    ul {
+      margin: 12px 0 0;
+      padding-left: 20px;
+    }
+    footer {
+      color: var(--muted);
+      margin-top: 28px;
+    }
+    @media (max-width: 760px) {
+      main { width: min(100% - 28px, 640px); padding-top: 34px; }
+      .flow, .paths { grid-template-columns: 1fr; }
+      h1 { font-size: 2.05rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="crumb" href="../">← Agent skills catalog</a>
+    <header>
+      <h1>Start With the Mess</h1>
+      <p>Judgment infrastructure works best as a loop: make messy context legible, challenge the thinking, deliberate the hard call, then create evidence before commitment.</p>
+      <div class="actions">
+        <a class="button primary" href="../demo/">See the full demo</a>
+        <a class="button secondary" href="../manifesto/">Read the thesis</a>
+      </div>
+    </header>
+
+    <section class="panel" aria-labelledby="first-use">
+      <h2 id="first-use">First Use in Three Minutes</h2>
+      <p class="lead">Pick the thing closest to what you have right now. You do not need to use every skill every time.</p>
+      <div class="paths">
+        <article class="path-card">
+          <h3>I have scattered notes or context.</h3>
+          <p>Start with The Briefing Room. It turns fragments into a brief you can think with.</p>
+          <pre>Use The Briefing Room on this messy context. Separate facts, claims, assumptions, tensions, open questions, and the best next use.</pre>
+        </article>
+        <article class="path-card">
+          <h3>I have a plan that sounds plausible.</h3>
+          <p>Start with Ground Truth. It challenges the plan before polish becomes false confidence.</p>
+          <pre>Use Ground Truth on this plan. Identify the weakest assumption, strongest counterargument, missing evidence, and what I should do before committing.</pre>
+        </article>
+        <article class="path-card">
+          <h3>I have a consequential decision.</h3>
+          <p>Start with The Quorum. It preserves disagreement and makes trade-offs visible.</p>
+          <pre>Use The Quorum on this decision. Convene the council, preserve disagreement, and give me a calibrated recommendation with a pre-mortem.</pre>
+        </article>
+        <article class="path-card">
+          <h3>I have an idea that needs evidence.</h3>
+          <p>Start with Test Drive. It designs the smallest credible test before you overcommit.</p>
+          <pre>Use Test Drive on this idea. Identify the evidence type, smallest credible test, artifact needed, connector path, approval gate, and learning loop.</pre>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="loop">
+      <h2 id="loop">The Judgment Loop</h2>
+      <div class="flow">
+        <article class="step">
+          <span>1</span>
+          <h3>Brief</h3>
+          <p><a href="../briefing-room/">The Briefing Room</a> separates the known, claimed, assumed, tense, unresolved, and useful.</p>
+        </article>
+        <article class="step">
+          <span>2</span>
+          <h3>Critique</h3>
+          <p><a href="../ground-truth/">Ground Truth</a> names the weakest assumption, strongest counterargument, and missing evidence.</p>
+        </article>
+        <article class="step">
+          <span>3</span>
+          <h3>Deliberate</h3>
+          <p><a href="../the-quorum/">The Quorum</a> convenes multiple lenses when the decision has real trade-offs.</p>
+        </article>
+        <article class="step">
+          <span>4</span>
+          <h3>Test</h3>
+          <p><a href="../test-drive/">Test Drive</a> turns a plausible idea, claim, or decision into an evidence-seeking trial.</p>
+        </article>
+      </div>
+      <p>You can enter the loop anywhere. A clean brief may go straight to action. A high-stakes decision may need The Quorum. A claim that only needs evidence can go directly to Test Drive.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="who">
+      <h2 id="who">Who This Helps</h2>
+      <ul>
+        <li>Founders and operators turning noisy context into decisions.</li>
+        <li>Product and strategy teams pressure-testing plans before roadmap commitment.</li>
+        <li>Researchers and analysts separating evidence from interpretation.</li>
+        <li>Writers and creators testing whether an idea, message, or argument actually lands.</li>
+        <li>Job seekers and career changers organizing context before consequential choices.</li>
+      </ul>
+    </section>
+
+    <footer>
+      Built for human-led AI work: clearer context, sharper critique, better decisions, and evidence before commitment.
+    </footer>
+  </main>
+</body>
+</html>

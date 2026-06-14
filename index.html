@@ -57,6 +57,12 @@
           },
           "hasPart": [
             {
+              "@id": "https://glichtenthal.github.io/agent-skills/start-here/#page"
+            },
+            {
+              "@id": "https://glichtenthal.github.io/agent-skills/demo/#article"
+            },
+            {
               "@id": "https://glichtenthal.github.io/agent-skills/briefing-room/#skill"
             },
             {
@@ -99,6 +105,26 @@
           ]
         },
         {
+          "@type": "WebPage",
+          "@id": "https://glichtenthal.github.io/agent-skills/start-here/#page",
+          "name": "Start Here: Judgment Infrastructure for Human-Led AI",
+          "description": "A practical workflow for using The Briefing Room, Ground Truth, The Quorum, and Test Drive as judgment infrastructure for human-led AI work.",
+          "url": "https://glichtenthal.github.io/agent-skills/start-here/",
+          "isPartOf": {
+            "@id": "https://glichtenthal.github.io/agent-skills/#website"
+          }
+        },
+        {
+          "@type": "Article",
+          "@id": "https://glichtenthal.github.io/agent-skills/demo/#article",
+          "headline": "Judgment Infrastructure Demo",
+          "description": "A concrete demo showing how The Briefing Room, Ground Truth, The Quorum, and Test Drive work together on one strategic decision.",
+          "url": "https://glichtenthal.github.io/agent-skills/demo/",
+          "author": {
+            "@id": "https://glichtenthal.github.io/agent-skills/#person"
+          }
+        },
+        {
           "@type": "Article",
           "@id": "https://glichtenthal.github.io/agent-skills/manifesto/#article",
           "headline": "Judgment Infrastructure for Human-Led AI",
@@ -121,7 +147,7 @@
           "license": "https://github.com/glichtenthal/briefing-room/blob/main/LICENSE",
           "keywords": "ai skill, codex skill, claude skill, sensemaking, messy notes, research synthesis, meeting brief",
           "runtimePlatform": "Claude, Codex",
-          "downloadUrl": "https://github.com/glichtenthal/briefing-room/releases/download/v1.0/briefing-room.skill"
+          "downloadUrl": "https://github.com/glichtenthal/briefing-room/releases/download/v1.1/briefing-room.skill"
         },
         {
           "@type": "SoftwareSourceCode",
@@ -136,7 +162,7 @@
           "license": "https://github.com/glichtenthal/ground-truth/blob/main/LICENSE",
           "keywords": "ai skill, codex skill, claude skill, critical thinking, anti sycophancy, review, calibrated honesty",
           "runtimePlatform": "Claude, Codex",
-          "downloadUrl": "https://github.com/glichtenthal/ground-truth/releases/download/v1.0/ground-truth.skill"
+          "downloadUrl": "https://github.com/glichtenthal/ground-truth/releases/download/v1.1/ground-truth.skill"
         },
         {
           "@type": "SoftwareSourceCode",
@@ -151,7 +177,7 @@
           "license": "https://github.com/glichtenthal/the-quorum/blob/main/LICENSE",
           "keywords": "ai skill, codex skill, claude skill, decision support, strategy, deliberation, build vs buy",
           "runtimePlatform": "Claude, Codex",
-          "downloadUrl": "https://github.com/glichtenthal/the-quorum/releases/download/v1.0/the-quorum.skill"
+          "downloadUrl": "https://github.com/glichtenthal/the-quorum/releases/download/v1.1/the-quorum.skill"
         },
         {
           "@type": "SoftwareSourceCode",
@@ -166,7 +192,7 @@
           "license": "https://github.com/glichtenthal/test-drive/blob/main/LICENSE",
           "keywords": "ai skill, codex skill, claude skill, evidence design, idea validation, test ideas, data analysis, regression, connector path",
           "runtimePlatform": "Claude, Codex",
-          "downloadUrl": "https://github.com/glichtenthal/test-drive/releases/download/v1.3/test-drive.skill"
+          "downloadUrl": "https://github.com/glichtenthal/test-drive/releases/download/v1.4/test-drive.skill"
         },
         {
           "@type": "FAQPage",
@@ -377,6 +403,11 @@
       color: var(--ink);
     }
 
+    a.button.primary {
+      background: var(--ground);
+      color: var(--cyan);
+    }
+
     footer {
       margin-top: 30px;
       color: var(--muted);
@@ -509,6 +540,8 @@
       <h1>Judgment Infrastructure for <span class="no-wrap">Human-Led AI</span></h1>
       <p>Portable agent skills by Greg Lichtenthal for people who want AI to strengthen human creativity, judgment, agency, and evidence-seeking action.</p>
       <div class="actions">
+        <a class="button primary" href="start-here/">Start here</a>
+        <a class="button secondary" href="demo/">See a full demo</a>
         <a class="button secondary" href="manifesto/">Read the thesis</a>
       </div>
     </header>
@@ -559,6 +592,10 @@
           <span>Test Drive creates evidence</span>
         </article>
       </div>
+      <div class="actions">
+        <a class="button secondary" href="start-here/">Use the guided workflow</a>
+        <a class="button secondary" href="demo/">Open the flagship demo</a>
+      </div>
     </section>
 
     <section class="grid" aria-label="Agent skills">
@@ -574,7 +611,7 @@
           <p>Turn messy context into a brief you can think with.</p>
           <div class="actions">
             <a class="button secondary" href="briefing-room/">Learn more</a>
-            <a class="button primary" href="https://github.com/glichtenthal/briefing-room/releases/download/v1.0/briefing-room.skill">Install skill</a>
+            <a class="button primary" href="https://github.com/glichtenthal/briefing-room/releases/download/v1.1/briefing-room.skill">Install skill</a>
             <a class="button secondary" href="https://github.com/glichtenthal/briefing-room">View repo</a>
           </div>
         </div>
@@ -592,7 +629,7 @@
           <p>Calibrated honesty and anti-sycophancy for plans, decisions, reviews, and ideas.</p>
           <div class="actions">
             <a class="button secondary" href="ground-truth/">Learn more</a>
-            <a class="button primary" href="https://github.com/glichtenthal/ground-truth/releases/download/v1.0/ground-truth.skill">Install skill</a>
+            <a class="button primary" href="https://github.com/glichtenthal/ground-truth/releases/download/v1.1/ground-truth.skill">Install skill</a>
             <a class="button secondary" href="https://github.com/glichtenthal/ground-truth">View repo</a>
           </div>
         </div>
@@ -610,7 +647,7 @@
           <p>A five-member expert council that pressure-tests consequential decisions.</p>
           <div class="actions">
             <a class="button secondary" href="the-quorum/">Learn more</a>
-            <a class="button primary" href="https://github.com/glichtenthal/the-quorum/releases/download/v1.0/the-quorum.skill">Install skill</a>
+            <a class="button primary" href="https://github.com/glichtenthal/the-quorum/releases/download/v1.1/the-quorum.skill">Install skill</a>
             <a class="button secondary" href="https://github.com/glichtenthal/the-quorum">View repo</a>
           </div>
         </div>
@@ -628,7 +665,7 @@
           <p>Test an idea, claim, or decision before trusting it.</p>
           <div class="actions">
             <a class="button secondary" href="test-drive/">Learn more</a>
-            <a class="button primary" href="https://github.com/glichtenthal/test-drive/releases/download/v1.3/test-drive.skill">Install skill</a>
+            <a class="button primary" href="https://github.com/glichtenthal/test-drive/releases/download/v1.4/test-drive.skill">Install skill</a>
             <a class="button secondary" href="https://github.com/glichtenthal/test-drive">View repo</a>
           </div>
         </div>
