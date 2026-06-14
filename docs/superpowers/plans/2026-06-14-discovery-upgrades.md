@@ -47,7 +47,7 @@
 
 ### Task 4: Verification
 
-- [ ] Validate HTML pages, JSON-LD, sitemap, and internal assets.
-- [ ] Push the new awesome repo to GitHub.
-- [ ] Commit and push catalog/profile updates.
-- [ ] Verify live GitHub Pages and repository metadata.
+- [x] Validate HTML pages, JSON-LD, sitemap, and internal assets.
+- [x] Push the new awesome repo to GitHub.
+- [x] Commit and push catalog/profile updates.
+- [x] Verify live GitHub Pages and repository metadata.
