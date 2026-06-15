@@ -18,11 +18,11 @@
   <rect x="118" y="478" width="358" height="54" rx="27" fill="#E2F075"/>
   <text x="146" y="514" fill="#0B1F3A" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800">Claude + Codex agent skill</text>
   <g opacity="0.55">
-    <line x1="782" y1="348" x2="1138" y2="348" stroke="#8AB4F8" stroke-width="2"/>
-    <line x1="782" y1="394" x2="1138" y2="394" stroke="#8AB4F8" stroke-width="2"/>
-    <line x1="782" y1="440" x2="1138" y2="440" stroke="#8AB4F8" stroke-width="2"/>
-    <circle cx="814" cy="348" r="10" fill="#E2F075"/>
-    <circle cx="960" cy="394" r="10" fill="#E2F075"/>
-    <circle cx="1092" cy="440" r="10" fill="#E2F075"/>
+    <line x1="824" y1="372" x2="1138" y2="372" stroke="#8AB4F8" stroke-width="2"/>
+    <line x1="824" y1="418" x2="1138" y2="418" stroke="#8AB4F8" stroke-width="2"/>
+    <line x1="824" y1="464" x2="1138" y2="464" stroke="#8AB4F8" stroke-width="2"/>
+    <circle cx="856" cy="372" r="10" fill="#E2F075"/>
+    <circle cx="1002" cy="418" r="10" fill="#E2F075"/>
+    <circle cx="1092" cy="464" r="10" fill="#E2F075"/>
   </g>
 </svg>
