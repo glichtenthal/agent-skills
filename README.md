@@ -61,7 +61,7 @@ A five-member expert council that pressure-tests consequential decisions.
 
 Test an idea before you trust it.
 
-- Install: https://github.com/glichtenthal/test-drive/releases/download/v1.4/test-drive.skill
+- Install: https://github.com/glichtenthal/test-drive/releases/download/v1.5/test-drive.skill
 - Best for: testing ideas, messages, prompts, skills, strategies, decisions, and data claims before overcommitting.
 - Quick demo: https://github.com/glichtenthal/test-drive/blob/main/examples/quick-demo.md
 
