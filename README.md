@@ -16,12 +16,14 @@ Awesome list: [awesome-judgment-infrastructure](https://github.com/glichtenthal/
 
 ## Start here
 
-| If you have... | Use... |
-| --- | --- |
-| Messy notes, transcripts, research, or context | [The Briefing Room](https://github.com/glichtenthal/briefing-room) |
-| A claim, plan, draft, or idea that needs honest critique | [Ground Truth](https://github.com/glichtenthal/ground-truth) |
-| A consequential decision with real trade-offs | [The Quorum](https://github.com/glichtenthal/the-quorum) |
-| An idea, claim, or decision that needs a small test before commitment | [Test Drive](https://github.com/glichtenthal/test-drive) |
+You do not need the full loop every time. Start with the part that matches what you have.
+
+| If you have... | Use... | Output |
+| --- | --- | --- |
+| Messy notes, transcripts, research, or context | [The Briefing Room](https://github.com/glichtenthal/briefing-room) | A brief you can think with |
+| A claim, plan, draft, or idea that needs honest critique | [Ground Truth](https://github.com/glichtenthal/ground-truth) | Weak assumptions, missing evidence, and sharper next steps |
+| A consequential decision with real trade-offs | [The Quorum](https://github.com/glichtenthal/the-quorum) | Structured disagreement and a calibrated recommendation |
+| An idea, claim, or decision that needs proof before commitment | [Test Drive](https://github.com/glichtenthal/test-drive) | The smallest credible test and the signal that would change your mind |
 
 ## Skills
 

@@ -169,6 +169,42 @@
       gap: 14px;
       margin-top: 16px;
     }
+    .choice-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+    .choice-table th,
+    .choice-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    .choice-table th {
+      background: #eef4fb;
+      color: var(--ink);
+      font-size: 0.86rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    .choice-table td {
+      color: var(--muted);
+    }
+    .choice-table td a {
+      color: var(--ink);
+      font-weight: 850;
+    }
+    .choice-table tr:last-child td {
+      border-bottom: 0;
+    }
+    .prompt-heading {
+      margin-top: 24px;
+    }
     .path-card {
       padding: 18px;
     }
@@ -198,6 +234,38 @@
     @media (max-width: 760px) {
       main { width: min(100% - 28px, 640px); padding-top: 34px; }
       .flow, .paths { grid-template-columns: 1fr; }
+      .choice-table,
+      .choice-table thead,
+      .choice-table tbody,
+      .choice-table tr,
+      .choice-table th,
+      .choice-table td {
+        display: block;
+      }
+      .choice-table thead {
+        display: none;
+      }
+      .choice-table td {
+        border-bottom: 0;
+        padding: 10px 14px;
+      }
+      .choice-table td::before {
+        content: attr(data-label);
+        display: block;
+        margin-bottom: 2px;
+        color: var(--ink);
+        font-size: 0.78rem;
+        font-weight: 850;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+      .choice-table tr {
+        border-bottom: 1px solid var(--line);
+        padding: 6px 0;
+      }
+      .choice-table tr:last-child {
+        border-bottom: 0;
+      }
       h1 { font-size: 2.05rem; }
     }
   </style>
@@ -217,6 +285,38 @@
     <section class="panel" aria-labelledby="first-use">
       <h2 id="first-use">First Use in Three Minutes</h2>
       <p class="lead">Pick the thing closest to what you have right now. You do not need to use every skill every time.</p>
+      <table class="choice-table">
+        <thead>
+          <tr>
+            <th>If you have</th>
+            <th>Start with</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="If you have">Scattered notes, transcripts, research, or context</td>
+            <td data-label="Start with"><a href="../briefing-room/">The Briefing Room</a></td>
+            <td data-label="Output">A brief you can think with</td>
+          </tr>
+          <tr>
+            <td data-label="If you have">A claim, plan, draft, or idea that needs honest critique</td>
+            <td data-label="Start with"><a href="../ground-truth/">Ground Truth</a></td>
+            <td data-label="Output">Weak assumptions, missing evidence, and sharper next steps</td>
+          </tr>
+          <tr>
+            <td data-label="If you have">A consequential decision with real trade-offs</td>
+            <td data-label="Start with"><a href="../the-quorum/">The Quorum</a></td>
+            <td data-label="Output">Structured disagreement and a calibrated recommendation</td>
+          </tr>
+          <tr>
+            <td data-label="If you have">An idea, claim, or decision that needs proof before commitment</td>
+            <td data-label="Start with"><a href="../test-drive/">Test Drive</a></td>
+            <td data-label="Output">The smallest credible test and the signal that would change your mind</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 class="prompt-heading">Copy/paste starts</h3>
       <div class="paths">
         <article class="path-card">
           <h3>I have scattered notes or context.</h3>
