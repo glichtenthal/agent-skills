@@ -14,6 +14,20 @@ Browse practical use cases: [Product Strategy](https://glichtenthal.github.io/ag
 
 Awesome list: [awesome-judgment-infrastructure](https://github.com/glichtenthal/awesome-judgment-infrastructure)
 
+## Install the full suite for Codex
+
+The suite installer downloads the pinned stable release of all four skills into Codex's current user-skills directory:
+
+```bash
+git clone https://github.com/glichtenthal/agent-skills.git
+cd agent-skills
+bash install.sh --target codex
+```
+
+Use `--dry-run` to preview the installation, `--update` to replace existing copies, or `--skill the-quorum` to install one skill. Run `bash install.sh --help` for all options.
+
+For ChatGPT or Claude, import each `.skill` release through the product's Skills settings. The shell installer is for Codex.
+
 ## Start here
 
 You do not need the full loop every time. Start with the part that matches what you have.
