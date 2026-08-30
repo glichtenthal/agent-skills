@@ -49,10 +49,10 @@ trap cleanup EXIT HUP INT TERM
 
 skill_ref() {
   case "$1" in
-    briefing-room) printf '%s\n' 'v1.2' ;;
+    briefing-room) printf '%s\n' 'v1.2.1' ;;
     ground-truth) printf '%s\n' 'v1.2' ;;
-    the-quorum) printf '%s\n' 'v1.4' ;;
-    test-drive) printf '%s\n' 'v1.6' ;;
+    the-quorum) printf '%s\n' 'v1.4.1' ;;
+    test-drive) printf '%s\n' 'v1.6.1' ;;
     *) return 1 ;;
   esac
 }

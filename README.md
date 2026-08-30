@@ -47,7 +47,7 @@ You do not need the full loop every time. Start with the part that matches what 
 
 Turn messy context into a brief you can think with.
 
-- Install: https://github.com/glichtenthal/briefing-room/releases/download/v1.2/briefing-room.skill
+- Install: https://github.com/glichtenthal/briefing-room/releases/download/v1.2.1/briefing-room.skill
 - Best for: messy notes, transcripts, research dumps, meeting context, customer feedback, and personal sensemaking.
 - Quick demo: https://github.com/glichtenthal/briefing-room/blob/main/examples/quick-demo.md
 
@@ -67,7 +67,7 @@ Calibrated honesty and anti-sycophancy for plans, decisions, reviews, and ideas.
 
 A five-member expert council that pressure-tests consequential decisions.
 
-- Install: https://github.com/glichtenthal/the-quorum/releases/download/v1.4/the-quorum.skill
+- Install: https://github.com/glichtenthal/the-quorum/releases/download/v1.4.1/the-quorum.skill
 - Best for: strategy calls, hiring decisions, build-vs-buy choices, and other consequential trade-offs.
 - Quick demo: https://github.com/glichtenthal/the-quorum/blob/main/examples/quick-demo.md
 
@@ -77,7 +77,7 @@ A five-member expert council that pressure-tests consequential decisions.
 
 Test an idea before you trust it.
 
-- Install: https://github.com/glichtenthal/test-drive/releases/download/v1.6/test-drive.skill
+- Install: https://github.com/glichtenthal/test-drive/releases/download/v1.6.1/test-drive.skill
 - Best for: testing ideas, messages, prompts, skills, strategies, decisions, and data claims before overcommitting.
 - Quick demo: https://github.com/glichtenthal/test-drive/blob/main/examples/quick-demo.md
 
