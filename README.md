@@ -67,7 +67,7 @@ Calibrated honesty and anti-sycophancy for plans, decisions, reviews, and ideas.
 
 A five-member expert council that pressure-tests consequential decisions.
 
-- Install: https://github.com/glichtenthal/the-quorum/releases/download/v1.3/the-quorum.skill
+- Install: https://github.com/glichtenthal/the-quorum/releases/download/v1.4/the-quorum.skill
 - Best for: strategy calls, hiring decisions, build-vs-buy choices, and other consequential trade-offs.
 - Quick demo: https://github.com/glichtenthal/the-quorum/blob/main/examples/quick-demo.md
 

@@ -51,7 +51,7 @@ skill_ref() {
   case "$1" in
     briefing-room) printf '%s\n' 'v1.2' ;;
     ground-truth) printf '%s\n' 'v1.2' ;;
-    the-quorum) printf '%s\n' 'v1.3' ;;
+    the-quorum) printf '%s\n' 'v1.4' ;;
     test-drive) printf '%s\n' 'v1.6' ;;
     *) return 1 ;;
   esac
