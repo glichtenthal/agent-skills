@@ -66,9 +66,11 @@ add_skill() {
   local existing
 
   is_known_skill "$requested" || fail "Unknown skill '$requested'."
-  for existing in "${selected_skills[@]}"; do
-    [ "$existing" = "$requested" ] && return
-  done
+  if [ "${#selected_skills[@]}" -gt 0 ]; then
+    for existing in "${selected_skills[@]}"; do
+      [ "$existing" = "$requested" ] && return
+    done
+  fi
   selected_skills+=("$requested")
 }
 
