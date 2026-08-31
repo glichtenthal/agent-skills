@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Building Partner</title>
+  <desc id="desc">A portable operating skill for human-led AI builds.</desc>
+  <rect width="1200" height="630" fill="#101820"/>
+  <rect x="72" y="72" width="1056" height="486" rx="28" fill="#17232d" stroke="#5ed2b8" stroke-width="3"/>
+  <g transform="translate(112 134)">
+    <rect x="0" y="0" width="92" height="92" rx="20" fill="#5ed2b8"/>
+    <path d="M25 48h42M46 27v42" stroke="#101820" stroke-width="10" stroke-linecap="round"/>
+    <text x="0" y="190" fill="#f7f4ea" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="700">BUILDING PARTNER</text>
+    <text x="0" y="265" fill="#b8c7cf" font-family="Inter, Arial, sans-serif" font-size="38">Human-led AI builds</text>
+    <text x="0" y="340" fill="#5ed2b8" font-family="Inter, Arial, sans-serif" font-size="28">VISIBLE CHOICES  •  EXPLICIT APPROVALS  •  VERIFIED RESULTS</text>
+  </g>
+</svg>

@@ -24,7 +24,7 @@ cd agent-skills
 bash install.sh --target codex
 ```
 
-Use `--dry-run` to preview the installation, `--update` to replace existing copies, or `--skill the-quorum` to install one skill. Run `bash install.sh --help` for all options.
+Use `--dry-run` to preview the installation, `--update` to replace existing copies, or `--skill the-quorum` to install one skill. Building Partner is an optional applied skill, so install it explicitly with `bash install.sh --skill building-partner`. Run `bash install.sh --help` for all options.
 
 For ChatGPT or Claude, import each `.skill` release through the product's Skills settings. The shell installer is for Codex.
 
@@ -91,3 +91,25 @@ These skills are designed for Claude and Codex-style agent workflows. Each repos
 - **Ground Truth** pressure-tests the brief, claim, plan, or draft.
 - **The Quorum** convenes multiple expert lenses for consequential decisions.
 - **Test Drive** turns ideas, claims, and decisions into small evidence-seeking trials.
+
+**Ready to build?** [Building Partner](https://github.com/glichtenthal/building-partner) carries the work into implementation.
+
+## Applied Judgment Systems
+
+Applied Judgment Systems carry human-led judgment into a particular domain or stage of work. Some are portable skills, while others are complete applications.
+
+### [Building Partner](https://github.com/glichtenthal/building-partner)
+
+![Building Partner preview](assets/building-partner-social-preview.svg)
+
+A portable operating skill for planning and building apps, prototypes, automations, integrations, and other technical workflows.
+
+Use it independently whenever AI is helping you build something. It can also follow the judgment loop, carrying clarified context, tested assumptions, and accepted decisions into implementation with visible trade-offs, explicit approvals, and verification against the real use case.
+
+- Install: https://github.com/glichtenthal/building-partner/releases/download/v1.0.0/building-partner.skill
+- Best for: human-led AI builds where data, cost, security, portability, deployment, or maintenance choices matter.
+- Quick demo: https://github.com/glichtenthal/building-partner/blob/main/examples/quick-demo.md
+
+### [Media, Tech & AI Executive Recruiter GPT](https://chatgpt.com/g/g-69c612c858188191a9d6d98fddd5b5b6-media-tech-ai-executive-recruiter)
+
+A domain-specific application of the same judgment-first principles for recruiter-style coaching across media, technology, ad-tech, and AI business-side roles.

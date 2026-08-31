@@ -77,6 +77,9 @@
             },
             {
               "@id": "https://glichtenthal.github.io/agent-skills/test-drive/#skill"
+            },
+            {
+              "@id": "https://glichtenthal.github.io/agent-skills/building-partner/#skill"
             }
           ]
         },
@@ -84,7 +87,7 @@
           "@type": "ItemList",
           "@id": "https://glichtenthal.github.io/agent-skills/#itemlist",
           "name": "Agent skills catalog",
-          "numberOfItems": 4,
+          "numberOfItems": 5,
           "itemListElement": [
             {
               "@type": "ListItem",
@@ -105,6 +108,11 @@
               "@type": "ListItem",
               "position": 4,
               "url": "https://glichtenthal.github.io/agent-skills/test-drive/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "url": "https://glichtenthal.github.io/agent-skills/building-partner/"
             }
           ]
         },
@@ -207,6 +215,21 @@
           "keywords": "ai skill, codex skill, claude skill, evidence design, idea validation, test ideas, data analysis, regression, connector path",
           "runtimePlatform": "Claude, Codex",
           "downloadUrl": "https://github.com/glichtenthal/test-drive/releases/download/v1.6.1/test-drive.skill"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "@id": "https://glichtenthal.github.io/agent-skills/building-partner/#skill",
+          "name": "Building Partner",
+          "description": "A portable operating skill for human-led AI builds.",
+          "url": "https://glichtenthal.github.io/agent-skills/building-partner/",
+          "codeRepository": "https://github.com/glichtenthal/building-partner",
+          "author": {
+            "@id": "https://glichtenthal.github.io/agent-skills/#person"
+          },
+          "license": "https://github.com/glichtenthal/building-partner/blob/main/LICENSE",
+          "keywords": "ai skill, codex skill, claude skill, human-led ai, software development, prototyping, automation, decision records",
+          "runtimePlatform": "Claude, ChatGPT, Codex, Town, Replit",
+          "downloadUrl": "https://github.com/glichtenthal/building-partner/releases/download/v1.0.0/building-partner.skill"
         },
         {
           "@type": "FAQPage",
@@ -410,6 +433,11 @@
     .test a.button.primary {
       background: var(--test);
       color: var(--test-accent);
+    }
+
+    .building a.button.primary {
+      background: #17232d;
+      color: #5ed2b8;
     }
 
     a.button.secondary {
@@ -617,6 +645,7 @@
         <a class="button secondary" href="start-here/">Use the guided workflow</a>
         <a class="button secondary" href="demo/">Open the flagship demo</a>
       </div>
+      <p class="workflow-intro"><strong>Ready to build?</strong> <a href="building-partner/">Building Partner</a> carries the work into implementation.</p>
     </section>
 
     <section class="start" aria-labelledby="use-cases-heading">
@@ -715,6 +744,44 @@
       </article>
     </section>
 
+    <section class="start" aria-labelledby="applied-heading">
+      <h2 id="applied-heading">Applied Judgment Systems</h2>
+      <p class="workflow-intro">Applied Judgment Systems carry human-led judgment into a particular domain or stage of work. Some are portable skills, while others are complete applications.</p>
+      <div class="grid">
+        <article class="skill building">
+          <img src="assets/building-partner-social-preview.svg" alt="Building Partner social preview">
+          <div class="body">
+            <div class="meta">
+              <span class="tag">Portable skill</span>
+              <span class="tag">Human-led builds</span>
+            </div>
+            <h2>Building Partner</h2>
+            <p>A portable operating skill for planning and building apps, prototypes, automations, integrations, and other technical workflows.</p>
+            <p>Use it independently whenever AI is helping you build something, or after the judgment loop to carry clarified context, tested assumptions, and accepted decisions into implementation.</p>
+            <div class="actions">
+              <a class="button secondary" href="building-partner/">Learn more</a>
+              <a class="button primary" href="https://github.com/glichtenthal/building-partner/releases/download/v1.0.0/building-partner.skill">Install skill</a>
+              <a class="button secondary" href="https://github.com/glichtenthal/building-partner">View repo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="skill">
+          <div class="body">
+            <div class="meta">
+              <span class="tag">Complete application</span>
+              <span class="tag">Career judgment</span>
+            </div>
+            <h2>Executive Recruiter GPT</h2>
+            <p>A domain-specific application of the same judgment-first principles for recruiter-style coaching across media, technology, ad-tech, and AI business-side roles.</p>
+            <div class="actions">
+              <a class="button secondary" href="https://chatgpt.com/g/g-69c612c858188191a9d6d98fddd5b5b6-media-tech-ai-executive-recruiter">Open GPT</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="faq" aria-labelledby="faq-heading">
       <h2 id="faq-heading">Frequently Asked Questions</h2>
       <article class="faq-item">
@@ -735,7 +802,7 @@
       </article>
       <article class="faq-item">
         <h3>How do I install these skills in Codex or Claude?</h3>
-        <p>Each skill has a GitHub repository, a release download for the packaged skill, and installation instructions for Claude and Codex. The catalog links directly to all four install files.</p>
+        <p>Each portable skill has a GitHub repository, a release download for the packaged skill, and installation instructions for supported platforms. The four core skills install as a suite; Building Partner installs separately as an optional applied skill.</p>
       </article>
     </section>
 
