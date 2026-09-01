@@ -24,7 +24,7 @@ cd agent-skills
 bash install.sh --target codex
 ```
 
-Use `--dry-run` to preview the installation, `--update` to replace existing copies, or `--skill the-quorum` to install one skill. Building Partner is an optional applied skill, so install it explicitly with `bash install.sh --skill building-partner`. Run `bash install.sh --help` for all options.
+Use `--dry-run` to preview the installation, `--update` to replace existing copies, or `--skill the-quorum` to install one skill. AI Project Steward is an optional applied skill, so install it explicitly with `bash install.sh --skill ai-project-steward`. Run `bash install.sh --help` for all options.
 
 For ChatGPT or Claude, import each `.skill` release through the product's Skills settings. The shell installer is for Codex.
 
@@ -92,18 +92,18 @@ These skills are designed for Claude and Codex-style agent workflows. Each repos
 - **The Quorum** convenes multiple expert lenses for consequential decisions.
 - **Test Drive** turns ideas, claims, and decisions into small evidence-seeking trials.
 
-**Ready to build?** [Building Partner](https://github.com/glichtenthal/building-partner) carries the work into implementation.
+**Ready to build?** [AI Project Steward](https://github.com/glichtenthal/ai-project-steward) carries the work into implementation.
 
 ## Applied Judgment Systems
 
-Applied Judgment Systems carry human-led judgment into a specific domain or stage of work. Building Partner is the first, focused on moving from an idea or decision into implementation.
+Applied Judgment Systems carry human-led judgment into a specific domain or stage of work. AI Project Steward is the first, focused on moving from an idea or decision into implementation.
 
-### [Building Partner](https://github.com/glichtenthal/building-partner)
+### [AI Project Steward](https://github.com/glichtenthal/ai-project-steward)
 
-![Building Partner preview](assets/building-partner-social-preview.svg)
+![AI Project Steward preview](assets/ai-project-steward-social-preview.svg)
 
-A portable skill for apps, prototypes, automations, and integrations. It helps the AI explain consequential choices, ask before risky actions, record accepted decisions, and verify the working result.
+An active AI collaborator for apps, prototypes, automations, and integrations. It keeps consequential choices visible, preserves approval boundaries, records accepted decisions, and verifies the working result.
 
-- Install: https://github.com/glichtenthal/building-partner/releases/download/v1.1.0/building-partner.skill
+- Install: https://github.com/glichtenthal/ai-project-steward/releases/download/v2.0.0/ai-project-steward.skill
 - Best for: human-led AI builds where data, cost, security, portability, deployment, or maintenance choices matter.
-- Quick demo: https://github.com/glichtenthal/building-partner/blob/main/examples/quick-demo.md
+- Quick demo: https://github.com/glichtenthal/ai-project-steward/blob/main/examples/quick-demo.md

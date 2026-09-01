@@ -28,7 +28,8 @@ Options:
 
 Skills:
   Core (installed by default): briefing-room, ground-truth, the-quorum, test-drive
-  Applied (install explicitly): building-partner
+  Applied (install explicitly): ai-project-steward
+  Legacy alias: building-partner
 EOF
 }
 
@@ -54,7 +55,7 @@ skill_ref() {
     ground-truth) printf '%s\n' 'v1.2' ;;
     the-quorum) printf '%s\n' 'v1.4.1' ;;
     test-drive) printf '%s\n' 'v1.6.1' ;;
-    building-partner) printf '%s\n' 'v1.1.0' ;;
+    ai-project-steward) printf '%s\n' 'v2.0.0' ;;
     *) return 1 ;;
   esac
 }
@@ -66,6 +67,11 @@ is_known_skill() {
 add_skill() {
   local requested="$1"
   local existing
+
+  if [ "$requested" = "building-partner" ]; then
+    printf 'Note: building-partner was renamed to ai-project-steward. Installing the new skill.\n' >&2
+    requested='ai-project-steward'
+  fi
 
   is_known_skill "$requested" || fail "Unknown skill '$requested'."
   if [ "${#selected_skills[@]}" -gt 0 ]; then
