@@ -1,47 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">AI Project Steward</title>
-  <desc id="desc">An operating skill for AI-assisted builds that keeps consequential choices, approvals, decisions, and results under human control.</desc>
+  <desc id="desc">Build with AI without giving up control. AI Project Steward surfaces consequential choices, pauses before high-impact actions, records accepted decisions, and verifies the finished result.</desc>
   <rect width="1200" height="630" fill="#EAF3F5"/>
   <circle cx="1092" cy="72" r="118" fill="#D7F0E7"/>
   <circle cx="92" cy="594" r="104" fill="#FAE7AF" opacity="0.72"/>
   <rect x="64" y="54" width="1072" height="522" rx="32" fill="#FFFDF8" stroke="#95CABF" stroke-width="3"/>
 
-  <g transform="translate(106 100)">
-    <rect width="130" height="130" rx="30" fill="#D7F0E7"/>
-    <rect x="22" y="27" width="59" height="68" rx="13" fill="#15243A"/>
-    <rect x="51" y="43" width="59" height="68" rx="13" fill="#38A88F"/>
-    <circle cx="66" cy="67" r="21" fill="#FFFDF8" stroke="#15243A" stroke-width="4"/>
-    <path d="M55 67l8 8 15-18" fill="none" stroke="#0E7C70" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(106 92)">
+    <rect width="112" height="112" rx="27" fill="#D7F0E7"/>
+    <rect x="20" y="23" width="51" height="59" rx="11" fill="#15243A"/>
+    <rect x="45" y="37" width="51" height="59" rx="11" fill="#38A88F"/>
+    <circle cx="58" cy="59" r="19" fill="#FFFDF8" stroke="#15243A" stroke-width="4"/>
+    <path d="M48 59l7 7 14-16" fill="none" stroke="#0E7C70" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
-  <rect x="278" y="94" width="242" height="34" rx="17" fill="#FAE7AF"/>
-  <text x="399" y="117" fill="#704A00" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" letter-spacing="1.4">APPLIED JUDGMENT SYSTEM</text>
-  <text x="278" y="184" fill="#15243A" font-family="Inter, Arial, sans-serif" font-size="61" font-weight="750">AI PROJECT STEWARD</text>
-  <text x="278" y="229" fill="#526070" font-family="Inter, Arial, sans-serif" font-size="25">Build with AI while keeping consequential choices</text>
-  <text x="278" y="263" fill="#526070" font-family="Inter, Arial, sans-serif" font-size="25">and the finished result under human control.</text>
+  <text x="250" y="158" fill="#15243A" font-family="Inter, Arial, sans-serif" font-size="61" font-weight="750">AI PROJECT STEWARD</text>
+  <line x1="106" y1="232" x2="1094" y2="232" stroke="#C8DED9" stroke-width="2"/>
 
-  <g transform="translate(106 342)">
-    <rect width="232" height="142" rx="22" fill="#D7F0E7"/>
-    <text x="24" y="38" fill="#0E7C70" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">01</text>
-    <text x="24" y="82" fill="#15243A" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">VISIBLE</text>
-    <text x="24" y="112" fill="#15243A" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">CHOICES</text>
-  </g>
-  <g transform="translate(348 342)">
-    <rect width="232" height="142" rx="22" fill="#FAE7AF"/>
-    <text x="24" y="38" fill="#8A5D00" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">02</text>
-    <text x="24" y="82" fill="#15243A" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">APPROVAL</text>
-    <text x="24" y="112" fill="#15243A" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">BOUNDARIES</text>
-  </g>
-  <g transform="translate(590 342)">
-    <rect width="232" height="142" rx="22" fill="#DDEAF8"/>
-    <text x="24" y="38" fill="#35699A" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">03</text>
-    <text x="24" y="82" fill="#15243A" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">RECORDED</text>
-    <text x="24" y="112" fill="#15243A" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">DECISIONS</text>
-  </g>
-  <g transform="translate(832 342)">
-    <rect width="232" height="142" rx="22" fill="#F4DAD4"/>
-    <text x="24" y="38" fill="#A85042" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">04</text>
-    <text x="24" y="82" fill="#15243A" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">VERIFIED</text>
-    <text x="24" y="112" fill="#15243A" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">RESULTS</text>
-  </g>
+  <text x="106" y="318" fill="#15243A" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="750">BUILD WITH AI. KEEP CONTROL.</text>
+  <text x="106" y="378" fill="#526070" font-family="Inter, Arial, sans-serif" font-size="25">Explains consequential choices and recommends a practical path.</text>
+  <text x="106" y="416" fill="#526070" font-family="Inter, Arial, sans-serif" font-size="25">Pauses before costly or hard-to-reverse actions, records accepted decisions,</text>
+  <text x="106" y="454" fill="#526070" font-family="Inter, Arial, sans-serif" font-size="25">and verifies the finished result.</text>
+
+  <rect x="106" y="486" width="988" height="52" rx="26" fill="#D7F0E7"/>
+  <text x="600" y="519" fill="#0E6259" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="1.2">APPS  •  PROTOTYPES  •  AUTOMATIONS  •  INTEGRATIONS  •  DEPLOYMENTS</text>
 </svg>
