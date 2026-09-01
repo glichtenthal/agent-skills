@@ -220,7 +220,7 @@
           "@type": "SoftwareSourceCode",
           "@id": "https://glichtenthal.github.io/agent-skills/building-partner/#skill",
           "name": "Building Partner",
-          "description": "A portable operating skill for human-led AI builds.",
+          "description": "A portable skill that helps people plan and build apps, prototypes, automations, and integrations with AI.",
           "url": "https://glichtenthal.github.io/agent-skills/building-partner/",
           "codeRepository": "https://github.com/glichtenthal/building-partner",
           "author": {
@@ -229,7 +229,7 @@
           "license": "https://github.com/glichtenthal/building-partner/blob/main/LICENSE",
           "keywords": "ai skill, codex skill, claude skill, human-led ai, software development, prototyping, automation, decision records",
           "runtimePlatform": "Claude, ChatGPT, Codex, Town, Replit",
-          "downloadUrl": "https://github.com/glichtenthal/building-partner/releases/download/v1.0.0/building-partner.skill"
+          "downloadUrl": "https://github.com/glichtenthal/building-partner/releases/download/v1.1.0/building-partner.skill"
         },
         {
           "@type": "FAQPage",
@@ -436,8 +436,8 @@
     }
 
     .building a.button.primary {
-      background: #17232d;
-      color: #5ed2b8;
+      background: #0b6b5b;
+      color: #ffffff;
     }
 
     a.button.secondary {
@@ -466,6 +466,15 @@
       display: grid;
       gap: 16px;
       margin-bottom: 28px;
+    }
+
+    .applied {
+      margin-top: 52px;
+    }
+
+    .applied-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 760px);
     }
 
     .workflow {
@@ -560,6 +569,10 @@
       .start-grid,
       .workflow-track {
         grid-template-columns: 1fr;
+      }
+
+      .applied {
+        margin-top: 40px;
       }
 
       header {
@@ -744,38 +757,23 @@
       </article>
     </section>
 
-    <section class="start" aria-labelledby="applied-heading">
+    <section class="start applied" aria-labelledby="applied-heading">
       <h2 id="applied-heading">Applied Judgment Systems</h2>
-      <p class="workflow-intro">Applied Judgment Systems carry human-led judgment into a particular domain or stage of work. Some are portable skills, while others are complete applications.</p>
-      <div class="grid">
+      <p class="workflow-intro">Applied Judgment Systems carry human-led judgment into a specific domain or stage of work. Building Partner is the first, focused on moving from an idea or decision into implementation.</p>
+      <div class="applied-grid">
         <article class="skill building">
-          <img src="assets/building-partner-social-preview.svg" alt="Building Partner social preview">
+          <img src="assets/building-partner-social-preview.svg" alt="Building Partner mark and description">
           <div class="body">
             <div class="meta">
               <span class="tag">Portable skill</span>
               <span class="tag">Human-led builds</span>
             </div>
             <h2>Building Partner</h2>
-            <p>A portable operating skill for planning and building apps, prototypes, automations, integrations, and other technical workflows.</p>
-            <p>Use it independently whenever AI is helping you build something, or after the judgment loop to carry clarified context, tested assumptions, and accepted decisions into implementation.</p>
+            <p>A portable skill for apps, prototypes, automations, and integrations. It helps the AI explain consequential choices, ask before risky actions, and verify the working result.</p>
             <div class="actions">
               <a class="button secondary" href="building-partner/">Learn more</a>
-              <a class="button primary" href="https://github.com/glichtenthal/building-partner/releases/download/v1.0.0/building-partner.skill">Install skill</a>
+              <a class="button primary" href="https://github.com/glichtenthal/building-partner/releases/download/v1.1.0/building-partner.skill">Install skill</a>
               <a class="button secondary" href="https://github.com/glichtenthal/building-partner">View repo</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="skill">
-          <div class="body">
-            <div class="meta">
-              <span class="tag">Complete application</span>
-              <span class="tag">Career judgment</span>
-            </div>
-            <h2>Executive Recruiter GPT</h2>
-            <p>A domain-specific application of the same judgment-first principles for recruiter-style coaching across media, technology, ad-tech, and AI business-side roles.</p>
-            <div class="actions">
-              <a class="button secondary" href="https://chatgpt.com/g/g-69c612c858188191a9d6d98fddd5b5b6-media-tech-ai-executive-recruiter">Open GPT</a>
             </div>
           </div>
         </article>

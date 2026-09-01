@@ -54,7 +54,7 @@ skill_ref() {
     ground-truth) printf '%s\n' 'v1.2' ;;
     the-quorum) printf '%s\n' 'v1.4.1' ;;
     test-drive) printf '%s\n' 'v1.6.1' ;;
-    building-partner) printf '%s\n' 'v1.0.0' ;;
+    building-partner) printf '%s\n' 'v1.1.0' ;;
     *) return 1 ;;
   esac
 }

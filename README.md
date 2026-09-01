@@ -96,20 +96,14 @@ These skills are designed for Claude and Codex-style agent workflows. Each repos
 
 ## Applied Judgment Systems
 
-Applied Judgment Systems carry human-led judgment into a particular domain or stage of work. Some are portable skills, while others are complete applications.
+Applied Judgment Systems carry human-led judgment into a specific domain or stage of work. Building Partner is the first, focused on moving from an idea or decision into implementation.
 
 ### [Building Partner](https://github.com/glichtenthal/building-partner)
 
 ![Building Partner preview](assets/building-partner-social-preview.svg)
 
-A portable operating skill for planning and building apps, prototypes, automations, integrations, and other technical workflows.
+A portable skill for apps, prototypes, automations, and integrations. It helps the AI explain consequential choices, ask before risky actions, record accepted decisions, and verify the working result.
 
-Use it independently whenever AI is helping you build something. It can also follow the judgment loop, carrying clarified context, tested assumptions, and accepted decisions into implementation with visible trade-offs, explicit approvals, and verification against the real use case.
-
-- Install: https://github.com/glichtenthal/building-partner/releases/download/v1.0.0/building-partner.skill
+- Install: https://github.com/glichtenthal/building-partner/releases/download/v1.1.0/building-partner.skill
 - Best for: human-led AI builds where data, cost, security, portability, deployment, or maintenance choices matter.
 - Quick demo: https://github.com/glichtenthal/building-partner/blob/main/examples/quick-demo.md
-
-### [Media, Tech & AI Executive Recruiter GPT](https://chatgpt.com/g/g-69c612c858188191a9d6d98fddd5b5b6-media-tech-ai-executive-recruiter)
-
-A domain-specific application of the same judgment-first principles for recruiter-style coaching across media, technology, ad-tech, and AI business-side roles.
