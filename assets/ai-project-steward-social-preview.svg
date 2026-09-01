@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">AI Project Steward</title>
-  <desc id="desc">Build with AI without giving up control. AI Project Steward surfaces consequential choices, pauses before high-impact actions, records accepted decisions, and verifies the finished result.</desc>
+  <desc id="desc">Strengthen AI builds through better human-AI collaboration. Your AI co-builder surfaces consequential choices, explains realistic options, preserves approval boundaries, records decisions, and verifies the finished result.</desc>
   <rect width="1200" height="630" fill="#EAF3F5"/>
   <circle cx="1092" cy="72" r="118" fill="#D7F0E7"/>
   <circle cx="92" cy="594" r="104" fill="#FAE7AF" opacity="0.72"/>
@@ -17,10 +17,10 @@
   <text x="250" y="158" fill="#15243A" font-family="Inter, Arial, sans-serif" font-size="61" font-weight="750">AI PROJECT STEWARD</text>
   <line x1="106" y1="232" x2="1094" y2="232" stroke="#C8DED9" stroke-width="2"/>
 
-  <text x="106" y="318" fill="#15243A" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="750">BUILD WITH AI. KEEP CONTROL.</text>
-  <text x="106" y="378" fill="#526070" font-family="Inter, Arial, sans-serif" font-size="25">Explains consequential choices and recommends a practical path.</text>
-  <text x="106" y="416" fill="#526070" font-family="Inter, Arial, sans-serif" font-size="25">Pauses before costly or hard-to-reverse actions, records accepted decisions,</text>
-  <text x="106" y="454" fill="#526070" font-family="Inter, Arial, sans-serif" font-size="25">and verifies the finished result.</text>
+  <text x="106" y="296" fill="#15243A" font-family="Inter, Arial, sans-serif" font-size="43" font-weight="750">STRENGTHEN AI BUILDS THROUGH</text>
+  <text x="106" y="348" fill="#15243A" font-family="Inter, Arial, sans-serif" font-size="43" font-weight="750">BETTER HUMAN-AI COLLABORATION.</text>
+  <text x="106" y="402" fill="#526070" font-family="Inter, Arial, sans-serif" font-size="24">Your AI co-builder surfaces consequential choices, explains realistic options,</text>
+  <text x="106" y="440" fill="#526070" font-family="Inter, Arial, sans-serif" font-size="24">preserves approval boundaries, records decisions, and verifies the finished result.</text>
 
   <rect x="106" y="486" width="988" height="52" rx="26" fill="#D7F0E7"/>
   <text x="600" y="519" fill="#0E6259" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="1.2">APPS  •  PROTOTYPES  •  AUTOMATIONS  •  INTEGRATIONS  •  DEPLOYMENTS</text>
