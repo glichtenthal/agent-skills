@@ -24,7 +24,7 @@ cd agent-skills
 bash install.sh --target codex
 ```
 
-Use `--dry-run` to preview the installation, `--update` to replace existing copies, or `--skill the-quorum` to install one skill. AI Project Steward is an optional applied skill, so install it explicitly with `bash install.sh --skill ai-project-steward`. Run `bash install.sh --help` for all options.
+Use `--dry-run` to preview the installation, `--update` to replace existing copies, or `--skill the-quorum` to install one skill. AI Project Steward installs separately from the four-part judgment suite and is recommended for people who regularly build with AI; install it with `bash install.sh --skill ai-project-steward`. Run `bash install.sh --help` for all options.
 
 For ChatGPT or Claude, import each `.skill` release through the product's Skills settings. The shell installer is for Codex.
 
@@ -92,18 +92,21 @@ These skills are designed for Claude and Codex-style agent workflows. Each repos
 - **The Quorum** convenes multiple expert lenses for consequential decisions.
 - **Test Drive** turns ideas, claims, and decisions into small evidence-seeking trials.
 
-**Ready to build?** [AI Project Steward](https://github.com/glichtenthal/ai-project-steward) carries the work into implementation.
+**Ready to build?** [AI Project Steward](https://github.com/glichtenthal/ai-project-steward) helps the human and AI manage the build as a whole, from visible choices and approvals through decision continuity and verification.
 
 ## Applied Judgment Systems
 
-Applied Judgment Systems carry human-led judgment into a specific domain or stage of work. AI Project Steward is the first, focused on moving from an idea or decision into implementation.
+Applied Judgment Systems carry human-led judgment into a specific domain or stage of work.
 
 ### [AI Project Steward](https://github.com/glichtenthal/ai-project-steward)
 
 ![AI Project Steward preview](assets/ai-project-steward-social-preview.svg)
 
-An active AI collaborator for apps, prototypes, automations, and integrations. It keeps consequential choices visible, preserves approval boundaries, records accepted decisions, and verifies the working result.
+A clear operating layer for visibility, guidance, approval, continuity, and verification throughout an AI-assisted build.
 
-- Install: https://github.com/glichtenthal/ai-project-steward/releases/download/v2.0.0/ai-project-steward.skill
+Use it independently or as the human-led governance and verification layer within a broader AI build harness. It complements the model, tools, runtime, project context, and platform mechanics rather than replacing them.
+
+- Install: https://github.com/glichtenthal/ai-project-steward/releases/latest
 - Best for: human-led AI builds where data, cost, security, portability, deployment, or maintenance choices matter.
-- Quick demo: https://github.com/glichtenthal/ai-project-steward/blob/main/examples/quick-demo.md
+- Four scenarios: https://github.com/glichtenthal/ai-project-steward/tree/main/examples
+- Evaluation evidence: https://github.com/glichtenthal/ai-project-steward/tree/main/evals
