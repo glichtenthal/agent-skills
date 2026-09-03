@@ -60,7 +60,8 @@
     h1, h2, h3, p { margin: 0; }
     .crumb { display: inline-flex; align-items: center; color: var(--muted); font-size: .93rem; font-weight: 750; text-decoration: none; }
     .crumb:hover { color: var(--brand-deep); }
-    .eyebrow { display: inline-flex; width: fit-content; padding: 5px 8px; border: 1px solid #c6d4ca; border-radius: 4px; background: transparent; color: var(--brand-deep); font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+    /* Keep every outlined label at the catalog-wide compact scale; section copy must not resize it. */
+    .eyebrow { display: inline-flex; width: fit-content; padding: 5px 8px; border: 1px solid #c6d4ca; border-radius: 4px; background: transparent; color: var(--brand-deep); font-size: .72rem !important; font-weight: 700; letter-spacing: .09em; line-height: 1.2 !important; text-transform: uppercase; }
     .hero { display: grid; grid-template-columns: 1fr; align-items: center; margin-top: 28px; padding: clamp(28px, 5vw, 58px) 2px clamp(30px, 5vw, 54px); }
     .hero-copy { display: grid; gap: 18px; max-width: 760px; }
     h1 { max-width: 620px; color: var(--headline-accent); font-size: clamp(2.1rem, 4.8vw, 4.2rem); font-weight: 600; letter-spacing: -.015em; line-height: .98; }

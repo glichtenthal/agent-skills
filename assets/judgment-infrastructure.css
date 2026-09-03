@@ -98,10 +98,11 @@ h3, strong { color: var(--ink); }
   border: 1px solid #c6d4ca;
   border-radius: 4px;
   color: var(--brand-deep);
-  font-size: .72rem;
+  /* Labels remain a compact, shared component even inside a locally styled section. */
+  font-size: .72rem !important;
   font-weight: 700;
   letter-spacing: .09em;
-  line-height: 1.2;
+  line-height: 1.2 !important;
   text-transform: uppercase;
 }
 
