@@ -84,7 +84,8 @@
     .section { margin-top: clamp(56px, 7vw, 80px); }
     .section-intro { display: grid; gap: 14px; max-width: 760px; }
     .section-intro h2 { color: var(--headline-accent); font-size: clamp(2rem, 4vw, 3.1rem); font-weight: 650; letter-spacing: -.045em; line-height: 1.04; }
-    .section-intro p { color: var(--muted); font-size: 1.05rem; }
+    /* Section copy is larger; the compact outlined label above it is not. */
+    .section-intro p:not(.eyebrow) { color: var(--muted); font-size: 1.05rem; }
     .flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; margin-top: 36px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
     .flow-step { min-width: 0; padding: 26px 22px 28px; border-left: 1px solid var(--line); }
     .flow-step:first-child { border-left: 0; }
@@ -110,7 +111,8 @@
     .harness-intro { display: grid; gap: 16px; }
     .harness h2 { color: var(--headline-accent); font-size: clamp(1.75rem, 3vw, 2.45rem); font-weight: 650; letter-spacing: -.045em; line-height: 1.04; }
     .harness-copy { display: grid; gap: 16px; }
-    .harness p { color: #49655b; font-size: 1.07rem; }
+    /* Harness copy is larger; preserve the catalog-wide label token for its eyebrow. */
+    .harness p:not(.eyebrow) { color: #49655b; font-size: 1.07rem; }
     .install { display: grid; grid-template-columns: 1fr auto; gap: 30px; align-items: end; padding: 32px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
     .install h2 { color: var(--headline-accent); font-size: 1.75rem; font-weight: 650; letter-spacing: -.035em; }
     .install p { max-width: 720px; margin-top: 9px; color: var(--muted); }
