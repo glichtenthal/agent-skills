@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:opsz,wght@14..32,400..700&display=swap");
+
+:root {
+  color-scheme: light;
+  --page: #fbf8f2;
+  --canvas: #fbf8f2;
+  --panel: #fffdf8;
+  --surface: #fffdf8;
+  --surface-soft: #edf2ec;
+  --white: #fffdf8;
+  --ink: #1c2b34;
+  --muted: #68716f;
+  --line: #dadbd2;
+  --brand: #3f6a5b;
+  --brand-deep: #2f5146;
+  --headline-accent: #005fcc;
+  --navy: #3f6a5b;
+  --ground: #3f6a5b;
+  --briefing: #3f6a5b;
+  --quorum: #3f6a5b;
+  --test: #3f6a5b;
+  --accent: #3f6a5b;
+  --cyan: #ffffff;
+  --lime: #ffffff;
+  --briefing-accent: #ffffff;
+  --test-accent: #ffffff;
+  --shadow: 0 12px 30px rgba(38, 52, 46, .055);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--page);
+  color: var(--ink);
+  font-family: "Instrument Sans", "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+}
+
+/* The hub is a system overview; detail pages retain the warmer porcelain canvas. */
+body.catalog-hub {
+  --page: #f3f6f7;
+  --canvas: #f3f6f7;
+}
+
+a { text-underline-offset: 3px; }
+
+/* Text links share one readable treatment; buttons and navigation retain their own affordances. */
+a:not(.button):not(.crumb):not(.evidence-card):not(.back) {
+  color: var(--brand-deep);
+  font-weight: 600;
+  letter-spacing: 0;
+  text-decoration-thickness: 1.25px;
+  text-underline-offset: 3px;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--headline-accent) !important;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px var(--headline-accent) !important;
+}
+
+main { padding-bottom: clamp(64px, 8vw, 104px); }
+
+main > header,
+main > .hero {
+  margin-top: 28px;
+  margin-bottom: clamp(42px, 6vw, 76px);
+  padding: clamp(28px, 5vw, 58px) 0 clamp(30px, 5vw, 54px);
+}
+
+h1 {
+  color: var(--headline-accent);
+  font-weight: 600;
+  letter-spacing: -.015em;
+}
+
+h2 {
+  color: var(--headline-accent);
+  font-weight: 600;
+  letter-spacing: -.01em;
+}
+
+h3, strong { color: var(--ink); }
+
+.crumb {
+  display: inline-flex;
+  align-items: center;
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.crumb:hover { color: var(--brand-deep); }
+
+.eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  padding: 5px 8px;
+  border: 1px solid #c6d4ca;
+  border-radius: 4px;
+  color: var(--brand-deep);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.mechanism {
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 620;
+  letter-spacing: -.008em;
+  line-height: 1.7;
+}
+
+.button,
+a.button {
+  border-radius: 6px;
+  font-weight: 650;
+  transition: background .18s ease, border-color .18s ease, color .18s ease, transform .18s ease;
+}
+
+.button:hover,
+a.button:hover { transform: translateY(-1px); }
+
+.button.primary,
+a.button.primary,
+.briefing a.button.primary,
+.ground a.button.primary,
+.quorum a.button.primary,
+.test a.button.primary,
+.steward a.button.primary {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #ffffff;
+  box-shadow: 0 6px 14px rgba(48, 81, 70, .13);
+}
+
+.button.primary:hover,
+a.button.primary:hover,
+.briefing a.button.primary:hover,
+.ground a.button.primary:hover,
+.quorum a.button.primary:hover,
+.test a.button.primary:hover,
+.steward a.button.primary:hover { background: var(--brand-deep); border-color: var(--brand-deep); }
+
+.button.secondary,
+a.button.secondary {
+  background: var(--panel);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+.button.secondary:hover,
+a.button.secondary:hover {
+  background: var(--surface-soft);
+  border-color: #a9c8bd;
+}
+
+.card,
+.skill,
+.route,
+.step,
+.panel,
+.path-card,
+.section,
+.faq-item,
+.example-box,
+.callout {
+  background: var(--panel);
+  border-color: var(--line);
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.callout { border-left-color: var(--brand); }
+
+.tag {
+  border-color: #cbd6cc;
+  color: var(--brand-deep);
+}
+
+.catalog-hub .tag.compatibility {
+  border-color: #a9c8bd;
+  background: #f0f7f3;
+  color: var(--brand-deep);
+}
+
+.choice-table th { background: var(--surface-soft); }
+
+pre {
+  background: var(--brand-deep);
+  color: #f7f4ee;
+}
+
+.scenario {
+  background: var(--brand-deep);
+  border-color: var(--brand-deep);
+}
+
+.scenario p { color: #e1eee5; }
+
+.step span {
+  background: transparent;
+  color: var(--muted);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.45;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}

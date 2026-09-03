@@ -43,15 +43,17 @@
     header p, .card p { color:var(--muted); }
     .grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:16px; }
     .card { border:1px solid var(--line); border-radius:8px; background:var(--panel); padding:22px; display:grid; gap:10px; }
-    .card a { font-weight:850; }
+    .card h2 > a { font-weight:600; letter-spacing:0; text-decoration-thickness:1.25px; text-underline-offset:3px; }
     .button { display:inline-flex; min-height:44px; align-items:center; justify-content:center; border-radius:6px; padding:10px 14px; text-decoration:none; font-weight:850; background:var(--navy); color:var(--cyan); width:max-content; }
     @media (max-width:760px) { main { width:min(100% - 28px, 640px); padding-top:34px; } .grid { grid-template-columns:1fr; } h1 { font-size:2.05rem; } }
   </style>
+  <link rel="stylesheet" href="../assets/judgment-infrastructure.css?v=20260903-link-system">
 </head>
 <body>
   <main>
     <a class="crumb" href="../">← Agent skills catalog</a>
     <header>
+      <p class="eyebrow">Judgment in practice</p>
       <h1>Use Cases</h1>
       <p>Start from the situation you actually have: a product bet, founder decision, research pile, or career choice. Each path shows how the skills help you organize context, challenge thinking, deliberate trade-offs, and create evidence.</p>
       <a class="button" href="../start-here/">Start with the workflow</a>

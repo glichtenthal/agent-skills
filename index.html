@@ -228,7 +228,7 @@
           },
           "license": "https://github.com/glichtenthal/ai-project-steward/blob/main/LICENSE",
           "keywords": "ai skill, codex skill, claude skill, human-led ai, software development, prototyping, automation, decision records",
-          "runtimePlatform": "Claude, ChatGPT, Codex, Town, Replit",
+          "runtimePlatform": "Claude, ChatGPT, Codex, Replit",
           "downloadUrl": "https://github.com/glichtenthal/ai-project-steward/releases/latest/download/ai-project-steward.skill"
         },
         {
@@ -469,8 +469,8 @@
     }
 
     .applied {
-      margin-top: 72px;
-      padding-top: 42px;
+      margin-top: 48px;
+      padding-top: 30px;
       border-top: 1px solid var(--line);
     }
 
@@ -574,8 +574,8 @@
       }
 
       .applied {
-        margin-top: 52px;
-        padding-top: 34px;
+        margin-top: 40px;
+        padding-top: 26px;
       }
 
       header {
@@ -596,12 +596,15 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="assets/judgment-infrastructure.css?v=20260903-link-system">
 </head>
-<body>
+<body class="catalog-hub">
   <main>
     <header>
+      <p class="eyebrow">Portable judgment infrastructure</p>
       <h1>Judgment Infrastructure for <span class="no-wrap">Human-Led AI</span></h1>
-      <p>Portable agent skills by Greg Lichtenthal for people who want AI to strengthen human creativity, judgment, agency, and evidence-seeking action.</p>
+      <p>Portable agent skills that help people keep context, critique, trade-offs, and evidence visible while working with AI.</p>
+      <p class="mechanism">Make the context legible. Challenge the thinking. Deliberate consequential choices. Create evidence before commitment.</p>
       <div class="actions">
         <a class="button primary" href="start-here/">Start here</a>
         <a class="button secondary" href="use-cases/">Use cases</a>
@@ -633,8 +636,9 @@
     </section>
 
     <section class="workflow" aria-labelledby="workflow-heading">
+      <p class="eyebrow">A repeatable operating flow</p>
       <h2 id="workflow-heading">The Judgment Loop</h2>
-      <p class="workflow-intro">You do not need the full loop every time. Start with the part that matches what you have: messy context, a claim to test, a consequential decision, or an idea that needs evidence.</p>
+      <p class="workflow-intro">You do not need the full loop every time. Start with the part that matches what you have, then carry accepted context into the next judgment move.</p>
       <div class="workflow-track">
         <article class="step">
           <strong>Mess</strong>
@@ -661,7 +665,7 @@
         <a class="button secondary" href="start-here/">Use the guided workflow</a>
         <a class="button secondary" href="demo/">Open the flagship demo</a>
       </div>
-      <p class="workflow-intro"><strong>Ready to build?</strong> <a href="ai-project-steward/">AI Project Steward</a> helps the human and AI manage the build as a whole—from visible choices and approvals through decision continuity and verification.</p>
+      <p class="workflow-intro"><strong>Ready to build?</strong> <a href="ai-project-steward/">AI Project Steward</a> carries the work into implementation with visible choices, clear approval boundaries, recorded decisions, and verified results.</p>
     </section>
 
     <section class="start" aria-labelledby="use-cases-heading">
@@ -688,11 +692,10 @@
 
     <section class="grid" aria-label="Agent skills">
       <article class="skill briefing">
-        <img src="assets/briefing-room-social-preview.svg" alt="The Briefing Room social preview">
+        <img src="assets/briefing-room-social-preview.svg?v=20260903" alt="The Briefing Room social preview">
         <div class="body">
           <div class="meta">
-            <span class="tag">Claude</span>
-            <span class="tag">Codex</span>
+            <span class="tag compatibility">Works with Claude + Codex</span>
             <span class="tag">Sensemaking</span>
           </div>
           <h2>The Briefing Room</h2>
@@ -706,11 +709,10 @@
       </article>
 
       <article class="skill ground">
-        <img src="assets/ground-truth-social-preview.svg" alt="Ground Truth social preview">
+        <img src="assets/ground-truth-social-preview.svg?v=20260903" alt="Ground Truth social preview">
         <div class="body">
           <div class="meta">
-            <span class="tag">Claude</span>
-            <span class="tag">Codex</span>
+            <span class="tag compatibility">Works with Claude + Codex</span>
             <span class="tag">Critical thinking</span>
           </div>
           <h2>Ground Truth</h2>
@@ -724,11 +726,10 @@
       </article>
 
       <article class="skill quorum">
-        <img src="assets/quorum-social-preview.svg" alt="The Quorum social preview">
+        <img src="assets/quorum-social-preview.svg?v=20260903" alt="The Quorum social preview">
         <div class="body">
           <div class="meta">
-            <span class="tag">Claude</span>
-            <span class="tag">Codex</span>
+            <span class="tag compatibility">Works with Claude + Codex</span>
             <span class="tag">Decision support</span>
           </div>
           <h2>The Quorum</h2>
@@ -742,11 +743,10 @@
       </article>
 
       <article class="skill test">
-        <img src="assets/test-drive-social-preview.svg" alt="Test Drive social preview">
+        <img src="assets/test-drive-social-preview.svg?v=20260903" alt="Test Drive social preview">
         <div class="body">
           <div class="meta">
-            <span class="tag">Claude</span>
-            <span class="tag">Codex</span>
+            <span class="tag compatibility">Works with Claude + Codex</span>
             <span class="tag">Evidence design</span>
           </div>
           <h2>Test Drive</h2>
@@ -770,12 +770,13 @@
             <div class="meta">
               <span class="tag">Portable operating skill</span>
               <span class="tag">Human-led builds</span>
+              <span class="tag compatibility">Works with Claude, ChatGPT, Codex + Replit</span>
             </div>
             <h2>AI Project Steward</h2>
             <p>Stronger human–AI collaboration across the whole build, with visible choices, realistic guidance, clear approval boundaries, recorded decisions, and verified results.</p>
             <div class="actions">
               <a class="button secondary" href="ai-project-steward/">Learn more</a>
-              <a class="button primary" href="https://github.com/glichtenthal/ai-project-steward/releases/latest">Review and install</a>
+              <a class="button primary" href="https://github.com/glichtenthal/ai-project-steward/releases/latest">Review latest release</a>
               <a class="button secondary" href="https://github.com/glichtenthal/ai-project-steward">View repo</a>
             </div>
           </div>
