@@ -80,6 +80,8 @@ h2 {
   letter-spacing: -.01em;
 }
 
+h1, h2 { text-wrap: balance; }
+
 h3, strong { color: var(--ink); }
 
 .crumb {
