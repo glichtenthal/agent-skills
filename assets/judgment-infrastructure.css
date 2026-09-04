@@ -63,9 +63,9 @@ main { padding-bottom: clamp(64px, 8vw, 104px); }
 
 main > header,
 main > .hero {
-  margin-top: 22px;
-  margin-bottom: clamp(28px, 4vw, 48px);
-  padding: clamp(20px, 3vw, 34px) 0 clamp(18px, 3vw, 28px);
+  margin-top: 16px;
+  margin-bottom: clamp(18px, 3vw, 34px);
+  padding: clamp(14px, 2vw, 24px) 0 clamp(12px, 2vw, 20px);
 }
 
 h1 {
