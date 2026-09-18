@@ -1,0 +1,13 @@
+{
+  "name": "production-frontend-engineer",
+  "version": "1.3.1",
+  "status": "stable",
+  "date": "2026-09-18",
+  "source": {
+    "authoring_location": "GTM Agent OS Project/plugins/gtm-product-experience/skills/production-frontend-engineer",
+    "base_plugin_version": "1.3.0"
+  },
+  "skill_sha256": "180c7aa9942bcc94d9dcd066e4b65dd634331e72e847cc4f3d955ed88c1e20f6",
+  "validation_scope": "Bounded evaluation of unchanged candidate instructions: Codex local build with 10 local and 15 browser checks; Claude Cowork build with 19 passing checks and native browser zoom not run after application fixes; fresh-session continuity with 7 focused passes and a 19-pass suite rerun. Saved evidence and selected cases independently inspected. One prompted project, no controlled baseline or proof of automatic routing. Screen-reader behavior and other browser engines untested. Claude after-work skill hashes were not retained. Validation applies to the unchanged candidate instruction payload; publication and installation receipts are maintained separately.",
+  "promoted_from": "1.3.1-rc.1"
+}

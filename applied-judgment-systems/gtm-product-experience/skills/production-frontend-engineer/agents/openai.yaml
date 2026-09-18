@@ -1,0 +1,4 @@
+interface:
+  display_name: "Production Frontend Engineer"
+  short_description: "Build and verify production-ready interfaces"
+  default_prompt: "Use $production-frontend-engineer to implement and verify this approved product experience."

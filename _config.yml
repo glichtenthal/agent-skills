@@ -1,0 +1,3 @@
+# Keep packaged skill documentation out of the rendered Pages site.
+exclude:
+  - applied-judgment-systems
