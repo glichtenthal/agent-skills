@@ -58,3 +58,13 @@
 - **Recommendation:** Prepare the tested instructions unchanged, with version metadata and bounded evidence.
 - **Consequences:** Preserves tested behavior; source publication and installation remain separate steps. Local changes can be discarded before publication.
 - **Reconsider when:** Review finds a source conflict or repeated real-world failures justify a focused instruction change.
+
+## 2026-09-18 — Retain MIT and clarify skill licensing at the catalog root
+
+- **Status:** Accepted
+- **Context:** Employer sharing raised questions about commercial reuse and creator attribution. The three product development skills already ship under MIT with Greg Lichtenthal copyright notices.
+- **Options considered:** Retain MIT and clarify its scope; change future releases to a restrictive license; apply a blanket license across the catalog.
+- **Decision:** Retain MIT for the three skills and add a root README licensing section linking their existing licenses. The user approved retaining MIT and the recommended clarification. Do not extend these licenses to unrelated catalog content.
+- **Rationale:** Preserve easy workplace adoption and accurately explain the requirement to retain notices without promising prominent public credit.
+- **Consequences and trade-offs:** Commercial redistribution remains permitted. No skill instructions or release archives change. Editing this documentation cannot revoke permissions already granted under MIT.
+- **Reconsider when:** New releases introduce material whose ownership or licensing differs, or a separate decision is made to license the whole catalog.

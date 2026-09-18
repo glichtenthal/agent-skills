@@ -123,3 +123,15 @@ Two complementary skills work alongside AI Project Steward:
 Install all three for the combined workflow; use the roles each task needs. A narrow frontend fix does not require a new design cycle.
 
 [Install the product development skills](applied-judgment-systems/README.md)
+
+## Licensing and attribution
+
+The three product development skills are MIT-licensed, with copyright notices naming Greg Lichtenthal:
+
+- [AI Project Steward license](https://github.com/glichtenthal/ai-project-steward/blob/main/LICENSE)
+- [Product Design Director license](applied-judgment-systems/gtm-product-experience/skills/product-design-director/LICENSE)
+- [Production Frontend Engineer license](applied-judgment-systems/gtm-product-experience/skills/production-frontend-engineer/LICENSE)
+
+MIT permits personal and commercial use, modification, and redistribution, including within an employer's teams. Copies or substantial portions must retain the applicable copyright and license notices. MIT does not require prominent creator credit in a product or marketing, and does not require private modifications to be published.
+
+For other skills linked from this catalog, consult the license in the corresponding repository or release. These skill licenses do not establish a blanket license for every catalog page, asset, or external resource.
