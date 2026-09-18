@@ -14,9 +14,9 @@ Browse practical use cases: [Product Strategy](https://glichtenthal.github.io/ag
 
 Awesome list: [awesome-judgment-infrastructure](https://github.com/glichtenthal/awesome-judgment-infrastructure)
 
-## Install the full suite for Codex
+## Install the four core skills for Codex
 
-The suite installer downloads the pinned stable release of all four skills into Codex's current user-skills directory:
+The suite installer downloads the pinned stable release of the four core judgment skills into Codex's current user-skills directory:
 
 ```bash
 git clone https://github.com/glichtenthal/agent-skills.git
@@ -27,6 +27,8 @@ bash install.sh --target codex
 Use `--dry-run` to preview the installation, `--update` to replace existing copies, or `--skill the-quorum` to install one skill. AI Project Steward installs separately from the four-part judgment suite and is recommended for people who regularly build with AI; install it with `bash install.sh --skill ai-project-steward`. Run `bash install.sh --help` for all options.
 
 For ChatGPT or Claude, import each `.skill` release through the product's Skills settings. The shell installer is for Codex.
+
+For Product Design Director and Production Frontend Engineer alongside Steward, use the separate [product development installation guide](applied-judgment-systems/README.md).
 
 ## Start here
 
@@ -113,4 +115,11 @@ Use it independently or as the human-led governance and verification layer withi
 
 ### Product design and frontend engineering
 
-[Product development skills](applied-judgment-systems/README.md) pairs Product Design Director and Production Frontend Engineer with AI Project Steward for scoped product definition, visual critique, implementation, and verification.
+Two complementary skills work alongside AI Project Steward:
+
+- **[Product Design Director](applied-judgment-systems/gtm-product-experience/skills/product-design-director/)** defines the product experience, workflows, interaction design, and visual direction, then critiques the rendered result.
+- **[Production Frontend Engineer](applied-judgment-systems/gtm-product-experience/skills/production-frontend-engineer/)** implements the interface and checks its behavior, visual fidelity, and technical readiness.
+
+Install all three for the combined workflow; use the roles each task needs. A narrow frontend fix does not require a new design cycle.
+
+[Install the product development skills](applied-judgment-systems/README.md)

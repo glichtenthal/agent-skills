@@ -10,6 +10,20 @@ Use three complementary skills for product work:
 
 Install all three for the combined workflow; invoke the roles relevant to each task. A narrow frontend fix does not require a new design cycle. Design Craft is not a separate dependency.
 
+## Install
+
+Download the three individual skill ZIPs:
+
+- [AI Project Steward 2.1.2](https://github.com/glichtenthal/ai-project-steward/releases/download/v2.1.2/ai-project-steward-2.1.2.zip)
+- [Product Design Director 1.3.1](https://github.com/glichtenthal/agent-skills/releases/download/product-experience-v1.3.1/product-design-director-1.3.1.zip)
+- [Production Frontend Engineer 1.3.1](https://github.com/glichtenthal/agent-skills/releases/download/product-experience-v1.3.1/production-frontend-engineer-1.3.1.zip)
+
+**Claude:** Upload each ZIP through your account's Skills settings, enable all three, and start a fresh chat. Chat attachments alone do not install skills. Replace older copies of these skills; no separate Design Craft installation is needed.
+
+**Codex:** Use your skill installer with the linked skill folders above and Steward's canonical repository. The catalog shell installer supports Steward separately, but does not install Director or Engineer. If you use the optional GTM Product Experience plugin, it supplies Director and Engineer; install Steward separately and avoid duplicate standalone copies of the same roles.
+
+After installation, ask the agent to confirm the loaded skill names, versions from metadata/release.json, and matching SKILL.md hashes before starting work.
+
 ## Distribution
 
 Stable versions: Steward 2.1.2; Director and Engineer 1.3.1. Individual skill ZIPs contain one named folder with SKILL.md at its root. The optional gtm-product-experience plugin contains only Director and Engineer; install Steward separately. Do not upload the plugin archive as an individual Claude skill. Uploading an archive into a chat does not install it.
