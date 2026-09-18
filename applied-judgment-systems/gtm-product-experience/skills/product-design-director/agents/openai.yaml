@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Design Director"
+  short_description: "Direct cohesive product experience redesigns"
+  default_prompt: "Use $product-design-director to audit this product and define an approved experience direction."

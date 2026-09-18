@@ -49,3 +49,12 @@
 - **Rationale:** The public release should reflect the approved experience and its evidence without exposing internal selection work as accidental product pages.
 - **Consequences and trade-offs:** The public repository stays focused and the design-review artifacts remain available locally. Sharing those comparisons later requires an explicit decision to package or publish them.
 - **Reconsider when:** A deliberate public design-process archive, case study, or contributor workflow calls for those comparison pages.
+
+## 2026-09-18 — Prepare product-development collection
+
+- **Status:** Accepted for publication on 2026-09-18.
+- **Context:** Add a README-linked distribution section for the specialist pair, referencing the existing Steward repository.
+- **Options:** Keep candidates only; publish the tested instructions unchanged; add further speculative instructions.
+- **Recommendation:** Prepare the tested instructions unchanged, with version metadata and bounded evidence.
+- **Consequences:** Preserves tested behavior; source publication and installation remain separate steps. Local changes can be discarded before publication.
+- **Reconsider when:** Review finds a source conflict or repeated real-world failures justify a focused instruction change.

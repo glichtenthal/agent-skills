@@ -110,3 +110,7 @@ Use it independently or as the human-led governance and verification layer withi
 - Best for: human-led AI builds where data, cost, security, portability, deployment, or maintenance choices matter.
 - Four scenarios: https://github.com/glichtenthal/ai-project-steward/tree/main/examples
 - Evaluation evidence: https://github.com/glichtenthal/ai-project-steward/tree/main/evals
+
+### Product design and frontend engineering
+
+[Product development skills](applied-judgment-systems/README.md) pairs Product Design Director and Production Frontend Engineer with AI Project Steward for scoped product definition, visual critique, implementation, and verification.
