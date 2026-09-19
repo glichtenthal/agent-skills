@@ -223,3 +223,37 @@ pre {
     transition-duration: .01ms !important;
   }
 }
+
+/* Product skills share a visual group without implying a required sequence. */
+.product-intro { display: grid; gap: 8px; margin-top: 12px; max-width: 760px; }
+.product-intro h3 { margin: 0; font-size: 1.35rem; font-weight: 600; }
+.product-intro p { color: var(--muted); }
+.product-roles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.product-role { display: flex; flex-direction: column; gap: 16px; min-width: 0; padding: 26px; border: 1px solid var(--line); border-top: 4px solid var(--role-color, #3f6a5b); border-radius: 10px; background: var(--panel); }
+.product-role.director { --role-color: #5367a4; }
+.product-role.engineer { --role-color: #9a6838; }
+.product-role .role-label { margin: 0; color: var(--brand-deep); font-size: .8rem; font-weight: 600; }
+.product-role h2, .product-role h4 { margin: 0; color: var(--headline-accent); font-size: 1.55rem; font-weight: 600; line-height: 1.2; text-wrap: balance; }
+.product-role p { margin: 0; color: var(--muted); }
+.product-role > a { margin-top: auto; padding-top: 8px; }
+.product-role .role-example { border-top: 1px solid var(--line); padding-top: 16px; font-size: .95rem; }
+.product-page { margin: 0; line-height: 1.6; }
+.product-page * { box-sizing: border-box; }
+.product-page main { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding-top: 40px; }
+.product-page header { display: grid; gap: 18px; max-width: 780px; }
+.product-page h1 { margin: 0; font-size: clamp(2.2rem, 4.5vw, 3.6rem); line-height: 1.08; }
+.product-page header > p:not(.eyebrow) { margin: 0; color: var(--muted); font-size: 1.16rem; }
+.product-page .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.product-page a.button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 16px; border: 1px solid var(--line); text-decoration: none; }
+.product-page .product-section { display: grid; gap: 16px; margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--line); }
+.product-page .product-section > p { max-width: 840px; margin: 0; color: var(--muted); }
+.product-page .product-section h2 { margin: 0; font-size: 1.8rem; line-height: 1.2; }
+.product-example { padding: 24px; border-radius: 10px; background: var(--surface-soft); }
+.product-example h3 { margin: 0 0 8px; font-size: 1.1rem; }
+.product-example p { margin: 0; max-width: 840px; }
+.product-page footer { margin-top: 32px; color: var(--muted); font-size: .9rem; }
+.product-role, #product-development, #working-together { scroll-margin-top: 24px; }
+@media (max-width: 900px) {
+  .product-roles { grid-template-columns: 1fr; }
+  .product-role { padding: 22px; }
+}

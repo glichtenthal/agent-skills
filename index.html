@@ -87,7 +87,7 @@
           "@type": "ItemList",
           "@id": "https://glichtenthal.github.io/agent-skills/#itemlist",
           "name": "Agent skills catalog",
-          "numberOfItems": 5,
+          "numberOfItems": 7,
           "itemListElement": [
             {
               "@type": "ListItem",
@@ -113,6 +113,18 @@
               "@type": "ListItem",
               "position": 5,
               "url": "https://glichtenthal.github.io/agent-skills/ai-project-steward/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "name": "Product Design Director",
+              "url": "https://glichtenthal.github.io/agent-skills/product-development/#director"
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "name": "Production Frontend Engineer",
+              "url": "https://glichtenthal.github.io/agent-skills/product-development/#engineer"
             }
           ]
         },
@@ -269,10 +281,10 @@
             },
             {
               "@type": "Question",
-              "name": "How do I install these skills in Codex?",
+              "name": "How do I install these skills in Codex or Claude?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Each skill page links to a GitHub release download and a repository with Codex installation instructions. The catalog also links directly to each installable .skill file."
+                "text": "Install the skills you need using the linked repositories and release packages. The four core judgment skills can be installed individually or as a suite. AI Project Steward, Product Design Director, and Production Frontend Engineer each work independently; install all three if you want the combined product development workflow."
               }
             }
           ]
@@ -598,7 +610,7 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="assets/judgment-infrastructure.css?v=20260903-label-scale">
+  <link rel="stylesheet" href="assets/judgment-infrastructure.css?v=20260919-product-development">
 </head>
 <body class="catalog-hub">
   <main>
@@ -667,7 +679,7 @@
         <a class="button secondary" href="start-here/">Use the guided workflow</a>
         <a class="button secondary" href="demo/">Open the flagship demo</a>
       </div>
-      <p class="workflow-intro"><strong>Ready to build?</strong> <a href="ai-project-steward/">AI Project Steward</a> carries the work into implementation with visible choices, clear approval boundaries, recorded decisions, and verified results.</p>
+      <p class="workflow-intro"><strong>Ready to build?</strong> Explore the <a href="#product-development">product development skills</a> for project stewardship, product design, and frontend implementation. Use each independently or combine them as needed.</p>
     </section>
 
     <section class="start" aria-labelledby="use-cases-heading">
@@ -764,26 +776,39 @@
 
     <section class="start applied" aria-labelledby="applied-heading">
       <h2 id="applied-heading">Applied Judgment Systems</h2>
-      <p class="workflow-intro">Applied Judgment Systems carry human-led judgment into a specific domain or stage of work.</p>
-      <div class="applied-grid">
-        <article class="skill steward">
-          <img src="assets/ai-project-steward-social-preview.svg" alt="AI Project Steward mark and description">
-          <div class="body">
-            <div class="meta">
-              <span class="tag">Portable operating skill</span>
-              <span class="tag">Human-led builds</span>
-              <span class="tag compatibility">Works with Claude, ChatGPT, Codex + Replit</span>
-            </div>
-            <h2>AI Project Steward</h2>
-            <p>Stronger human–AI collaboration across the whole build, with visible choices, realistic guidance, clear approval boundaries, recorded decisions, and verified results.</p>
-            <div class="actions">
-              <a class="button secondary" href="ai-project-steward/">Learn more</a>
-              <a class="button primary" href="https://github.com/glichtenthal/ai-project-steward/releases/latest">Review latest release</a>
-              <a class="button secondary" href="https://github.com/glichtenthal/ai-project-steward">View repo</a>
-            </div>
-          </div>
+      <p class="workflow-intro">These skills and applications bring human-led judgment into a specific kind of work.</p>
+      <div class="product-intro" id="product-development">
+        <h3>Product development</h3>
+        <p>Use any of these three skills on its own, or combine them for a coordinated build. Choose the roles your task needs.</p>
+      </div>
+      <div class="product-roles">
+        <article class="product-role steward">
+          <p class="role-label">Project stewardship</p>
+          <h4>AI Project Steward</h4>
+          <p>Keep decisions, approvals, and project history clear across an AI-assisted build. Check the result against what was agreed.</p>
+
+          <a href="product-development/#steward" aria-label="Explore AI Project Steward">Explore the skill <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="product-role director">
+          <p class="role-label">Product & design</p>
+          <h4>Product Design Director</h4>
+          <p>Define the product experience, workflows, interaction design, and visual direction. Critique the rendered result.</p>
+
+          <a href="product-development/#director" aria-label="Explore Product Design Director">Explore the skill <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="product-role engineer">
+          <p class="role-label">Frontend engineering</p>
+          <h4>Production Frontend Engineer</h4>
+          <p>Implement the interface and check its behavior, visual fidelity, and technical readiness.</p>
+
+          <a href="product-development/#engineer" aria-label="Explore Production Frontend Engineer">Explore the skill <span aria-hidden="true">→</span></a>
         </article>
       </div>
+      <div class="actions">
+        <a class="button primary" href="product-development/">Explore product development</a>
+        <a class="button secondary" href="https://github.com/glichtenthal/agent-skills/tree/main/applied-judgment-systems">Installation instructions</a>
+      </div>
+      <p class="workflow-intro">Steward also supports automations, integrations, and other technical builds. Each skill works independently; using them together does not require separate agents.</p>
     </section>
 
     <section class="faq" aria-labelledby="faq-heading">
@@ -806,7 +831,7 @@
       </article>
       <article class="faq-item">
         <h3>How do I install these skills in Codex or Claude?</h3>
-        <p>Each portable skill has a GitHub repository, a release download, and installation instructions. The four core judgment skills install as a suite. AI Project Steward installs separately and is recommended for people who regularly build apps, prototypes, automations, integrations, or deployments with AI.</p>
+        <p>Install the skills you need using the linked repositories and release packages. The four core judgment skills can be installed individually or as a suite. AI Project Steward, Product Design Director, and Production Frontend Engineer each work independently; install all three if you want the combined product development workflow.</p>
       </article>
     </section>
 

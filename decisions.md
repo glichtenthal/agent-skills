@@ -68,3 +68,12 @@
 - **Rationale:** Preserve easy workplace adoption and accurately explain the requirement to retain notices without promising prominent public credit.
 - **Consequences and trade-offs:** Commercial redistribution remains permitted. No skill instructions or release archives change. Editing this documentation cannot revoke permissions already granted under MIT.
 - **Reconsider when:** New releases introduce material whose ownership or licensing differs, or a separate decision is made to license the whole catalog.
+
+## 2026-09-19 — Show independent product skills together in the catalog
+
+- **Status:** Accepted for implementation and publication. Greg explicitly approved publication on 2026-09-19.
+- **Context:** The profile names three product skills while the visual catalog shows only Steward. Greg approved the recommendation to retain the Judgment Loop and Applied Judgment Systems on one homepage and explicitly confirmed that all three product skills work independently.
+- **Options considered:** Split the two sections into separate top-level pages; add three large standalone promotional cards; retain one catalog with three compact role cards and one shared detail page.
+- **Decision:** Keep both sections on the homepage, group the three skills under Product development, and add a shared overview for independent uses, collaboration, and installation links. Link the overview from the profile and Steward page. Preserve the current static HTML and shared visual layer.
+- **Consequences and trade-offs:** Visitors can discover all three together without a required sequence or dependency. One additional static page needs maintenance; reversing the navigation and presentation is straightforward. No skill instructions, release packages, dependencies, or hosting change.
+- **Reconsider when:** More applied domains need navigation, the page becomes difficult to scan, or each specialist needs substantial standalone examples.

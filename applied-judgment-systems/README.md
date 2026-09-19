@@ -1,6 +1,6 @@
 # Product development skills
 
-Use three complementary skills for product work:
+Use any of these three skills independently, or combine them for product work. [Explore the visual overview](https://glichtenthal.github.io/agent-skills/product-development/).
 
 | Skill | Responsibility | Distribution |
 | --- | --- | --- |
@@ -18,7 +18,7 @@ Download the three individual skill ZIPs:
 - [Product Design Director 1.3.1](https://github.com/glichtenthal/agent-skills/releases/download/product-experience-v1.3.1/product-design-director-1.3.1.zip)
 - [Production Frontend Engineer 1.3.1](https://github.com/glichtenthal/agent-skills/releases/download/product-experience-v1.3.1/production-frontend-engineer-1.3.1.zip)
 
-**Claude:** Upload each ZIP through your account's Skills settings, enable all three, and start a fresh chat. Chat attachments alone do not install skills. Replace older copies of these skills; no separate Design Craft installation is needed.
+**Claude:** Upload the ZIPs for the skills you want through your account's Skills settings, enable those skills, and start a fresh chat. Chat attachments alone do not install skills. Replace older copies of these skills; no separate Design Craft installation is needed.
 
 **Codex:** Use your skill installer with the linked skill folders above and Steward's canonical repository. The catalog shell installer supports Steward separately, but does not install Director or Engineer. If you use the optional GTM Product Experience plugin, it supplies Director and Engineer; install Steward separately and avoid duplicate standalone copies of the same roles.
 

@@ -45,3 +45,12 @@
 ## Remaining review item
 
 - Confirm the cool-mist hub canvas and Google-hosted font request in local review before public deployment. No deployment action has been taken in this update.
+
+## 2026-09-19 — Product development catalog update (local)
+
+- Scope: three compact homepage role cards; a shared `/product-development/` overview; Steward cross-link; independent-use installation wording; sitemap and catalog structured-data update. Matching profile README changes are in the sibling `../profile` checkout on `codex/product-development-catalog`.
+- Browser verification: desktop at 1280px; overview at 390px; catalog at 320px. Cards display in three columns on desktop and stack on mobile. No horizontal overflow detected in the inspected mobile pages. Visually reviewed title wrapping, spacing, and card presentation.
+- Navigation: homepage overview CTA, individual Director anchor, and Steward-to-overview link exercised. Keyboard Tab moves focus between overview actions. A scripted check of all local links and anchors in the three edited HTML pages found zero missing targets. Catalog JSON-LD parses; both repository diffs pass `git diff --check`.
+- Limits: local static rendering, not a Jekyll deployment test; remote downloads and skill behavior were not retested. No skill payload or release archive changed. Public site and profile have not been updated.
+- Preview: serve the repository with an existing static HTTP server, then open `/`, `/product-development/`, and `/ai-project-steward/`. This session uses `node /tmp/catalog-preview.cjs` at `http://127.0.0.1:4173/`.
+- Publication approved by Greg on 2026-09-19. Publish the catalog first and verify the new URL before updating the profile link. Reverting the scoped commits restores the previous presentation; no data migration is involved.
