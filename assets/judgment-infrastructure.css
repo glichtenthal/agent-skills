@@ -257,3 +257,10 @@ pre {
   .product-roles { grid-template-columns: 1fr; }
   .product-role { padding: 22px; }
 }
+
+/* Balance short product copy so the final line is not a stranded fragment. */
+.catalog-hub p,
+.product-intro p,
+.product-role p,
+.product-page header > p,
+.product-page .product-section p { text-wrap: balance; }
