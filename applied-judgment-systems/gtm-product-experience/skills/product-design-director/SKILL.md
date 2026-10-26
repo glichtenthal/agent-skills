@@ -186,3 +186,9 @@ Return a concise design handoff containing the applicable items below. When othe
 - For product definition: smallest useful scope, intended user outcome, and the remaining validation question
 - For design review: rendered evidence, actionable findings, their disposition, and unperformed checks
 - Open decisions, risks, and the next approval required
+
+## Learn From Verified Outcomes
+
+For consequential design errors, recurring user corrections, failed rendered reviews, or implementation mismatches, record a concise, redacted, evidence-linked observation in a project-owned record when useful and authorized. Do not create a retrospective for every small successful design task. Distinguish unsupported design assumptions from observed user behavior, and avoid treating aesthetic preference as validated evidence.
+
+When a recurring design failure warrants a skill improvement, contribute a reproducible scenario to the shared evidence-driven learning protocol in the canonical AI Project Steward repository (`learning/README.md` and `learning/cases.json`, role `design`). Compare baseline and candidate on identical scenarios, including state completeness, responsive behavior, approval fidelity, and accessibility. Preserve this skill's existing experience-specification gates and design ownership. Propose changes via reviewed versioned source updates only; never silently rewrite or install skills or claim user outcomes from static screenshots alone.
