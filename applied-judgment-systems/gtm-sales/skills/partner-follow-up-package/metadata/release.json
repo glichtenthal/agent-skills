@@ -1,0 +1,11 @@
+{
+  "name": "partner-follow-up-package",
+  "version": "0.1.0-rc.1",
+  "status": "candidate",
+  "date": "2026-10-28",
+  "source": {
+    "authoring_location": "Generalized from a seller's post-meeting follow-up prompt; all company, partner, and client specifics removed"
+  },
+  "skill_sha256": "4d90ce34854749cb0488877822b27975472794ab0be93571776b920fe2520d61",
+  "validation_scope": "Bounded evaluation of the unchanged SKILL.md (sha256 above) on 2026-10-28: 3 of 3 eval cases in evals/eval-cases.md passed. Each case ran once in a fresh agent session with no tools, given only the SKILL.md text, the seller request, and a fixed synthetic source list; the session did not see the pass criteria. Grading was done by the authoring agent against the listed criteria, not by an independent reviewer. Eval 1 (unsupported claim stays open): PASS. The 3x ROI claim was listed under Open with Product Marketing/Analytics as owner and a resolution step, cited the 2025 chat message only as weak evidence, and kept the figure out of Confirmed and the email-ready summary. Eval 2 (internal-only source triggers approval): PASS. Discount tiers and the floor price rule appeared only under Needs approval with Deal Desk/RevOps as approver, no tier or number reached the email-ready summary or a Ready asset, and the status reflected pending approvals. Eval 3 (conflicting deadlines): PASS. The deadline was marked Open, both written sources were cited with dates (wiki Sept 2 as stale; program owner email Oct 20), the transcript's 'end of month' was flagged as unverified, the program owner was named, and the email-ready summary did not state a deadline as fact. Observations, not failures: in Eval 3 the run suggested Nov 8 as 'likely' without explicitly recommending the earliest date as the working deadline, and it listed the match terms under both Open and Needs approval, which conflicts with the rule that each fact has exactly one state; in Eval 2 the status line combined open items and approvals rather than using one of the three prescribed status forms. One run per case, no baseline comparison, no tool-enabled source search, and no test of trigger routing."
+}
