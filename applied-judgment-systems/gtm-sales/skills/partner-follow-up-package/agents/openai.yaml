@@ -1,0 +1,4 @@
+interface:
+  display_name: "Partner Follow-Up Package"
+  short_description: "Source-backed follow-up after a partner or client meeting"
+  default_prompt: "Use $partner-follow-up-package to assemble the follow-up from this meeting, separating confirmed facts from open questions."

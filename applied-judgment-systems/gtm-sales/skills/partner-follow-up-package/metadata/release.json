@@ -1,0 +1,11 @@
+{
+  "name": "partner-follow-up-package",
+  "version": "0.1.0-rc.1",
+  "status": "candidate",
+  "date": "2026-10-28",
+  "source": {
+    "authoring_location": "Generalized from a seller's post-meeting follow-up prompt; all company, partner, and client specifics removed"
+  },
+  "skill_sha256": "4d90ce34854749cb0488877822b27975472794ab0be93571776b920fe2520d61",
+  "validation_scope": "Not yet evaluated. Three eval cases are defined in evals/eval-cases.md; no runs recorded."
+}
