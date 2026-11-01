@@ -1,0 +1,43 @@
+{
+  "positive": {
+    "commands": [
+      {
+        "command": "/bin/zsh -lc 'cat .agents/skills/product-design-director/SKILL.md'",
+        "exit_code": 0
+      },
+      {
+        "command": "/bin/zsh -lc 'cat .agents/skills/product-design-director/references/visual-design.md'",
+        "exit_code": 0
+      },
+      {
+        "command": "/bin/zsh -lc 'cat .agents/skills/product-design-director/references/experience-specification.md'",
+        "exit_code": 0
+      },
+      {
+        "command": "/bin/zsh -lc \"rg --files -g 'AGENTS.md' -g 'decisions.md' -g '*spec*' -g 'README*' -g '\"'!node_modules'\"' -g '\"'!.agents/**'\"'\"",
+        "exit_code": 1
+      }
+    ],
+    "usage": [
+      {
+        "input_tokens": 53095,
+        "cached_input_tokens": 42624,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2147,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  },
+  "negative": {
+    "commands": [],
+    "usage": [
+      {
+        "input_tokens": 14320,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 15,
+        "reasoning_output_tokens": 0
+      }
+    ]
+  }
+}

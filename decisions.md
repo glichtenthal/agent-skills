@@ -86,3 +86,11 @@
 - **Rationale:** One authoritative instruction path per role; no duplicate evaluator, source tree, dependency or service.
 - **Consequences:** Individual role versions can differ from the collection version; immutable commits/hashes identify evidence. Published stable tags/assets are untouched. Candidate bookkeeping is reversible before release; collection publication still requires a later approved version manifest.
 - **Reconsider when:** Source hashes diverge from validated payloads, the handoff contract changes, or Frontend earns separate evidence and approval.
+
+## 2026-11-01 — Prepare standalone Design 1.3.2 final candidate
+
+- **Status:** Accepted for preparation only by the user's final release-preparation request. Publication, tag, merge and installation unapproved.
+- **Context/options:** Change tested instructions; release the mixed collection; or prepare standalone Design with metadata only and bounded evidence.
+- **Decision:** Preserve tested instruction hash; prepare standalone version 1.3.2, candidate/unreleased with false approval flags and proposed tag product-design-director-v1.3.2. Keep collection and stable Frontend unchanged.
+- **Consequences:** New metadata produces a new archive digest. Two-session authenticated smoke closes the local loading gap but provides no universal routing/cross-platform certification. Prior releases remain rollback assets. No active installation changes.
+- **Reconsider when:** Hash, references, package closure or CI diverge; or a reproducible material regression appears.

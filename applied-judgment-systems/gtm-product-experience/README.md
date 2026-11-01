@@ -1,4 +1,4 @@
-> **Unreleased Design-only integration candidate.** Collection 1.3.2-rc.2 contains the validated Design Director 1.3.2-rc.1 payload and unchanged stable Frontend Engineer 1.3.1. The distinct collection identifier avoids collision with the mixed experimental 1.3.2-rc.1 branch. Published stable 1.3.1 assets remain untouched; no release or installation is approved. See [Design-only review](RELEASE_REVIEW.md).
+> **Unreleased standalone Design preparation.** Design Director 1.3.2 preserves the tested rc.1 instructions; Frontend remains stable 1.3.1. Collection identifier 1.3.2-rc.2 is unchanged and is not proposed for release. See [final approval package](../../release-preparation/design-1.3.2/README.md). Publication and installation remain unapproved.
 
 # GTM Product Experience
 
