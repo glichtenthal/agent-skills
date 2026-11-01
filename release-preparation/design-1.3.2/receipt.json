@@ -1,0 +1,25 @@
+{
+  "source_commit": "899f24d98b2fa2450ffcaf0f39c39c825c4a0110",
+  "version": "1.3.2-rc.1",
+  "skill_sha256": "4039da168236b1ca58221a9ea028fbc2cb859ac95b8e9825270ba7febf692e0a",
+  "archive_sha256": "c735167a7ceda8573185cab9de550e9a9963a4604e1ea0c57e4d74df44b3a16c",
+  "members": [
+    "product-design-director/LICENSE",
+    "product-design-director/SKILL.md",
+    "product-design-director/agents/openai.yaml",
+    "product-design-director/metadata/release.json",
+    "product-design-director/references/experience-specification.md",
+    "product-design-director/references/visual-design.md"
+  ],
+  "checks": {
+    "stable_archive_member_parity": true,
+    "extracted_source_byte_parity": true,
+    "local_markdown_references": true,
+    "entrypoint_metadata": true,
+    "candidate_flags_false": true
+  },
+  "runtime_load": "NOT RUN: automatic approval review rejected model-service export; no workaround attempted",
+  "activation_nonactivation": "NOT RUN",
+  "temporary_extraction": "/tmp/design-release-smoke-local/product-design-director",
+  "publication": "not authorized; unpublished"
+}
