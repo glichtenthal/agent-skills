@@ -167,3 +167,9 @@ Return a concise handoff containing the applicable items below. When other skill
 - Deployment status, skipped checks, and remaining risk
 
 Do not call work production-ready when the app did not render, the critical interaction was not exercised, relevant tests failed, console errors remain unexplained, real data was replaced with fiction, or deployment readiness was confused with an actual deployment.
+
+## Learn From Verified Outcomes
+
+For consequential implementation errors, repeated regressions, incorrect runtime behavior, inaccessible interactions, or failed browser checks, record a concise redacted observation with a reproducible failing scenario and evidence when useful and authorized. Prefer an ordinary project regression test for a local bug; only propose a skill change when the lesson generalizes beyond the project. Do not turn every successful narrow fix into a new process artifact.
+
+When a repeated engineering failure warrants improving this skill, use the shared evidence-driven learning protocol in the canonical AI Project Steward repository (`learning/README.md` and `learning/cases.json`, role `frontend`). Compare unchanged baseline and candidate scenarios on the same harness, model, fixtures, and approval contract. Treat missing browser or integration evidence as a gap, not a pass. Preserve existing design-approval, security, data-integrity, and release-readiness gates; never auto-edit or install global skills or promote an unreviewed improvement.

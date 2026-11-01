@@ -1,4 +1,4 @@
-> Stable version **1.3.1**, release. Individual skill instructions match the tested 1.3.1-rc.1 candidates. The plugin wrapper itself was not the installation method used in the live trials.
+> **Unreleased Frontend-only experiment.** Collection 1.3.2-rc.3 retains experimental Frontend Engineer 1.3.2-rc.1 and unchanged stable Design Director 1.3.1. Validated Design integration is separate in [PR #7](https://github.com/glichtenthal/agent-skills/pull/7). Stable published assets remain untouched; no merge, release or installation is approved.
 
 # GTM Product Experience
 
