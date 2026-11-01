@@ -85,3 +85,11 @@
 - **Decision:** Keep role guidance small, use Steward's schema 1.1 and shared role cases, retain stable 1.3.1 and label changed payloads 1.3.2-rc.1.
 - **Consequences:** No specialist runtime dependency for ordinary work. Learning review needs the versioned shared protocol. Reversible before release.
 - **Reconsider when:** Targeted evaluation shows no useful gain, extra artifacts, ownership drift, or safety regressions.
+
+## 2026-11-01 — Retain Frontend experiment after Design extraction
+
+- **Status:** Accepted for source separation by the controlled-integration request; merge/release/install remain unapproved.
+- **Context/options:** Leave a mixed PR; erase Frontend work; or extract Design and keep a narrowly scoped Frontend PR with append-only source history.
+- **Decision:** Design integration moves to PR #7. Restore this PR's Design directory to main while retaining all old commits and evidence; leave Frontend candidate instructions unchanged. Collection 1.3.2-rc.3 denotes this held experiment, distinct from Design-only 1.3.2-rc.2.
+- **Consequences:** One canonical instruction path per role, no duplicate evaluator. Rebase on actual main and preserve approved Design before any future Frontend proposal. No version is published or installed.
+- **Reconsider when:** The Frontend regression is resolved or explicitly reassessed with retained evidence and human approval.

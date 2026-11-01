@@ -1,4 +1,4 @@
-> **Unreleased learning candidate 1.3.2-rc.1.** Published stable 1.3.1 remains unchanged. Targeted advisory results are in the [shared Steward pilot](https://github.com/glichtenthal/ai-project-steward/blob/feat/evidence-driven-learning-20261025/learning/results/pilot-2026-10-31/README.md). Full release gates remain blocked; no install or release is approved.
+> **Unreleased Frontend-only experiment.** Collection 1.3.2-rc.3 retains experimental Frontend Engineer 1.3.2-rc.1 and unchanged stable Design Director 1.3.1. Validated Design integration is separate in [PR #7](https://github.com/glichtenthal/agent-skills/pull/7). Stable published assets remain untouched; no merge, release or installation is approved.
 
 # GTM Product Experience
 
