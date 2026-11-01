@@ -77,3 +77,11 @@
 - **Decision:** Keep both sections on the homepage, group the three skills under Product development, and add a shared overview for independent uses, collaboration, and installation links. Link the overview from the profile and Steward page. Preserve the current static HTML and shared visual layer.
 - **Consequences and trade-offs:** Visitors can discover all three together without a required sequence or dependency. One additional static page needs maintenance; reversing the navigation and presentation is straightforward. No skill instructions, release packages, dependencies, or hosting change.
 - **Reconsider when:** More applied domains need navigation, the page becomes difficult to scan, or each specialist needs substantial standalone examples.
+
+## 2026-10-31 — Shared supervised learning candidates
+
+- **Status:** Accepted for implementation and PR update by the continuation request; release/install remain unapproved.
+- **Options:** Separate role-specific engines; shared Steward evidence contract; no learning additions.
+- **Decision:** Keep role guidance small, use Steward's schema 1.1 and shared role cases, retain stable 1.3.1 and label changed payloads 1.3.2-rc.1.
+- **Consequences:** No specialist runtime dependency for ordinary work. Learning review needs the versioned shared protocol. Reversible before release.
+- **Reconsider when:** Targeted evaluation shows no useful gain, extra artifacts, ownership drift, or safety regressions.
