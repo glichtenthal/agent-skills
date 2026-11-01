@@ -1,4 +1,4 @@
-> Stable version **1.3.1**, release. Individual skill instructions match the tested 1.3.1-rc.1 candidates. The plugin wrapper itself was not the installation method used in the live trials.
+> **Unreleased learning candidate 1.3.2-rc.1.** Published stable 1.3.1 remains unchanged. Targeted advisory results are in the [shared Steward pilot](https://github.com/glichtenthal/ai-project-steward/blob/feat/evidence-driven-learning-20261025/learning/results/pilot-2026-10-31/README.md). Full release gates remain blocked; no install or release is approved.
 
 # GTM Product Experience
 

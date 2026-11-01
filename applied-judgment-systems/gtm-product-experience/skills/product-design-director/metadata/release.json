@@ -14,5 +14,6 @@
   "publication_status": "unreleased",
   "release_approved": false,
   "installation_approved": false,
-  "validation_status": "pending targeted evaluation"
+  "validation_status": "targeted advisory evaluations recorded; full release clearance blocked; human review pending",
+  "evidence_summary": "https://github.com/glichtenthal/ai-project-steward/blob/feat/evidence-driven-learning-20261025/learning/results/pilot-2026-10-31/README.md"
 }
