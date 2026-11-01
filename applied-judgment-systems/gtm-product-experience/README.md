@@ -1,4 +1,4 @@
-> Stable version **1.3.1**, release. Individual skill instructions match the tested 1.3.1-rc.1 candidates. The plugin wrapper itself was not the installation method used in the live trials.
+> **Unreleased Design-only integration candidate.** Collection 1.3.2-rc.2 contains the validated Design Director 1.3.2-rc.1 payload and unchanged stable Frontend Engineer 1.3.1. The distinct collection identifier avoids collision with the mixed experimental 1.3.2-rc.1 branch. Published stable 1.3.1 assets remain untouched; no release or installation is approved. See [Design-only review](RELEASE_REVIEW.md).
 
 # GTM Product Experience
 

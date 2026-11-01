@@ -1,0 +1,22 @@
+name: Validate product skill metadata
+on:
+  pull_request:
+  push:
+permissions:
+  contents: read
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check instruction hashes and candidate approval flags
+        shell: bash
+        run: |
+          set -euo pipefail
+          for role in product-design-director production-frontend-engineer; do
+            dir="applied-judgment-systems/gtm-product-experience/skills/$role"
+            expected=$(jq -r '.skill_sha256' "$dir/metadata/release.json")
+            actual=$(sha256sum "$dir/SKILL.md" | cut -d ' ' -f 1)
+            test "$expected" = "$actual"
+            jq -e 'if .status == "candidate" then .publication_status == "unreleased" and .release_approved == false and .installation_approved == false else true end' "$dir/metadata/release.json"
+          done
