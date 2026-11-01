@@ -77,3 +77,12 @@
 - **Decision:** Keep both sections on the homepage, group the three skills under Product development, and add a shared overview for independent uses, collaboration, and installation links. Link the overview from the profile and Steward page. Preserve the current static HTML and shared visual layer.
 - **Consequences and trade-offs:** Visitors can discover all three together without a required sequence or dependency. One additional static page needs maintenance; reversing the navigation and presentation is straightforward. No skill instructions, release packages, dependencies, or hosting change.
 - **Reconsider when:** More applied domains need navigation, the page becomes difficult to scan, or each specialist needs substantial standalone examples.
+
+## 2026-11-01 — Separate Design-only integration from Frontend experiment
+
+- **Status:** Accepted for source preparation by the controlled-integration request; merge, release and installation remain unapproved.
+- **Context/options:** Keep a mixed candidate; create a second canonical Design skill directory; or split PRs using the existing canonical paths and distinct collection candidate identifiers.
+- **Decision:** Use the existing Design directory with unchanged tested 1.3.2-rc.1 payload. Identify its collection as 1.3.2-rc.2 with stable Frontend 1.3.1. Narrow the old mixed PR to Frontend-only after the Design PR exists, preserving all old commits/evidence. Never merge the held Frontend branch as an upgrade to the Design-only collection without rebasing and review.
+- **Rationale:** One authoritative instruction path per role; no duplicate evaluator, source tree, dependency or service.
+- **Consequences:** Individual role versions can differ from the collection version; immutable commits/hashes identify evidence. Published stable tags/assets are untouched. Candidate bookkeeping is reversible before release; collection publication still requires a later approved version manifest.
+- **Reconsider when:** Source hashes diverge from validated payloads, the handoff contract changes, or Frontend earns separate evidence and approval.
