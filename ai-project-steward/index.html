@@ -58,6 +58,7 @@
     a:focus-visible { outline: 3px solid var(--headline-accent) !important; outline-offset: 3px; box-shadow: 0 0 0 3px var(--headline-accent) !important; }
     main { width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: 56px 0 64px; }
     h1, h2, h3, p { margin: 0; }
+    p { text-wrap: pretty; }
     .crumb { display: inline-flex; align-items: center; color: var(--muted); font-size: .9rem; font-weight: 600; letter-spacing: 0; line-height: 1.3; text-decoration: none; }
     .crumb:hover { color: var(--brand-deep); }
     /* Keep every outlined label at the catalog-wide compact scale; section copy must not resize it. */
@@ -89,6 +90,7 @@
     .section-intro h2 { color: var(--headline-accent); font-size: clamp(2rem, 4vw, 3.1rem); font-weight: 650; letter-spacing: -.045em; line-height: 1.04; text-wrap: balance; }
     /* Section copy is larger; the compact outlined label above it is not. */
     .section-intro p:not(.eyebrow) { color: var(--muted); font-size: 1.05rem; }
+    .section-intro p.scenario-copy { text-wrap: balance; }
     .flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; margin-top: 28px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
     .flow-step { min-width: 0; padding: 22px 20px 24px; border-left: 1px solid var(--line); }
     .flow-step:first-child { border-left: 0; }
@@ -173,7 +175,7 @@
       <div class="section-intro">
         <p class="eyebrow">An example in practice</p>
         <h2 id="scenario-heading">A polished demo is only the beginning.</h2>
-        <p>A customer dashboard can look finished while still using sample data. Steward helps distinguish the demo from a verified integration, calls for checks of authentication, permissions, and failure states, and makes any unfinished behavior explicit.</p>
+        <p class="scenario-copy">A customer dashboard can look finished while still using sample data. Steward helps distinguish the demo from a verified integration, calls for checks of authentication, permissions, and failure states, and makes any unfinished behavior explicit.</p>
         <p><a class="text-link" href="https://github.com/glichtenthal/ai-project-steward/blob/main/examples/false-completion.md">See the false-completion scenario →</a></p>
       </div>
     </section>
