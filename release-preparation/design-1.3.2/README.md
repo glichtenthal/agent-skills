@@ -1,3 +1,5 @@
+> Publication finalization: user explicitly approved standalone publication after reviewing head `1a99aeb8fbf85935ef96a8e12195690482ba968e`. Stable metadata now identifies 1.3.2, approved for publication; installation remains false. Final `receipt.json` and SHA256SUMS supersede candidate digests. Historical preparation context below is retained; publication is executed only after final CI/integrity gates.
+
 # Final standalone Design 1.3.2 approval package
 
 Prepared from approved Design-only main `899f24d98b2fa2450ffcaf0f39c39c825c4a0110`. Role version **1.3.2**, status **candidate**, publication **unreleased**, release/install flags **false**. Proposed standalone tag `product-design-director-v1.3.2`. Collection stays 1.3.2-rc.2; no collection or Frontend release is proposed.

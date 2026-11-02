@@ -1,0 +1,31 @@
+{
+  "source_commit": "f61c87c5a3745289587996b243b8d9892de9c139",
+  "version": "1.3.2",
+  "proposed_tag": "product-design-director-v1.3.2",
+  "archive": "product-design-director-1.3.2.zip",
+  "archive_sha256": "50170a93627de76ff38ae9332307840c70eb704d77891fc6355fe63c16925198",
+  "instruction_sha256": "4039da168236b1ca58221a9ea028fbc2cb859ac95b8e9825270ba7febf692e0a",
+  "members": [
+    "product-design-director/LICENSE",
+    "product-design-director/SKILL.md",
+    "product-design-director/agents/openai.yaml",
+    "product-design-director/metadata/release.json",
+    "product-design-director/references/experience-specification.md",
+    "product-design-director/references/visual-design.md"
+  ],
+  "checks": {
+    "exact_membership": true,
+    "stable_member_parity": true,
+    "extracted_source_byte_parity": true,
+    "same_environment_repeat_build_identical": true,
+    "references": true,
+    "entrypoint": true,
+    "metadata": true,
+    "stable_frontend_unchanged": true
+  },
+  "approvals": {
+    "publication": false,
+    "installation": false
+  },
+  "limitations": "Smoke tested rc1 instructions on Codex 0.166.0; final metadata-only package checked deterministically, no new model session. Model identity unavailable. See SMOKE.md."
+}

@@ -1,7 +1,7 @@
 {
   "name": "product-design-director",
   "version": "1.3.2",
-  "status": "candidate",
+  "status": "stable",
   "date": "2026-11-01",
   "source": {
     "repository": "https://github.com/glichtenthal/agent-skills",
@@ -12,10 +12,10 @@
   },
   "skill_sha256": "4039da168236b1ca58221a9ea028fbc2cb859ac95b8e9825270ba7febf692e0a",
   "validation_scope": "Unchanged tested instructions. Prior paired advisory evidence and applied handoff plus two fresh authenticated Codex CLI 0.166.0 sessions: natural positive routing, unrelated-request nonactivation and scoped contract preservation. Model identity not emitted; no universal routing, cross-platform or accessibility certification.",
-  "stable_release": "1.3.1",
-  "publication_status": "unreleased",
-  "release_approved": false,
+  "stable_release": "1.3.2",
+  "publication_status": "approved_for_publication",
+  "release_approved": true,
   "installation_approved": false,
-  "validation_status": "final standalone release preparation; bounded authenticated smoke passed; publication and installation unapproved",
+  "validation_status": "approved for standalone publication by user; bounded authenticated smoke passed; active installation unapproved",
   "evidence_summary": "https://github.com/glichtenthal/ai-project-steward/blob/74c834a928d91408768095da9edaa79e55f82490/learning/results/release-review-2026-11-01/README.md"
 }
