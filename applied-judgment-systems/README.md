@@ -26,7 +26,9 @@ After installation, ask the agent to confirm the loaded skill names, versions fr
 
 ## Distribution
 
-Stable versions: Steward 2.1.2; standalone Director 1.3.2; Engineer 1.3.1. The optional GTM Product Experience plugin remains a 1.3.1 snapshot for both Director and Engineer; using standalone Director 1.3.2 alongside that plugin requires excluding its older Design copy from Codex discovery, without disabling Frontend Engineer. Individual skill ZIPs contain one named folder with SKILL.md at its root. The optional gtm-product-experience plugin contains only Director and Engineer; install Steward separately. Do not upload the plugin archive as an individual Claude skill. Uploading an archive into a chat does not install it.
+Stable versions: Steward 2.1.2; standalone Director 1.3.2; Engineer 1.3.1. Each individual ZIP contains one named folder with SKILL.md at its root. The optional GTM Product Experience plugin still packages Director and Engineer at 1.3.1; install Steward separately. If you use standalone Director 1.3.2 alongside the plugin in Codex, exclude the plugin's older Design copy without disabling Frontend Engineer.
+
+Do not upload the plugin archive as an individual Claude skill. Uploading an archive into a chat does not install it.
 
 The plugin folder is a distribution snapshot of the canonical GTM product-experience authoring source, not a second independent authoring location. Steward remains in its existing repository to avoid a competing source copy. The existing catalog installer is unchanged.
 
