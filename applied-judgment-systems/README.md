@@ -15,7 +15,7 @@ Install all three for the combined workflow; invoke the roles relevant to each t
 Download the three individual skill ZIPs:
 
 - [AI Project Steward 2.1.2](https://github.com/glichtenthal/ai-project-steward/releases/download/v2.1.2/ai-project-steward-2.1.2.zip)
-- [Product Design Director 1.3.1](https://github.com/glichtenthal/agent-skills/releases/download/product-experience-v1.3.1/product-design-director-1.3.1.zip)
+- [Product Design Director 1.3.2](https://github.com/glichtenthal/agent-skills/releases/download/product-design-director-v1.3.2/product-design-director-1.3.2.zip)
 - [Production Frontend Engineer 1.3.1](https://github.com/glichtenthal/agent-skills/releases/download/product-experience-v1.3.1/production-frontend-engineer-1.3.1.zip)
 
 **Claude:** Upload the ZIPs for the skills you want through your account's Skills settings, enable those skills, and start a fresh chat. Chat attachments alone do not install skills. Replace older copies of these skills; no separate Design Craft installation is needed.
@@ -26,7 +26,7 @@ After installation, ask the agent to confirm the loaded skill names, versions fr
 
 ## Distribution
 
-Stable versions: Steward 2.1.2; Director and Engineer 1.3.1. Individual skill ZIPs contain one named folder with SKILL.md at its root. The optional gtm-product-experience plugin contains only Director and Engineer; install Steward separately. Do not upload the plugin archive as an individual Claude skill. Uploading an archive into a chat does not install it.
+Stable versions: Steward 2.1.2; standalone Director 1.3.2; Engineer 1.3.1. The optional GTM Product Experience plugin remains a 1.3.1 snapshot for both Director and Engineer; using standalone Director 1.3.2 alongside that plugin requires excluding its older Design copy from Codex discovery, without disabling Frontend Engineer. Individual skill ZIPs contain one named folder with SKILL.md at its root. The optional gtm-product-experience plugin contains only Director and Engineer; install Steward separately. Do not upload the plugin archive as an individual Claude skill. Uploading an archive into a chat does not install it.
 
 The plugin folder is a distribution snapshot of the canonical GTM product-experience authoring source, not a second independent authoring location. Steward remains in its existing repository to avoid a competing source copy. The existing catalog installer is unchanged.
 
@@ -36,4 +36,4 @@ Bounded evaluation of unchanged candidate instructions: Codex local build with 1
 
 Historical Steward evaluations retain their original version scope. The saved app test results demonstrate the tested scenarios, not absence of defects or universal skill reliability.
 
-Download [Director, Engineer, and the optional plugin](https://github.com/glichtenthal/agent-skills/releases/tag/product-experience-v1.3.1), and [Steward 2.1.2](https://github.com/glichtenthal/ai-project-steward/releases/tag/v2.1.2).
+Download [Director 1.3.2](https://github.com/glichtenthal/agent-skills/releases/tag/product-design-director-v1.3.2), [Engineer 1.3.1 and the optional 1.3.1 plugin](https://github.com/glichtenthal/agent-skills/releases/tag/product-experience-v1.3.1), and [Steward 2.1.2](https://github.com/glichtenthal/ai-project-steward/releases/tag/v2.1.2).
