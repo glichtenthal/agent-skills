@@ -1,3 +1,5 @@
+> Update: Design-only source was merged. Final standalone 1.3.2 preparation and authenticated smoke evidence are recorded in [the approval package](../../release-preparation/design-1.3.2/README.md). Historical integration review below is retained. No collection release is proposed.
+
 # Design-only integration review — November 1, 2026
 
 ## Scope and identity
