@@ -104,9 +104,9 @@ Applied Judgment Systems carry human-led judgment into a specific domain or stag
 
 ![AI Project Steward preview](assets/ai-project-steward-social-preview.svg)
 
-A clear operating layer for visibility, guidance, approval, continuity, and verification throughout an AI-assisted build.
+**Bring your ideas to life with AI, while your judgment shapes what gets built.**
 
-Use it independently or as the human-led governance and verification layer within a broader AI build harness. It complements the model, tools, runtime, project context, and platform mechanics rather than replacing them.
+AI Project Steward helps you navigate consequential technical decisions, preserve choices throughout development, and verify that what gets built works as intended. It works alongside coding, design, and deployment tools, keeping significant decisions and approval boundaries visible without adding process to routine changes.
 
 - Install: https://github.com/glichtenthal/ai-project-steward/releases/latest
 - Best for: human-led AI builds where data, cost, security, portability, deployment, or maintenance choices matter.
