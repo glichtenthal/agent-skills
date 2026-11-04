@@ -55,7 +55,7 @@ skill_ref() {
     ground-truth) printf '%s\n' 'v1.2' ;;
     the-quorum) printf '%s\n' 'v1.4.1' ;;
     test-drive) printf '%s\n' 'v1.6.1' ;;
-    ai-project-steward) printf '%s\n' 'v2.0.0' ;;
+    ai-project-steward) printf '%s\n' 'v2.1.3' ;;
     *) return 1 ;;
   esac
 }
@@ -136,7 +136,22 @@ printf 'Destination: %s\n' "$destination"
 for skill_name in "${selected_skills[@]}"; do
   release_ref="$(skill_ref "$skill_name")"
   target_dir="${destination%/}/$skill_name"
-  release_url="https://github.com/glichtenthal/$skill_name/releases/download/$release_ref/$skill_name.skill"
+  archive_name="$skill_name.skill"
+  if [ "$skill_name" = "ai-project-steward" ]; then
+    archive_name="ai-project-steward-2.1.3-codex.zip"
+    # Codex discovers both shared and legacy skill roots; avoid adding a competing copy.
+    case "$target_dir" in
+      "$HOME/.agents/skills/ai-project-steward")
+        other_dir="$HOME/.codex/skills/ai-project-steward" ;;
+      "$HOME/.codex/skills/ai-project-steward")
+        other_dir="$HOME/.agents/skills/ai-project-steward" ;;
+      *) other_dir='' ;;
+    esac
+    if [ -n "$other_dir" ] && { [ -e "$other_dir" ] || [ -L "$other_dir" ]; }; then
+      fail "Another Steward skill source exists at $other_dir. Reconcile duplicate discovery before installing or updating."
+    fi
+  fi
+  release_url="https://github.com/glichtenthal/$skill_name/releases/download/$release_ref/$archive_name"
 
   if [ -e "$target_dir" ] && [ "$update" = false ]; then
     printf 'Skipping %s: already installed (use --update to replace it).\n' "$skill_name"
@@ -151,7 +166,7 @@ for skill_name in "${selected_skills[@]}"; do
   fi
 
   work_dir="$(mktemp -d "${TMPDIR:-/tmp}/judgment-infrastructure.XXXXXX")"
-  archive_path="$work_dir/$skill_name.skill"
+  archive_path="$work_dir/$archive_name"
   unpack_dir="$work_dir/unpacked"
   stage_dir="${destination%/}/.$skill_name.install.$$"
   previous_dir="$work_dir/previous-$skill_name"
@@ -160,6 +175,19 @@ for skill_name in "${selected_skills[@]}"; do
 
   mkdir -p "$unpack_dir"
   curl -fsSL --retry 3 --retry-delay 1 "$release_url" -o "$archive_path"
+
+  if [ "$skill_name" = "ai-project-steward" ]; then
+    # Published v2.1.3 release checksum; fail closed before extraction or replacement.
+    expected_sha256='89c417673beb4d35805642d9ff75a11f0a75d9c7e2077dd0fcf57a59e13790b7'
+    if command -v shasum >/dev/null 2>&1; then
+      actual_sha256="$(shasum -a 256 "$archive_path" | awk '{print $1}')"
+    elif command -v sha256sum >/dev/null 2>&1; then
+      actual_sha256="$(sha256sum "$archive_path" | awk '{print $1}')"
+    else
+      fail "Steward archive verification requires shasum or sha256sum."
+    fi
+    [ "$actual_sha256" = "$expected_sha256" ] || fail "Steward v2.1.3 archive SHA-256 mismatch."
+  fi
 
   while IFS= read -r archive_entry; do
     case "$archive_entry" in
@@ -173,6 +201,11 @@ for skill_name in "${selected_skills[@]}"; do
   [ -f "$source_dir/SKILL.md" ] || fail "$skill_name release is missing SKILL.md."
   grep -Eq "^name:[[:space:]]*$skill_name[[:space:]]*$" "$source_dir/SKILL.md" || \
     fail "$skill_name release has an unexpected skill name."
+  if [ "$skill_name" = "ai-project-steward" ]; then
+    [ -f "$source_dir/metadata/release.json" ] || fail "Steward release metadata is missing."
+    grep -Eq '"version":[[:space:]]*"2\.1\.3"' "$source_dir/metadata/release.json" || fail "Unexpected Steward version."
+    grep -Eq '"scope":[[:space:]]*"Codex only"' "$source_dir/metadata/release.json" || fail "Unexpected Steward release scope."
+  fi
   [ ! -e "$stage_dir" ] || fail "Temporary install path already exists: $stage_dir"
 
   mv "$source_dir" "$stage_dir"
