@@ -1,0 +1,72 @@
+name: Temporary Steward v2.1.3 installer check
+on:
+  push:
+    branches:
+      - fix/steward-codex-v213-distribution-pins-20261104
+
+permissions:
+  contents: read
+
+jobs:
+  installer-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check script syntax and version pins
+        shell: bash
+        run: |
+          set -euo pipefail
+          bash -n install.sh
+          temp_home="$(mktemp -d)"
+          output="$(HOME="$temp_home" bash install.sh --skill ai-project-steward --dry-run)"
+          printf '%s\n' "$output"
+          grep -Fq "Install ai-project-steward v2.1.3" <<<"$output"
+          core="$(HOME="$temp_home" bash install.sh --skill briefing-room --dry-run)"
+          grep -Fq "Install briefing-room v1.2.1" <<<"$core"
+          test ! -e "$temp_home/.agents"
+      - name: Download real Steward ZIP and verify installed contents
+        shell: bash
+        run: |
+          set -euo pipefail
+          temp_home="$(mktemp -d)"
+          dest="$(mktemp -d)"
+          HOME="$temp_home" bash install.sh --skill ai-project-steward --dest "$dest"
+          test -f "$dest/ai-project-steward/SKILL.md"
+          grep -Fq '"version": "2.1.3"' "$dest/ai-project-steward/metadata/release.json"
+          grep -Fq '"scope": "Codex only"' "$dest/ai-project-steward/metadata/release.json"
+          test ! -e "$temp_home/.agents"
+      - name: Reject corrupted download without installing
+        shell: bash
+        run: |
+          set -euo pipefail
+          fake_bin="$(mktemp -d)"
+          cat > "$fake_bin/curl" <<'SH'
+          #!/usr/bin/env bash
+          while [ "$#" -gt 0 ]; do
+            if [ "$1" = "-o" ]; then
+              shift
+              printf 'invalid ZIP bytes' > "$1"
+              exit 0
+            fi
+            shift
+          done
+          exit 1
+          SH
+          chmod +x "$fake_bin/curl"
+          dest="$(mktemp -d)"
+          if PATH="$fake_bin:$PATH" HOME="$(mktemp -d)" bash install.sh --skill ai-project-steward --dest "$dest"; then
+            echo "Corrupted download was not rejected" >&2
+            exit 1
+          fi
+          test ! -e "$dest/ai-project-steward"
+      - name: Reject duplicate conventional Codex skill roots
+        shell: bash
+        run: |
+          set -euo pipefail
+          temp_home="$(mktemp -d)"
+          mkdir -p "$temp_home/.codex/skills/ai-project-steward"
+          if HOME="$temp_home" bash install.sh --skill ai-project-steward --dry-run; then
+            echo "Duplicate Steward source was not rejected" >&2
+            exit 1
+          fi
