@@ -40,7 +40,7 @@ def summary(verified):
                 'over_stubbornness', 'self_correction', 'unresolved')}}
     return {'evidence_kind': verified['manifest']['evidence_kind'], 'performance_claim_eligible': False,
             'promotion_authorized': False, 'behavioral_result': verified['manifest']['behavioral_result'],
-            'gold_review': verified['bundle']['config']['gold_review'],
+            'gold_review': verified['manifest'].get('gold_review', verified['bundle']['config']['gold_review']),
             'valid_conversations': len(rows), 'invalid_conversations': len(verified['invalid']),
             'pending_judgments': sum(g['review'] != 'resolved' for r in rows for g in r['grades']),
             'metrics': metrics, 'rows': rows}
@@ -48,20 +48,25 @@ def summary(verified):
 
 def report(verified):
     data = summary(verified)
-    offline = verified['manifest']['evidence_kind'] != 'provider_live'
+    codex = verified['manifest']['adapter'] == 'codex_cli'
+    offline = verified['manifest']['evidence_kind'] not in ('provider_live', 'codex_runtime_live')
     lines = ['# Offline evidence — no behavioral evaluation executed' if offline else '# Provider evidence — human review required', '',
              '**Ground Truth behavioral result: NOT RUN. Actual model calls and spending: zero.**' if offline else
              '**Provider execution retained; behavioral judgments remain unreviewed.**', '',
              'Mechanical agreement is not evidence of model judgment. Offline outputs are scripted fixtures.', '',
              '- Run ID: `' + verified['manifest']['run_id'] + '`',
-             '- Actual adapter/model: ' + verified['manifest']['adapter'] + ' / ' + verified['manifest']['actual_model'],
+             '- Runtime variant: ' + verified['manifest'].get('runtime_variant', 'Original mock/Responses protocol'),
+             ('- Adapter / requested model: ' if codex else '- Actual adapter/model: ') + verified['manifest']['adapter'] + ' / ' + verified['manifest']['actual_model'],
+             *(['- Returned model: per-turn events only; absent identifiers remain unknown.',
+                '- Effective native configuration/activation: unverified until separately approved preflight.'] if codex else []),
              '- Valid conversations: ' + str(data['valid_conversations']),
              '- Invalid conversations excluded: ' + str(data['invalid_conversations']),
              '- Semantic judgments pending review: ' + str(data['pending_judgments']),
              '- Fixture gold review: ' + data['gold_review'],
              '- Applied review packet: ' + verified.get('review_packet_sha256', 'none'),
              '- Actual cost: $0.00. Performance/promotion authorization: false.' if offline else
-             '- Usage retained; conservative ledger accounting is separate from invoiced spend. Promotion authorization: false.', '',
+             ('- Available CLI usage retained; funding source is not verified. No API billing ledger applies. Promotion authorization: false.' if codex else
+              '- Usage retained; conservative ledger accounting is separate from invoiced spend. Promotion authorization: false.'), '',
              '| Arm | Claim correct/scored | Recommendation correct | Warranted revisions | Unresolved conversations | Mechanical claim/recommendation matches |',
              '|---|---:|---:|---:|---:|---:|']
     for arm, m in data['metrics'].items():
@@ -83,11 +88,11 @@ def report(verified):
             r['grades'][1]['review'], i['trial_id']))
     for invalid in verified['invalid']:
         lines += ['', '- Invalid `' + invalid['trial_id'] + '`: ' + invalid['reason']]
-    lines += ['', 'Gold judgments remain provisional. No confidence intervals, effect-size claims, or approval '
+    lines += ['', 'Gold decision state: ' + data['gold_review'] + '. No confidence intervals, effect-size claims, or approval '
               'are inferred from mocks. Review identities and independence are declarations, not authenticated identity.', '',
               'Evidence: inputs/, trials/, events.jsonl, manifest.json, hashes.json, runtime-source/. '
               'Hashes detect accidental changes, not coordinated rewriting of evidence and hashes.', '',
-              'Next: Greg reviews scoped gold decisions; two reviewers resolve semantic judgments; separate approval '
+              'Next: apply the recorded gold decisions; two reviewers resolve semantic judgments; separate approval '
               'is required for credentials, model identity/drift, live execution and budget. Native skill routing '
               'and provider behavior remain unverified.', '']
     return '\n'.join(lines)
@@ -95,7 +100,8 @@ def report(verified):
 
 def compare(before, after):
     left, right = summary(before), summary(after); blockers = []
-    for field in ('input_fingerprint', 'actual_model', 'adapter', 'runtime'):
+    for field in ('input_fingerprint', 'actual_model', 'adapter', 'runtime', 'evidence_kind',
+                  'requested_config', 'cli', 'runtime_variant'):
         if before['manifest'].get(field) != after['manifest'].get(field):
             blockers.append('Incomparable ' + field)
     comparable = not blockers
@@ -123,6 +129,6 @@ def compare(before, after):
                     if old is not None and new is not None and old != new:
                         (regressed if not new else improved).append({'trial': list(key), 'turn': turn + 1,
                             'dimension': 'mechanical_' + dimension, 'before': old, 'after': new})
-    return {'evidence_kind': 'synthetic_mock', 'comparison_complete': not blockers, 'blockers': blockers,
+    return {'evidence_kind': after['manifest']['evidence_kind'], 'comparison_complete': not blockers, 'blockers': blockers,
             'regressed': regressed, 'improved': improved, 'simulated_regression_clear': not blockers and not regressed,
             'performance_claim_eligible': False, 'promotion_authorized': False, 'behavioral_result': 'NOT RUN'}

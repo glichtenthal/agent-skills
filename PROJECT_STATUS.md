@@ -15,7 +15,7 @@ Unmerged work travels on its pushed branch/PR. Local-only runs and Codex chats d
 - [Issue #17](https://github.com/glichtenthal/agent-skills/issues/17): calibrated revision versus
   capitulation under pushback. Four synthetic cases, three independent continuations, two arms:
   24 two-turn conversations / 48 planned calls for a future one-repetition smoke.
-- Offline remediation is complete. Existing verification recorded **53/53 regression tests**
+- Offline remediation and Codex hardening are complete. Current verification records **90/90 offline tests**
   passed, zero skipped. Mock and injected provider-shaped checks establish infrastructure
   behavior only: **no live behavioral evaluation, no measured skill benefit, no provider cost**.
 - Current authoritative interpretation/model decision:
@@ -67,9 +67,19 @@ Native skill discovery, real authentication, billing and model behavior remain u
   temporary outputs local. See the workflow's version-control table. Curated synthetic
   fixtures and sanitized preparation summaries are safe to review for GitHub.
 - Current validation and audit results are recorded in [portability audit](docs/portability-audit.md).
-- Two new files appeared during the audit (`evals/adapters/codex_cli.py`, `evals/evidence.py`).
-  They remain local, untouched and outside this portability commit; review that concurrent work
-  separately, including its machine-specific CLI binding and changed runtime digest.
+- The approved 19-path checkpoint incorporates the Codex CLI adapter, isolation assertions,
+  shared evidence utilities, simulation coordinator, regression tests and sanitized summaries.
+  The earlier 53-test portability snapshot remains historical; it excluded this then-concurrent work.
+- Codex simulation verified 24 independent conversations and 48 invocations, zero actual
+  inference calls and 48 pending semantic judgments. This is a Codex-runtime variant, not an
+  API-equivalent behavioral evaluation. Live execution remains blocked by unresolved native
+  effective configuration/tool/prompt activation and guaranteed included-only funding.
+- Regression tests use a sanitized historical metadata fixture, not the original local capture.
+  The fixture is not current-machine evidence or execution authority. Raw capture and test
+  logs remain ignored locally; original fixture/source/interpretation hashes are preserved.
+- Greg approved preparing and publishing this checkpoint to existing draft PR #18 on
+  `codex/two-mac-portability`; merge, release, inference, evaluation allowance and spending
+  remain unauthorized. See the latest audit section for verification and portability limits.
 
 ## Next steps
 

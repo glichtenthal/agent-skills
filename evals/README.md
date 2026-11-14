@@ -18,6 +18,9 @@ installation or publication are authorized. The earlier root decision record is 
   independent original-claim/recommendation/evidence scores, unsupported-claim and fabrication fields.
 - A prepared Responses API adapter and bounded 24-conversation coordinator, **disabled by default**.
   Only offline transport injection is used in verification. There is no live CLI execution switch.
+- An offline-tested Codex CLI adapter/protocol variant reuses the same fixtures, grading,
+  reviews and reports. It simulates 24 independent sessions and 48 exact-ID turn invocations;
+  actual inference fails closed on unverified included-only funding and native isolation.
 - Persistent SQLite reservation ledger: serialized reservations, no reset of budget/configuration,
   duplicate-attempt rejection, uncertain-call holds, accounting-overrun freeze and 56-attempt limit.
 - Frozen inputs and controller bytes, UTC timing, event logs, raw/provider-normalized outputs,
@@ -148,3 +151,30 @@ and rubric bytes remain unchanged. Earlier provisional text/readiness outputs ar
 The separately prepared one-request connectivity package lives in
 `experiments/017-ground-truth/connectivity/README.md`. It is not authorized to execute,
 and the full 48-call experiment remains a separate unapproved gate. No credential was inspected.
+
+## Codex subscription-runtime variant
+
+See [the Codex protocol](experiments/017-ground-truth/codex/protocol.md) for pins,
+isolation controls, funding limits and preflight gates. Run `python3 -B -m evals.codex_demo
+--output evals/local-runs/my-codex-fixture` for **local simulation only**. Use the same
+`runner verify`, `report`, `review-packet`, `review-template` and `compare` commands on
+that evidence. No CLI process, account request, subscription inference or spending occurs.
+
+Included quota and credits may be separately visible in account metadata, but no verified
+included-only enforcement exists in this adapter. ChatGPT login/remaining quota do not
+unlock execution. The two-turn inference preflight and full experiment remain separate
+authorization gates after native isolation and funding are established.
+
+The metadata-only preflight has since been approved and completed. The final offline
+hardening removes ignored/ineffective overrides, disables remaining tool families and
+requires structured, request-bound native isolation evidence before an actual turn.
+All 33 disable flags were confirmed in the installed native feature resolver with network
+and file writes denied. This is not a full exec-context verification: protected prompt
+inspection failed before producing a prompt. Native configuration/tool/prompt evidence
+and included-only funding remain blocking requirements. No collector service or new
+dependency was added; see the Codex protocol and `hardening-verification.json`.
+
+The portable Codex regression suite uses `tests/fixtures/codex-feature-metadata.json`, a
+sanitized historical metadata projection (not current native evidence). Original native
+capture and raw test transcripts remain ignored locally; verification-summary capture hashes
+retain their historical meaning. All 90 offline tests can run without those local records.

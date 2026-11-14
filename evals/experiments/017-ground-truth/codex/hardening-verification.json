@@ -1,0 +1,88 @@
+{
+  "actual_inference_calls": 0,
+  "actual_spending_usd": "0.00",
+  "fixture_sha256": {
+    "approved-decisions.json": "827c2a59d6734cc0d5f07fbfd281b8822893819331bdb09b5db14bbbf8c51a12",
+    "cases.jsonl": "2a16ddff1dbf63c9176bef0998f4557d160dfe5dbde744d18540e9ddd8a44af3",
+    "rubric.json": "d95da619b3faaf07c8e3c136e6ade6e74f8005908373b23b12de5265105fa984",
+    "sources/ground-truth-v1.2.txt": "33b750543fe8c3ca758712b98d15accc4e34564f907e3c58d55a9fb5c4b68c06"
+  },
+  "funding_policy_unchanged": true,
+  "included_only_guaranteed": false,
+  "independent_mock_session_ids": 24,
+  "live_execution_enabled": false,
+  "mock_evidence_directory": "evals/local-runs/codex-cli-hardening-v2",
+  "native_effective_exec_configuration_verified": false,
+  "native_feature_evidence_sha256": "67a71db6b1c79aee1372da902c76af86e34ec5f6f19bc8eaff160f0450c0f7d8",
+  "native_feature_resolution_verified": true,
+  "native_prompt_inspection_verified": false,
+  "native_prompt_probe_outcome": "Both arms exited 1 with Operation not permitted and no prompt output; no unprotected retry.",
+  "native_prompt_probe_protections": [
+    "network denied",
+    "all filesystem writes denied"
+  ],
+  "network_and_inference_execution_patched_to_fail_in_suite": true,
+  "new_dependencies": [],
+  "new_native_assertions": [
+    "33 feature flags off and host discovery skipped",
+    "successful probe and reviewed diagnostics",
+    "effective settings equal requested settings",
+    "no unexpected instruction-file overrides",
+    "empty exposed tools/MCP/skills and disabled native MCP configuration",
+    "request/environment/CLI bindings and 300-second freshness",
+    "current managed policy and no inspection session creation",
+    "exact developer-priority skill-only prompt delta and contamination markers"
+  ],
+  "new_services": [],
+  "pending_semantic_judgments": 48,
+  "persistent_native_sessions_created": 0,
+  "pipeline_commands": {
+    "compare": {
+      "exit_code": 1,
+      "expected_blockers": [
+        "Unresolved judgments remain"
+      ],
+      "expected_exit_code": 1,
+      "stdout_sha256": "e0a10bf2f19b1ef530055ec9583b49e0d620026c7e0ad6dc6744d93826def858"
+    },
+    "report": {
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout_sha256": "33342076fa57d7ede5ee73eaa3c3326475fd4efd1ef26b1a0293b5b886141983"
+    },
+    "review-packet": {
+      "conversations": 24,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout_sha256": "3a4a6d3df22cf76c3523a805b0c1b2d8a92f6d1d42806a67f27b767ecfd83627"
+    },
+    "review-template": {
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout_sha256": "030cbef9b602c8c469c9956c11759c95f6618894a490d6bf92ef48178d36edab"
+    },
+    "verify": {
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout_sha256": "88bb408f7d6318e70cfb5d55cc52c18f9ad832d88e7c4e4f686c1b8dc27a8551"
+    }
+  },
+  "recommendation": "Offline hardening complete. NO-GO for live inference while native exec-context evidence and included-only funding enforcement remain unavailable.",
+  "removed_overrides": [
+    "unified_exec=false (ignored)",
+    "mcp_servers={} (not proof of clearing)",
+    "hooks={} (not proof of clearing)"
+  ],
+  "scope": "Bounded offline hardening only; no behavioral effectiveness inference",
+  "simulated_cli_invocations": 48,
+  "subscription_inference_consumed": 0,
+  "tests": {
+    "errors": 0,
+    "executed": 90,
+    "failed": 0,
+    "passed": 90,
+    "skipped": 0
+  },
+  "valid_mock_conversations": 24,
+  "verified_at_utc": "2026-11-14T04:22:39.037787+00:00"
+}

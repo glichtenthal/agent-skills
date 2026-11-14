@@ -121,3 +121,20 @@ as part of setup. Gold/model-drift decisions carry forward; local execution auth
 
 Older `docs/superpowers/plans/` and release receipts also contain historical paths. They are
 provenance, not dependencies of the evaluation runtime. Preserve their historical meaning.
+
+## Codex offline hardening checkpoint
+
+The offline check now covers 90 tests, including the Codex CLI adapter and isolation contracts.
+`python3 -B -m evals.codex_demo --output evals/local-runs/UNIQUE-NAME` is local simulation only:
+24 independent conversations / 48 simulated invocations, no native CLI inference or allowance.
+The regression fixture at `evals/tests/fixtures/codex-feature-metadata.json` is a sanitized
+historical metadata projection, not current native activation evidence. Raw native capture and
+test logs stay local; the tests no longer require them.
+
+Offline development requires no installed Codex binary. Real native dispatch still pins the
+reviewed CLI location, version and binary SHA-256; on another Mac, do not silently discover or
+substitute a different executable. Any changed pin needs separate review and fresh evidence.
+Adding the Codex modules changes the runtime digest, so the historical connectivity package
+cannot authorize these new runtime bytes. Native effective configuration/tool/prompt activation
+and guaranteed included-only funding remain unresolved; inference and spending stay blocked.
+Git synchronization grants no execution authority on either Mac.

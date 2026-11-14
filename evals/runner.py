@@ -122,6 +122,11 @@ def run(experiment, output, profile=None, budget=None):
 
 def load_run(path, bundle):
     manifest = read_json(Path(path) / "manifest.json")
+    if manifest.get("evidence_kind") in ("offline_codex_cli_fixture", "codex_runtime_live"):
+        from evals.codex_smoke import load_codex_run
+        result = load_codex_run(path)
+        require(result["bundle"]["fingerprint"] == bundle["fingerprint"], "Codex inputs differ from trusted experiment")
+        return result
     if manifest.get("evidence_kind") in ("offline_provider_fixture", "provider_live"):
         from evals.provider_smoke import load_provider_run
         result = load_provider_run(path)

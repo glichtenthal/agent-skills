@@ -117,3 +117,10 @@
 - **Decision:** Use separate Git clones, shared GitHub branches/PRs, a versioned project status and standard fetch/pull/commit/push handoffs. Include the existing offline framework and its approved interpretation records without rewriting their bytes. Keep credentials, local settings, raw run evidence, private inputs and billing ledgers out of Git.
 - **Consequences:** Ignored evidence and Codex chats do not synchronize. Use one active writer per branch. The saved connectivity package remains bound to its original machine paths/runtime and unauthorized; any relocation for execution needs a new reviewed package and explicit approval. Gold/model-drift approvals remain valid for their unchanged scope.
 - **Reconsider when:** A future live run requires evidence/ledger transfer, or source/runtime changes invalidate reviewed hashes. Never reset evidence, budget holds or approvals to make a second clone executable.
+
+## 2026-11-13 — Approved offline Codex synchronization checkpoint
+
+- **Status:** Greg explicitly approved the reviewed 19-path checkpoint on `codex/two-mac-portability` and publication to existing draft PR #18. No merge, released-skill publication, live inference, subscription evaluation allowance or spending is authorized.
+- **Decision:** Preserve reusable Codex adapter/isolation code, tests, synthetic inputs, approved decisions and sanitized verification summaries. Replace the regression dependency on a raw machine capture with a clearly labeled sanitized historical metadata fixture. Keep original capture, raw test logs, local runs and ledgers untouched and excluded.
+- **Verification:** 90 offline tests pass without failures or skips; 24 independent conversations and 48 invocations are verified only in simulation. Gold/model decisions remain approved for their unchanged scope.
+- **Limits:** The CLI path/version/binary hash remain reviewed pins; the original connectivity runtime binding is historical. Native effective configuration/tool/prompt activation and guaranteed included-only funding remain unresolved and block inference. Another physical Mac requires offline checks; historical metadata cannot certify it.
