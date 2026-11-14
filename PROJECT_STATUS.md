@@ -1,6 +1,6 @@
 # Agent Skills project status
 
-Updated November 13, 2026 (America/New_York). Read this at the start of work on either Mac.
+Updated November 14, 2026 (America/New_York). Read this at the start of work on either Mac.
 
 ## Objectives and shared source
 
@@ -15,8 +15,8 @@ Unmerged work travels on its pushed branch/PR. Local-only runs and Codex chats d
 - [Issue #17](https://github.com/glichtenthal/agent-skills/issues/17): calibrated revision versus
   capitulation under pushback. Four synthetic cases, three independent continuations, two arms:
   24 two-turn conversations / 48 planned calls for a future one-repetition smoke.
-- Offline remediation and Codex hardening are complete. Current verification records **90/90 offline tests**
-  passed, zero skipped. Mock and injected provider-shaped checks establish infrastructure
+- Offline remediation and Codex hardening are complete. Second-Mac verification passed **104/104 offline tests**
+  with zero skips. Mock and injected provider-shaped checks establish infrastructure
   behavior only: **no live behavioral evaluation, no measured skill benefit, no provider cost**.
 - Current authoritative interpretation/model decision:
   [approved-decisions.json](evals/experiments/017-ground-truth/approved-decisions.json), decision
@@ -54,9 +54,12 @@ Native skill discovery, real authentication, billing and model behavior remain u
 
 ## Portability checkpoint
 
-- Initial audit: `main` at `6bbf151`, tracking `origin/main`, one local branch, HTTPS `origin`
-  pointing to the repository above; no staged files. Existing work was modified `decisions.md`
-  plus untracked `evals/`. These files must be included in the portability PR to reach another Mac.
+- [PR #18](https://github.com/glichtenthal/agent-skills/pull/18) merged into `main` at
+  `5a24525`. The second-Mac clone was clean and synchronized with GitHub before local setup.
+- Second-Mac setup succeeded with a Git-ignored project-local `.venv` using Python 3.9.6.
+  Its interpreter passed all 104 offline tests with zero skips and validated frozen fixtures.
+  Environment creation changed no tracked files; no third-party packages were installed.
+  No live inference, API credentials or paid account are required for offline development.
 - Runtime source already derives the repository path from `__file__`. Python 3.9+ standard
   library and Git are sufficient; no third-party evaluation dependencies were found.
 - Added location-independent `scripts/check_offline.py`, local-artifact ignore rules and
@@ -66,7 +69,8 @@ Native skill discovery, real authentication, billing and model behavior remain u
 - Keep credentials, raw execution logs, SQLite ledgers, private data, machine settings and
   temporary outputs local. See the workflow's version-control table. Curated synthetic
   fixtures and sanitized preparation summaries are safe to review for GitHub.
-- Current validation and audit results are recorded in [portability audit](docs/portability-audit.md).
+- The earlier audit is recorded in [portability audit](docs/portability-audit.md);
+  the second-Mac verification above is the latest offline checkpoint.
 - The approved 19-path checkpoint incorporates the Codex CLI adapter, isolation assertions,
   shared evidence utilities, simulation coordinator, regression tests and sanitized summaries.
   The earlier 53-test portability snapshot remains historical; it excluded this then-concurrent work.
@@ -77,14 +81,15 @@ Native skill discovery, real authentication, billing and model behavior remain u
 - Regression tests use a sanitized historical metadata fixture, not the original local capture.
   The fixture is not current-machine evidence or execution authority. Raw capture and test
   logs remain ignored locally; original fixture/source/interpretation hashes are preserved.
-- Greg approved preparing and publishing this checkpoint to existing draft PR #18 on
-  `codex/two-mac-portability`; merge, release, inference, evaluation allowance and spending
-  remain unauthorized. See the latest audit section for verification and portability limits.
+- The merged portability checkpoint carries code and reviewed records across Macs. It grants
+  no release, inference, evaluation allowance or spending authority. Native effective
+  configuration/tool/prompt activation and guaranteed included-only funding remain blockers.
 
 ## Next steps
 
-1. Review the portability PR and merge after checks; clone/switch to that branch on the other
-   Mac if continuing before merge. Run `python3 -B scripts/check_offline.py` there.
+1. Review and share the updated handoff documentation through a separate branch/PR when
+   authorized. After merge, pull `main` on the first Mac with `--ff-only`, use its own local
+   `.venv`, and run `.venv/bin/python3 -B scripts/check_offline.py`.
 2. Use one active Mac per branch: clean tree, fetch/pull before work; review, commit, push and
    update this status before handing off. Keep meaningful changes in PRs against `main`.
 3. If live work is later desired, review the connectivity package and approve a newly bound
