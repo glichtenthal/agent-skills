@@ -7,9 +7,10 @@ run directory does not travel with Git. Start a new chat in the clone and read
 
 ## Set up another Mac
 
-Prerequisites: Git, Python 3.9+ with its standard library (including SQLite), and GitHub
-authentication with push access for contributions. The offline suite was verified on Python
-3.9.6; another Python version must pass the same checks before relying on it. No pip packages,
+Prerequisites: Git, an approved Python interpreter with its standard library (including SQLite),
+and GitHub authentication with push access for contributions. The runtime supports Python 3.9+;
+the second Mac passed all 104 offline tests in a local Python 3.9.6 virtual environment.
+Another Python version requires approval and the same checks before relying on it. No pip packages,
 Node, SDK, API key, skill installation or paid account are required for evaluation development.
 Configure Git identity and GitHub authentication separately on each Mac. Do not copy credentials
 into this repository. Installing the catalog's skills is a separate operation (`install.sh`),
@@ -22,8 +23,35 @@ git clone https://github.com/glichtenthal/agent-skills.git
 cd agent-skills
 git switch main
 git pull --ff-only origin main
+```
+
+PR #18 merged into `main` at `5a24525`; its portability checkpoint is available on both Macs
+after synchronization. Each Mac owns its environment. Do not copy `.venv` between computers.
+From the clone root, check for an existing `.venv` first. If it is absent, obtain approval for
+environment creation and verify that `python3.9 --version` reports the approved Python 3.9.6
+before running:
+
+```bash
+python3.9 -m venv --without-pip .venv
+```
+
+The environment needs no pip or third-party packages. For an existing environment, activate
+and verify it before use; stop for approval if it is broken or uses an unapproved interpreter.
+
+```bash
+source .venv/bin/activate
+python3 --version
+which python3
+git check-ignore -v .venv/pyvenv.cfg
 python3 -B scripts/check_offline.py
 ```
+
+Confirm the Python version is 3.9.6 and `which python3` resolves inside this clone's `.venv`.
+The existing `.gitignore` excludes `.venv/`; environment setup should leave `git status --short`
+unchanged. Do not change global PATH or install dependencies globally. In a fresh shell, activate
+again or use `.venv/bin/python3 -B scripts/check_offline.py` directly. The November 14, 2026
+second-Mac verification passed 104 tests with zero skips, validated frozen fixtures and kept
+live execution disabled. No API credentials or live inference were required.
 
 If continuing an unmerged PR, first `git fetch origin`, then
 `git switch --track origin/codex/BRANCH-NAME` (or switch to the existing local branch).
@@ -45,6 +73,9 @@ git fetch origin
 git switch main
 git pull --ff-only origin main
 git switch -c codex/describe-the-change
+source .venv/bin/activate
+python3 --version
+which python3
 ```
 
 Proceed only with a clean working tree when switching branches or pulling. If there are local
@@ -61,7 +92,7 @@ Append significant decisions to `decisions.md`; retain original approval evidenc
 Review the files and diff before staging explicit paths:
 
 ```bash
-python3 -B scripts/check_offline.py
+.venv/bin/python3 -B scripts/check_offline.py
 git diff --check
 git status --short --untracked-files=all
 git diff
@@ -124,8 +155,8 @@ provenance, not dependencies of the evaluation runtime. Preserve their historica
 
 ## Codex offline hardening checkpoint
 
-The offline check now covers 90 tests, including the Codex CLI adapter and isolation contracts.
-`python3 -B -m evals.codex_demo --output evals/local-runs/UNIQUE-NAME` is local simulation only:
+The offline check now covers 104 tests, including the Codex CLI adapter and isolation contracts.
+`.venv/bin/python3 -B -m evals.codex_demo --output evals/local-runs/UNIQUE-NAME` is local simulation only:
 24 independent conversations / 48 simulated invocations, no native CLI inference or allowance.
 The regression fixture at `evals/tests/fixtures/codex-feature-metadata.json` is a sanitized
 historical metadata projection, not current native activation evidence. Raw native capture and
