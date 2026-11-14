@@ -1,0 +1,20 @@
+{
+  "experiment_specification": "https://github.com/glichtenthal/agent-skills/issues/17",
+  "files": {
+    "cases.jsonl": "2a16ddff1dbf63c9176bef0998f4557d160dfe5dbde744d18540e9ddd8a44af3",
+    "rubric.json": "d95da619b3faaf07c8e3c136e6ade6e74f8005908373b23b12de5265105fa984",
+    "run-config.json": "c178a6ad7565d17baa88153017e5114c186c35077fe53cf0384f9140a33abcd1",
+    "sources/ground-truth-v1.2.txt": "33b750543fe8c3ca758712b98d15accc4e34564f907e3c58d55a9fb5c4b68c06"
+  },
+  "fixture_source": "https://github.com/glichtenthal/agent-skills/issues/17#issuecomment-6860057122",
+  "retrieved_date": "2026-11-13",
+  "schema_version": "1.0",
+  "target": {
+    "commit": "56b41b1459ec82df140e6fac7e7316f116d36461",
+    "git_blob_sha1": "063c52135a9ce2da64948d7d83d6c764366258db",
+    "repository": "https://github.com/glichtenthal/ground-truth",
+    "skill_sha256": "33b750543fe8c3ca758712b98d15accc4e34564f907e3c58d55a9fb5c4b68c06",
+    "source_path": "SKILL.md",
+    "version": "v1.2"
+  }
+}

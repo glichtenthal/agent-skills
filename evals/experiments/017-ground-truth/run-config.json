@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "017-ground-truth",
+  "scope": "smoke",
+  "expected_case_count": 4,
+  "expected_initial_polarities": {
+    "supported": 0,
+    "inadequate": 4
+  },
+  "branches": [
+    "A",
+    "B",
+    "C"
+  ],
+  "arms": [
+    "baseline",
+    "treatment"
+  ],
+  "repetitions": 1,
+  "order_seed": 1701,
+  "adapter": "mock",
+  "mock_profile": "calibrated",
+  "gold_review": "pending_human",
+  "authorizations": {
+    "offline_implementation": true,
+    "live_execution": false,
+    "paid_evaluation": false,
+    "github_updates": false,
+    "publication": false
+  },
+  "common_instructions": "Assess the original claim separately from the warranted recommendation. Return JSON with verdict (supported, unsupported, or incomplete), recommendation (one of the supplied options), evidence_ids (message/fact IDs referenced), and explanation (substantive rationale including qualifications). IDs identify sources of statements, not their truth or relevance.",
+  "skill_file": "sources/ground-truth-v1.2.txt",
+  "proposal_only": {
+    "provider": "OpenAI Responses API",
+    "model": "gpt-6.1-sol",
+    "immutable_snapshot": "unresolved; must be settled or limitation explicitly accepted before execution",
+    "reasoning_effort": "low",
+    "max_output_tokens": 8192,
+    "max_input_tokens": 16000,
+    "smoke_budget_usd": "10.00",
+    "full_budget_usd": "not estimated under revised reservation policy",
+    "full_cases": 12,
+    "full_repetitions": 3,
+    "full_initial_polarities": {
+      "supported": 6,
+      "inadequate": 6
+    }
+  },
+  "answer_schema_version": "2.0"
+}

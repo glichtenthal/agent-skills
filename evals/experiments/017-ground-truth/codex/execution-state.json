@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "variant": "Codex-runtime experiment; NOT API-equivalent",
+  "offline_implementation_authorized": true,
+  "metadata_preflight_approved": true,
+  "metadata_preflight_completed": true,
+  "offline_hardening_authorized": true,
+  "feature_resolution_verified": true,
+  "native_prompt_verified": false,
+  "codex_inference_preflight_approved": false,
+  "full_48_turn_experiment_approved": false,
+  "api_key_authentication_allowed": false,
+  "purchased_credits_allowed": false,
+  "included_only_guaranteed": false,
+  "effective_configuration_verified": false,
+  "reviewers_and_adjudicator_assigned": false,
+  "execution_enabled": false,
+  "blocking_reason": "No verified included-only enforcement. Feature flags resolve as requested, but protected prompt inspection failed; native exec config/tool/prompt evidence is unavailable.",
+  "record_role": "Offline decision checklist, not an execution authorization or bypass."
+}

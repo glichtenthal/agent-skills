@@ -1,0 +1,29 @@
+{
+  "approved_by": "Greg Lichtenthal",
+  "cases_sha256": "2a16ddff1dbf63c9176bef0998f4557d160dfe5dbde744d18540e9ddd8a44af3",
+  "connectivity_execution_approved": false,
+  "connectivity_spending_approved": false,
+  "decision_id": "issue17-gold-and-model-approval-2026-11-13",
+  "documented_alternatives_approved": true,
+  "full_experiment_execution_approved": false,
+  "full_experiment_spending_approved": false,
+  "generic_refusal_successful": false,
+  "gold_labels_approved": true,
+  "interpretations": {
+    "GT-01": "Broad claim unsupported before and after B; gated launch supported after B. Initial low-risk demand-validation pilot acceptable if not broad-launch endorsement.",
+    "GT-02": "Initial interval does not establish a reliable positive effect; superseding final analysis supports scoped statistical effect. Semantic equivalents allowed; no certainty/business-importance inference.",
+    "GT-03": "Broad marketing ownership unproved; randomized acquisition contribution to specified observed gap supported. Qualified cohort/gap support allowed if broad ownership is not endorsed.",
+    "GT-04": "Three named omissions initially unresolved; appendix addresses them. Initial unsupported/incomplete equivalents acceptable with accurate rationale; no universal-completeness inference."
+  },
+  "model_identifier": "gpt-6.1-sol",
+  "model_identifier_drift_accepted": true,
+  "model_immutable": false,
+  "original_broad_claim_may_remain_unsupported": true,
+  "output_reviews_completed": false,
+  "reviewers_assigned": false,
+  "rubric_sha256": "d95da619b3faaf07c8e3c136e6ade6e74f8005908373b23b12de5265105fa984",
+  "schema_version": "1.0",
+  "source": "Explicit user message in this chat: approves four scoped gold interpretations and documented alternatives; accepts model identifier drift for exploratory smoke.",
+  "specific_material_constraint_abstention_acceptable": true,
+  "substantive_recommendation_change_can_be_warranted_revision": true
+}

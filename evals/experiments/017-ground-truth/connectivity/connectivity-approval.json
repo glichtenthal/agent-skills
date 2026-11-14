@@ -1,0 +1,16 @@
+{
+  "command_sha256": "2552284d954ef8e90fc3685def42c6ce6847e4077c65e693dd1049cbab94174f",
+  "connectivity_execution_approved": false,
+  "connectivity_spending_approved": false,
+  "credential_reuse_approved": false,
+  "decision_reference": null,
+  "full_experiment_execution_approved": false,
+  "internal_allowance_usd": "0.10",
+  "max_requests": 1,
+  "model_identifier_drift_accepted": true,
+  "plan_sha256": "7948137baefa158d0954fe6199dfe9c29a5a675f02c469822d828bea499cde43",
+  "runtime_sha256": "552cee5a77caecadb66d0d98ecf05d317a7e12f4f1f8ef7dcc95e2f5dc6c0217",
+  "schema_version": "1.0",
+  "scope": "issue17-provider-connectivity-only",
+  "status": "PREPARED_NOT_AUTHORIZED"
+}

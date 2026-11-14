@@ -101,3 +101,26 @@
 - **Decision:** Publish the same tested instruction payload with stable 1.3.2 metadata, release_approved true and installation_approved false; rebuild and verify a new six-file digest before publication. Proposed tag product-design-director-v1.3.2 must identify the verified release commit.
 - **Consequences:** Candidate digest is historical. Frontend 1.3.1, collection version/assets, installers and existing rollback assets remain unchanged. No active skill updates.
 - **Reconsider when:** Instruction hash, final contents or CI unexpectedly diverge; stop before publication.
+
+## 2026-11-13 — Offline research evaluation foundation
+
+- **Status:** Accepted for local offline implementation only, by the user's explicit instruction to proceed with fixture/integrity work and a mock adapter. Live model calls, paid evaluations, GitHub updates and publication remain unapproved.
+- **Context/options:** Reuse the project-specific Codex controller; add a managed evaluation service; or build a small standard-library runner around the existing research template and Steward evidence-integrity principles.
+- **Decision:** Implement the offline runner and four-case Issue #17 smoke bundle under `evals/`, with a mock-only adapter, exact pinned instruction data, independent two-turn transcripts, integrity checks, synthetic oracle scoring and reports. Retain raw runs in new local directories outside the repository. No branches, released-skill edits, installation, external updates or model execution are included.
+- **Rationale:** Makes the implementation reviewable before spending or testing behavioral claims; avoids importing a fixed-suite evaluator or adding services/dependencies. Steward supports decisions and review outside the evaluated contexts.
+- **Consequences/trade-offs:** Mock outputs verify controlled infrastructure only. Native routing, real model behavior, immutable model availability, semantic grading and live accounting remain unverified. Human gold review and the remaining eight full-suite cases are outstanding. A future provider adapter requires separate approval and validation; the file-based contracts keep replacement practical.
+- **Reconsider when:** Offline review reveals a protocol mismatch, additional portfolio experiments need another fixture shape, or separately approved live work establishes a concrete integration requirement. See `evals/README.md` for the checkpoint and gates.
+
+## 2026-11-13 — GitHub continuity across two Macs
+
+- **Status:** Requested by Greg for this portability task; repository synchronization and a reviewable portability PR are in scope. Earlier offline-only restrictions remain historical and do not authorize live execution.
+- **Decision:** Use separate Git clones, shared GitHub branches/PRs, a versioned project status and standard fetch/pull/commit/push handoffs. Include the existing offline framework and its approved interpretation records without rewriting their bytes. Keep credentials, local settings, raw run evidence, private inputs and billing ledgers out of Git.
+- **Consequences:** Ignored evidence and Codex chats do not synchronize. Use one active writer per branch. The saved connectivity package remains bound to its original machine paths/runtime and unauthorized; any relocation for execution needs a new reviewed package and explicit approval. Gold/model-drift approvals remain valid for their unchanged scope.
+- **Reconsider when:** A future live run requires evidence/ledger transfer, or source/runtime changes invalidate reviewed hashes. Never reset evidence, budget holds or approvals to make a second clone executable.
+
+## 2026-11-13 — Approved offline Codex synchronization checkpoint
+
+- **Status:** Greg explicitly approved the reviewed 19-path checkpoint on `codex/two-mac-portability` and publication to existing draft PR #18. No merge, released-skill publication, live inference, subscription evaluation allowance or spending is authorized.
+- **Decision:** Preserve reusable Codex adapter/isolation code, tests, synthetic inputs, approved decisions and sanitized verification summaries. Replace the regression dependency on a raw machine capture with a clearly labeled sanitized historical metadata fixture. Keep original capture, raw test logs, local runs and ledgers untouched and excluded.
+- **Verification:** 90 offline tests pass without failures or skips; 24 independent conversations and 48 invocations are verified only in simulation. Gold/model decisions remain approved for their unchanged scope.
+- **Limits:** The CLI path/version/binary hash remain reviewed pins; the original connectivity runtime binding is historical. Native effective configuration/tool/prompt activation and guaranteed included-only funding remain unresolved and block inference. Another physical Mac requires offline checks; historical metadata cannot certify it.
