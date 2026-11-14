@@ -1,0 +1,15 @@
+{
+  "kind": "offline_only",
+  "real_provider_calls": 0,
+  "actual_cost_usd": "0.00",
+  "passed": [
+    "real pending approval blocks before dispatch",
+    "success: sole local fake call, repeat blocked, no credential retention",
+    "missing_usage: sole local fake call, repeat blocked, no credential retention",
+    "model_drift: sole local fake call, repeat blocked, no credential retention",
+    "wrong_family: sole local fake call, repeat blocked, no credential retention",
+    "missing_echo: sole local fake call, repeat blocked, no credential retention",
+    "missing credential blocks before output or dispatch"
+  ],
+  "fixture_and_rubric_bytes_unchanged": true
+}

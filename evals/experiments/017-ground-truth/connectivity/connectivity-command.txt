@@ -1,0 +1,145 @@
+#!/bin/sh
+# REVIEWABLE LAUNCH COMMAND. Do not run until separately authorized.
+set -eu
+cd /Users/greglichtenthal/Documents/agent-skills
+PYTHONDONTWRITEBYTECODE=1 /Library/Developer/CommandLineTools/usr/bin/python3 - <<'PY'
+import datetime as dt
+import json
+import os
+import platform
+import time
+from decimal import Decimal
+from pathlib import Path
+
+from evals.adapters.responses import SETTINGS, https_transport, usage_cost
+from evals.integrity import digest, fingerprint, require
+from evals.ledger import Ledger
+from evals.runner import runtime
+
+
+def main(root, transport=None):
+    folder = root / 'evals/experiments/017-ground-truth/connectivity'
+    plan_file = folder / 'request-plan.json'
+    plan = json.loads(plan_file.read_text())
+    approval = json.loads((folder / 'connectivity-approval.json').read_text())
+    command_hash = digest((folder / 'connectivity-command.txt').read_bytes())
+    require(approval.get('scope') == 'issue17-provider-connectivity-only'
+            and approval.get('connectivity_execution_approved') is True
+            and approval.get('connectivity_spending_approved') is True
+            and approval.get('credential_reuse_approved') is True
+            and approval.get('model_identifier_drift_accepted') is True
+            and approval.get('full_experiment_execution_approved') is False
+            and approval.get('max_requests') == 1 and approval.get('internal_allowance_usd') == '0.10'
+            and approval.get('plan_sha256') == digest(plan_file.read_bytes())
+            and approval.get('command_sha256') == command_hash
+            and approval.get('runtime_sha256') == fingerprint(runtime()['code_sha256'])
+            and approval.get('decision_reference'),
+            'STOP: one-request connectivity execution, spending and credential approval required')
+    require(platform.python_version() == plan['fixed_python_version'] == '3.9.6', 'Runtime differs from review')
+    require(plan['runtime_sha256'] == approval['runtime_sha256'], 'Runtime source differs from plan')
+    require(plan['scope'] == approval['scope'] and plan['max_requests'] == 1
+            and plan['automatic_retries'] == 0 and plan['internal_allowance_usd'] == '0.10'
+            and plan['reservation_usd'] == '0.10', 'Unexpected connectivity limits')
+    request = plan['request']
+    require(request == {**SETTINGS,
+        'instructions': 'This is a harmless connectivity check. Follow the user instruction.',
+        'input': [{'role': 'user', 'content': 'Return exactly CONNECTIVITY_OK.'}]}, 'Unreviewed request')
+    require(fingerprint(request) == plan['request_sha256'] and
+            len(json.dumps(request, ensure_ascii=False).encode()) <= 1024, 'Request hash/size differs')
+    # Presence only; neither the key nor auth headers are printed/persisted.
+    require(bool(os.environ.get('OPENAI_API_KEY', '').strip()), 'OPENAI_API_KEY is unavailable; no dispatch')
+    output = Path(plan['output_path']).resolve()
+    require(output == (root / 'evals/local-runs/issue17-connectivity-001').resolve(), 'Output path differs')
+    # Atomic directory creation prevents a second invocation from spending again with this approval.
+    output.mkdir(parents=True, mode=0o700, exist_ok=False)
+    def save(name, value):
+        encoded = json.dumps(value, sort_keys=True, indent=2)
+        credential = os.environ.get('OPENAI_API_KEY', '')
+        if credential:
+            encoded = encoded.replace(credential, '[REDACTED_CREDENTIAL]')
+        with (output / name).open('x', encoding='utf-8') as stream:
+            stream.write(encoded + '\n'); stream.flush(); os.fsync(stream.fileno())
+    ledger = Ledger(output / 'reservations.sqlite', '0.10',
+                    {'scope': plan['scope'], 'request': fingerprint(request), 'command': command_hash})
+    raw = None
+    started = dt.datetime.now(dt.timezone.utc).isoformat()
+    result = {'scope': plan['scope'], 'experiment_result': False,
+              'full_experiment_execution_approved': False, 'requested_model': request['model'],
+              'returned_model': None, 'model_immutable': False, 'model_drift_observed': None,
+              'started_at_utc': started, 'configuration': request,
+              'plan_sha256': digest(plan_file.read_bytes()), 'command_sha256': command_hash,
+              'runtime_sha256': approval['runtime_sha256'], 'runtime': runtime(),
+              'offline_transport': transport is not None, 'actual_billed_usd': None,
+              'dispatch_attempts': 0, 'status': 'BLOCKED', 'billing_invoice_verified': False}
+    stage = 'reservation'
+    try:
+        ledger.reserve('connectivity-001', request, '0.10')
+        save('request.json', request)
+        stage = 'provider_request'; result['dispatch_attempts'] = 1
+        save('dispatch.json', {'started_at_utc': started, 'request_sha256': fingerprint(request),
+                               'reserved_usd': '0.10', 'max_requests': 1})
+        tick = time.monotonic()
+        # The sole provider request in this command. No loops, redirects, retries, or experiment calls.
+        raw, metadata = (transport or https_transport)(request)
+        result['elapsed_seconds'] = time.monotonic() - tick
+        save('response.json', {'raw': raw, 'request_id': metadata.get('request_id')})
+        result['returned_model'] = raw.get('model')
+        result['model_drift_observed'] = raw.get('model') != request['model']
+        result['request_id'] = metadata.get('request_id')
+        result['response_id'] = raw.get('id')
+        result['provider_created_at'] = raw.get('created_at')
+        stage = 'billing_basis_validation'
+        require(isinstance(raw.get('model'), str) and (raw['model'] == request['model'] or
+                raw['model'].startswith(request['model'] + '-')) and raw.get('service_tier') == 'default',
+                'Unexpected model family or processing tier; retain reservation and review')
+        stage = 'usage_accounting'
+        accounted = usage_cost(raw)
+        ledger.settle('connectivity-001', accounted,
+                      {'usage': raw['usage'], 'request_id': metadata.get('request_id'),
+                       'accounting': 'conservative_upper_bound', 'offline_transport': transport is not None})
+        stage = 'response_validation'
+        result['returned_model'] = raw.get('model')
+        result['model_drift_observed'] = raw.get('model') != request['model']
+        result['request_id'] = metadata.get('request_id')
+        result['response_id'] = raw.get('id')
+        result['provider_created_at'] = raw.get('created_at')
+        result['usage'] = raw['usage']
+        result['conservative_accounted_usd'] = str(accounted)
+        items = raw.get('output') or []
+        visible = ''.join(c.get('text', '') for i in items if i.get('type') == 'message'
+                          for c in i.get('content', []) if c.get('type') == 'output_text')
+        checks = {
+            'completed': raw.get('status') == 'completed' and raw.get('error') is None
+                         and not raw.get('incomplete_details'),
+            'returned_model_present': isinstance(raw.get('model'), str) and bool(raw['model']),
+            'visible_marker': visible.strip() == 'CONNECTIVITY_OK',
+            'output_shape': bool(items) and all(i.get('type') in ('message', 'reasoning') for i in items),
+            'echoed_reasoning': (raw.get('reasoning') or {}).get('effort') == 'low',
+            'echoed_output_ceiling': raw.get('max_output_tokens') == 8192,
+            'echoed_tier': raw.get('service_tier') == 'default',
+            'echoed_store': raw.get('store') is False,
+            'echoed_tools': raw.get('tools') == [],
+            'echoed_truncation': raw.get('truncation') == 'disabled',
+            'request_and_response_ids': bool(metadata.get('request_id')) and bool(raw.get('id'))}
+        result['checks'] = checks
+        result['status'] = ('PASS_WITH_MODEL_DRIFT_DISCLOSURE' if result['model_drift_observed'] else 'PASS') if all(checks.values()) else 'INCONCLUSIVE_REVIEW_METADATA'
+        # API echoes are observations, not proof of internal inference settings or final invoice charges.
+    except Exception:
+        ledger.uncertain('connectivity-001')
+        result.update(status='FAILED_NO_RETRY', failed_stage=stage,
+                      error='Connectivity attempt failed or accounting is uncertain; inspect retained evidence')
+    finally:
+        result['finished_at_utc'] = dt.datetime.now(dt.timezone.utc).isoformat()
+        save('ledger-snapshot.json', ledger.snapshot()); ledger.close()
+        save('connectivity-result.json', result)
+        hashes = {p.name: digest(p.read_bytes()) for p in sorted(output.iterdir()) if p.is_file()}
+        save('hashes.json', hashes)
+    print(json.dumps({'status': result['status'], 'output_path': str(output),
+                      'model_drift_observed': result['model_drift_observed'],
+                      'full_experiment_execution_approved': False}, sort_keys=True))
+    return 0 if result['status'] in ('PASS', 'PASS_WITH_MODEL_DRIFT_DISCLOSURE') else 1
+
+
+if __name__ == '__main__':
+    raise SystemExit(main(Path.cwd()))
+PY

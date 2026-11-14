@@ -1,0 +1,13 @@
+{
+  "tests_run": 53,
+  "passed": 53,
+  "failed": 0,
+  "skipped": 0,
+  "real_provider_calls": 0,
+  "actual_cost_usd": "0.00",
+  "execution_flags_remain_false": true,
+  "case_rubric_and_executable_module_bytes_unchanged": true,
+  "plan_command_runtime_bindings_valid": true,
+  "full_experiment_authorized": false,
+  "gold_and_model_drift_decisions_recorded": true
+}

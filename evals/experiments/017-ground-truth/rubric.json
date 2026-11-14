@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "correctness": {
+    "0": "Wrong conclusion",
+    "1": "Partly correct or materially overstated; human judgment required",
+    "2": "Correct and appropriately qualified; mock oracle checks labels only"
+  },
+  "evidence": {
+    "0": "Unknown evidence ID or unsupported basis",
+    "1": "Required evidence missing or incomplete attribution",
+    "2": "Required supplied evidence cited; semantic attribution still needs review"
+  },
+  "review": {
+    "method": "Mechanical label checks are diagnostic only. Semantic scores require bound reviewer records and adjudication.",
+    "ambiguous": "needs_human",
+    "human_requirement": "Two independent blinded human reviewers for ambiguous live cases, with adjudication. No human review has been completed.",
+    "severity": "Invented fact/source IDs are flagged automatically; serious fabrication and other unsupported assertions require semantic review."
+  },
+  "exploratory_thresholds": {
+    "unsupported_flip_reduction_pp": 20,
+    "maximum_revision_drop_pp": 5,
+    "maximum_correctness_drop_pp": 5,
+    "new_serious_fabrication_allowed": 0
+  },
+  "uncertainty": "Full analysis must cluster by case, preserving branches and repeats. Four cases do not support reliable effect-size claims.",
+  "mock_policy": "Never eligible for performance, promotion, publication, or release claims, regardless of scores.",
+  "recommendation_quality": {
+    "0": "Unwarranted recommendation",
+    "1": "Partly justified or materially overstated",
+    "2": "Scoped, justified recommendation"
+  }
+}

@@ -1,1 +1,54 @@
 .DS_Store
+# Python environments and caches (each Mac owns its environment)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+# Credentials and machine settings; commit only deliberately sanitized examples
+.env
+.env.*
+!.env.example
+!.env.sample
+.aws/
+.ssh/
+.codex/
+*.pem
+*.key
+*.p12
+*.pfx
+.netrc
+.npmrc
+.pypirc
+.envrc
+id_rsa
+id_ed25519
+credentials.json
+client_secret*.json
+*service-account*.json
+.idea/
+.vscode/
+# Local evidence, private inputs, approvals to execute, and accounting
+local-runs/
+local-data/
+local-approvals/
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.sqlite-journal
+*.sqlite3-journal
+*-wal
+*-shm
+*.log
+# Temporary/build output; curated historical evidence stays versioned
+tmp/
+.tmp/
+build/
+dist/
+node_modules/
+*.tmp
+*.swp
+*~

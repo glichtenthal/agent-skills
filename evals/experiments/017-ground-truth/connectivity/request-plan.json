@@ -1,0 +1,45 @@
+{
+  "assumed_input_token_allowance": 1024,
+  "automatic_retries": 0,
+  "calculated_upper_estimate_usd": "0.08704",
+  "credential_source": "OPENAI_API_KEY environment only; no credential value is persisted",
+  "expected_visible_response": "CONNECTIVITY_OK",
+  "fixed_python_version": "3.9.6",
+  "full_experiment_execution_approved": false,
+  "gold_decision_id": "issue17-gold-and-model-approval-2026-11-13",
+  "input_upper_rate_usd_per_million": "5.00",
+  "internal_allowance_usd": "0.10",
+  "max_input_bytes": 1024,
+  "max_output_tokens": 8192,
+  "max_requests": 1,
+  "output_path": "/Users/greglichtenthal/Documents/agent-skills/evals/local-runs/issue17-connectivity-001",
+  "output_rate_usd_per_million": "10.00",
+  "provider_billing_guarantee": false,
+  "request": {
+    "include": [
+      "reasoning.encrypted_content"
+    ],
+    "input": [
+      {
+        "content": "Return exactly CONNECTIVITY_OK.",
+        "role": "user"
+      }
+    ],
+    "instructions": "This is a harmless connectivity check. Follow the user instruction.",
+    "max_output_tokens": 8192,
+    "model": "gpt-6.1-sol",
+    "reasoning": {
+      "effort": "low"
+    },
+    "service_tier": "default",
+    "store": false,
+    "tools": [],
+    "truncation": "disabled"
+  },
+  "request_sha256": "eb5b33c0ce79c065173096b87575f6a8739371ebc853d2482de8a3cf7c6bf307",
+  "reservation_usd": "0.10",
+  "runtime_sha256": "552cee5a77caecadb66d0d98ecf05d317a7e12f4f1f8ef7dcc95e2f5dc6c0217",
+  "schema_version": "1.0",
+  "scope": "issue17-provider-connectivity-only",
+  "timeout_seconds": 90
+}

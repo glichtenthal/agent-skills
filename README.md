@@ -14,6 +14,11 @@ Browse practical use cases: [Product Strategy](https://glichtenthal.github.io/ag
 
 Awesome list: [awesome-judgment-infrastructure](https://github.com/glichtenthal/awesome-judgment-infrastructure)
 
+## Continue development on another Mac
+
+Read [project status](PROJECT_STATUS.md) and the [two-Mac setup and GitHub workflow](docs/two-mac-workflow.md).
+Offline evaluation needs only Python 3.9+ and Git; run `python3 -B scripts/check_offline.py`.
+
 ## Install the four core skills for Codex
 
 The suite installer downloads the pinned stable release of the four core judgment skills into Codex's current user-skills directory:
