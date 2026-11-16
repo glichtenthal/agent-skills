@@ -123,7 +123,7 @@ AI Project Steward helps you navigate consequential technical decisions, preserv
 Two complementary skills work alongside AI Project Steward:
 
 - **[Product Design Director](applied-judgment-systems/gtm-product-experience/skills/product-design-director/)** defines the product experience, workflows, interaction design, and visual direction, then critiques the rendered result.
-- **[Production Frontend Engineer](applied-judgment-systems/gtm-product-experience/skills/production-frontend-engineer/)** implements the interface and checks its behavior, visual fidelity, and technical readiness.
+- **[Production Frontend Engineer v1.3.2](https://github.com/glichtenthal/agent-skills/tree/production-frontend-engineer-v1.3.2/applied-judgment-systems/gtm-product-experience/skills/production-frontend-engineer/)** implements the interface and checks its behavior, visual fidelity, and technical readiness.
 
 Install all three for the combined workflow; use the roles each task needs. A narrow frontend fix does not require a new design cycle.
 

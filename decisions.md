@@ -1,5 +1,12 @@
 # Decisions
 
+## 2026-11-16 — Explicit stable Frontend install and current links
+
+- **Status:** Greg explicitly approved adding the opt-in Frontend installer option, updating current site/install links, testing, committing and pushing. Design and Backend must remain unchanged.
+- **Decision:** Add only `--skill production-frontend-engineer`, pinned to standalone v1.3.2 with its published checksum. Retain the existing four default skills and all prior release pins. Update Frontend's current source/download links and distinguish the older optional plugin from the standalone release. Keep historical evidence and release archives intact.
+- **Safety/recovery:** Verify downloads before replacement, retain duplicate-root protection and reject symbolic-link Frontend targets. Do not change plugin settings or install other roles. Users must make a retained backup outside discovery before upgrades; the existing temporary replacement copy is not a retained backup. The published script can be reverted by a new commit; do not rewrite the stable release/tag.
+- **Verification scope:** Offline control-flow tests, a separate actual-release install/update in temporary targets, HTML/JSON-LD checks, rendered desktop/mobile link checks, CI and live-site verification. No new skill-behavior or cross-platform certification is claimed.
+
 ## 2026-11-15 — Publish standalone Production Frontend Engineer 1.3.2
 
 - **Status:** Accepted for finalization, source push, standalone tag and GitHub publication by explicit user approval after the exact RC archive and native desktop loading checks.

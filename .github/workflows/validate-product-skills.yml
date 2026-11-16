@@ -20,3 +20,8 @@ jobs:
             test "$expected" = "$actual"
             jq -e 'if .status == "candidate" then .publication_status == "unreleased" and .release_approved == false and .installation_approved == false else true end' "$dir/metadata/release.json"
           done
+      - name: Check explicit Frontend installer behavior
+        shell: bash
+        run: |
+          bash -n install.sh
+          node --test tests/install-frontend.test.mjs

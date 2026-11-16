@@ -1,3 +1,5 @@
+> **Current standalone Frontend:** [Production Frontend Engineer 1.3.2](https://github.com/glichtenthal/agent-skills/releases/tag/production-frontend-engineer-v1.3.2) is available separately. See the [current installation guide](../README.md). The preparation record below predates that standalone release; it does not describe the current Frontend download or change the older plugin snapshot.
+
 > **Unreleased standalone Design preparation.** Design Director 1.3.2 preserves the tested rc.1 instructions; Frontend remains stable 1.3.1. Collection identifier 1.3.2-rc.2 is unchanged and is not proposed for release. See [final approval package](../../release-preparation/design-1.3.2/README.md). Publication and installation remain unapproved.
 
 # GTM Product Experience

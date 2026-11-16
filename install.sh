@@ -28,7 +28,7 @@ Options:
 
 Skills:
   Core (installed by default): briefing-room, ground-truth, the-quorum, test-drive
-  Applied (install explicitly): ai-project-steward
+  Applied (install explicitly): ai-project-steward, production-frontend-engineer
   Legacy alias: building-partner
 EOF
 }
@@ -56,6 +56,7 @@ skill_ref() {
     the-quorum) printf '%s\n' 'v1.4.1' ;;
     test-drive) printf '%s\n' 'v1.6.1' ;;
     ai-project-steward) printf '%s\n' 'v2.1.3' ;;
+    production-frontend-engineer) printf '%s\n' 'production-frontend-engineer-v1.3.2' ;;
     *) return 1 ;;
   esac
 }
@@ -153,6 +154,23 @@ for skill_name in "${selected_skills[@]}"; do
   fi
   release_url="https://github.com/glichtenthal/$skill_name/releases/download/$release_ref/$archive_name"
 
+  if [ "$skill_name" = "production-frontend-engineer" ]; then
+    archive_name='production-frontend-engineer-1.3.2.zip'
+    release_url="https://github.com/glichtenthal/agent-skills/releases/download/$release_ref/$archive_name"
+    [ ! -L "$target_dir" ] || fail "Frontend target is a symbolic link; reconcile it before replacing the install."
+    case "$target_dir" in
+      "$HOME/.agents/skills/production-frontend-engineer")
+        other_dir="$HOME/.codex/skills/production-frontend-engineer" ;;
+      "$HOME/.codex/skills/production-frontend-engineer")
+        other_dir="$HOME/.agents/skills/production-frontend-engineer" ;;
+      *) other_dir='' ;;
+    esac
+    if [ -n "$other_dir" ] && { [ -e "$other_dir" ] || [ -L "$other_dir" ]; }; then
+      fail "Another Frontend skill source exists at $other_dir. Reconcile duplicate discovery before installing or updating."
+    fi
+    printf 'Frontend: avoid an enabled plugin copy of the same skill; this installer does not change plugin settings.\n' >&2
+  fi
+
   if [ -e "$target_dir" ] && [ "$update" = false ]; then
     printf 'Skipping %s: already installed (use --update to replace it).\n' "$skill_name"
     continue
@@ -189,6 +207,18 @@ for skill_name in "${selected_skills[@]}"; do
     [ "$actual_sha256" = "$expected_sha256" ] || fail "Steward v2.1.3 archive SHA-256 mismatch."
   fi
 
+  if [ "$skill_name" = "production-frontend-engineer" ]; then
+    expected_sha256='80c22c5034fde5d952159ebbd66f52950ab25bd4e62180c8818f0d44e0d9dd7c'
+    if command -v shasum >/dev/null 2>&1; then
+      actual_sha256="$(shasum -a 256 "$archive_path" | awk '{print $1}')"
+    elif command -v sha256sum >/dev/null 2>&1; then
+      actual_sha256="$(sha256sum "$archive_path" | awk '{print $1}')"
+    else
+      fail "Frontend archive verification requires shasum or sha256sum."
+    fi
+    [ "$actual_sha256" = "$expected_sha256" ] || fail "Frontend v1.3.2 archive SHA-256 mismatch."
+  fi
+
   while IFS= read -r archive_entry; do
     case "$archive_entry" in
       "$skill_name"|"$skill_name/"|"$skill_name/"*) ;;
@@ -205,6 +235,11 @@ for skill_name in "${selected_skills[@]}"; do
     [ -f "$source_dir/metadata/release.json" ] || fail "Steward release metadata is missing."
     grep -Eq '"version":[[:space:]]*"2\.1\.3"' "$source_dir/metadata/release.json" || fail "Unexpected Steward version."
     grep -Eq '"scope":[[:space:]]*"Codex only"' "$source_dir/metadata/release.json" || fail "Unexpected Steward release scope."
+  fi
+  if [ "$skill_name" = "production-frontend-engineer" ]; then
+    [ -f "$source_dir/metadata/release.json" ] || fail "Frontend release metadata is missing."
+    grep -Eq '"version":[[:space:]]*"1\.3\.2"' "$source_dir/metadata/release.json" || fail "Unexpected Frontend version."
+    grep -Eq '"status":[[:space:]]*"stable"' "$source_dir/metadata/release.json" || fail "Unexpected Frontend release status."
   fi
   [ ! -e "$stage_dir" ] || fail "Temporary install path already exists: $stage_dir"
 
