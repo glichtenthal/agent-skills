@@ -1,3 +1,7 @@
 # Keep packaged skill documentation out of the rendered Pages site.
 exclude:
   - applied-judgment-systems
+  - judgment-infrastructure/briefing-room
+  - judgment-infrastructure/ground-truth
+  - judgment-infrastructure/the-quorum
+  - judgment-infrastructure/test-drive
