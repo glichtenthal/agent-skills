@@ -8,6 +8,8 @@ Read the short thesis: [Judgment Infrastructure for Human-Led AI](https://glicht
 
 Start with the guided workflow: [Start Here](https://glichtenthal.github.io/agent-skills/start-here/)
 
+Browse the four independent core skills in the [Judgment Infrastructure collection](https://glichtenthal.github.io/agent-skills/judgment-infrastructure/).
+
 See the full loop in one scenario: [Judgment Infrastructure Demo](https://glichtenthal.github.io/agent-skills/demo/) ([Markdown source](examples/judgment-infrastructure-demo.md))
 
 Browse practical use cases: [Product Strategy](https://glichtenthal.github.io/agent-skills/use-cases/product-strategy/) · [Founder Decisions](https://glichtenthal.github.io/agent-skills/use-cases/founder-decisions/) · [Research Synthesis](https://glichtenthal.github.io/agent-skills/use-cases/research-synthesis/) · [Career Decisions](https://glichtenthal.github.io/agent-skills/use-cases/career-decisions/)

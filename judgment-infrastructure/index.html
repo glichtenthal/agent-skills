@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Judgment Infrastructure Skills | Human-Led AI</title>
+  <meta name="description" content="Explore four independent agent skills for organizing context, pressure-testing ideas, deliberating decisions, and testing assumptions.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://glichtenthal.github.io/agent-skills/judgment-infrastructure/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Judgment Infrastructure for Human-Led AI">
+  <meta property="og:title" content="Judgment Infrastructure Skills">
+  <meta property="og:description" content="Four independent skills for making context legible, challenging thinking, deliberating decisions, and creating evidence.">
+  <meta property="og:url" content="https://glichtenthal.github.io/agent-skills/judgment-infrastructure/">
+  <meta property="og:image" content="https://glichtenthal.github.io/agent-skills/assets/catalog-social-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../assets/judgment-infrastructure.css?v=20261116-collection">
+  <style>
+    .collection { margin-top: 40px; }
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .collection-card {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-width: 0;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+    }
+    .collection-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 2.4 / 1;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+    .collection-card h2 { margin: 0; font-size: 1.5rem; }
+    .collection-card p { margin: 0; color: var(--muted); }
+    .collection-card .actions { margin-top: auto; padding-top: 4px; }
+    .collection-note {
+      margin-top: 28px;
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface-soft);
+    }
+    .collection-note p { margin: 0; }
+    @media (max-width: 700px) {
+      .collection-grid { grid-template-columns: 1fr; }
+      .collection-card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="product-page">
+    <a class="crumb" href="../">← Judgment Infrastructure catalog</a>
+    <header>
+      <p class="eyebrow">Four independent skills</p>
+      <h1>Judgment Infrastructure</h1>
+      <p>Choose the skill that fits the work in front of you. Use one on its own, or combine them when a decision calls for a fuller loop.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/glichtenthal/agent-skills#install-the-four-core-skills-for-codex">Install the suite for Codex</a>
+        <a class="button secondary" href="../start-here/">See how they fit together</a>
+      </div>
+    </header>
+
+    <section class="collection" aria-label="The four Judgment Infrastructure skills">
+      <div class="collection-grid">
+        <article class="collection-card">
+          <img src="../assets/briefing-room-social-preview.svg" alt="">
+          <h2>The Briefing Room</h2>
+          <p>Turn scattered notes, research, transcripts, or context into a brief you can think with.</p>
+          <div class="actions">
+            <a class="button secondary" href="../briefing-room/">Explore skill</a>
+            <a class="button primary" href="https://github.com/glichtenthal/briefing-room">Open standalone source</a>
+          </div>
+        </article>
+        <article class="collection-card">
+          <img src="../assets/ground-truth-social-preview.svg" alt="">
+          <h2>Ground Truth</h2>
+          <p>Pressure-test a claim, plan, draft, or idea with calibrated honesty and useful critique.</p>
+          <div class="actions">
+            <a class="button secondary" href="../ground-truth/">Explore skill</a>
+            <a class="button primary" href="https://github.com/glichtenthal/ground-truth">Open standalone source</a>
+          </div>
+        </article>
+        <article class="collection-card">
+          <img src="../assets/quorum-social-preview.svg" alt="">
+          <h2>The Quorum</h2>
+          <p>Deliberate consequential decisions through multiple expert lenses, without hiding disagreement.</p>
+          <div class="actions">
+            <a class="button secondary" href="../the-quorum/">Explore skill</a>
+            <a class="button primary" href="https://github.com/glichtenthal/the-quorum">Open standalone source</a>
+          </div>
+        </article>
+        <article class="collection-card">
+          <img src="../assets/test-drive-social-preview.svg" alt="">
+          <h2>Test Drive</h2>
+          <p>Find the smallest credible test that can create evidence before you commit to an idea.</p>
+          <div class="actions">
+            <a class="button secondary" href="../test-drive/">Explore skill</a>
+            <a class="button primary" href="https://github.com/glichtenthal/test-drive">Open standalone source</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <aside class="collection-note">
+      <p><strong>Use them independently.</strong> This folder groups the four skills as one toolkit; it does not make them dependencies. Their source and releases remain in their individual repositories. AI Project Steward is separate and helps carry human-led judgment into a build.</p>
+    </aside>
+
+    <footer>
+      <p><a href="../">Back to the catalog</a> · <a href="../ai-project-steward/">Explore AI Project Steward</a></p>
+    </footer>
+  </main>
+</body>
+</html>
