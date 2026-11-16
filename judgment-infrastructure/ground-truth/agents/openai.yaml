@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ground Truth"
+  short_description: "Get calibrated honesty instead of easy validation"
+  default_prompt: "Use $ground-truth to pressure-test this idea honestly."

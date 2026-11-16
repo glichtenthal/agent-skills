@@ -9,6 +9,7 @@ Read the short thesis: [Judgment Infrastructure for Human-Led AI](https://glicht
 Start with the guided workflow: [Start Here](https://glichtenthal.github.io/agent-skills/start-here/)
 
 Browse the four independent core skills in the [Judgment Infrastructure collection](https://glichtenthal.github.io/agent-skills/judgment-infrastructure/).
+Their [skill folders](judgment-infrastructure/) contain release snapshots; each skill also remains available from its own source repository.
 
 See the full loop in one scenario: [Judgment Infrastructure Demo](https://glichtenthal.github.io/agent-skills/demo/) ([Markdown source](examples/judgment-infrastructure-demo.md))
 

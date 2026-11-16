@@ -1,0 +1,4 @@
+interface:
+  display_name: "The Briefing Room"
+  short_description: "Turn messy context into a brief you can think with"
+  default_prompt: "Use $briefing-room to structure this messy context into a clear brief."

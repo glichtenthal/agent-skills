@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test Drive"
+  short_description: "Test an idea before trusting it"
+  default_prompt: "Use $test-drive to turn this idea into the smallest useful test."
