@@ -12,13 +12,16 @@ Install all three for the combined workflow; invoke the roles relevant to each t
 
 ## Install
 
-Download the three individual skill ZIPs:
+Choose the AI Project Steward ZIP for your environment, and download the specialist skills you need:
 
-- [AI Project Steward 2.1.3 (Codex only)](https://github.com/glichtenthal/ai-project-steward/releases/download/v2.1.3/ai-project-steward-2.1.3-codex.zip)
+- [AI Project Steward 2.1.3 for Codex](https://github.com/glichtenthal/ai-project-steward/releases/download/v2.1.3/ai-project-steward-2.1.3-codex.zip)
+- [AI Project Steward 2.1.3 for Claude Code](https://github.com/glichtenthal/ai-project-steward/releases/download/v2.1.3-claude/ai-project-steward-2.1.3-claude.zip) · [SHA256SUMS](https://github.com/glichtenthal/ai-project-steward/releases/download/v2.1.3-claude/STEWARD-CLAUDE-SHA256SUMS)
 - [Product Design Director 1.3.2](https://github.com/glichtenthal/agent-skills/releases/download/product-design-director-v1.3.2/product-design-director-1.3.2.zip)
 - [Production Frontend Engineer 1.3.2](https://github.com/glichtenthal/agent-skills/releases/download/production-frontend-engineer-v1.3.2/production-frontend-engineer-1.3.2.zip) · [SHA256SUMS](https://github.com/glichtenthal/agent-skills/releases/download/production-frontend-engineer-v1.3.2/SHA256SUMS)
 
-**Claude:** Steward 2.1.3 is a Codex-only release, not a certified Claude upgrade. For Claude, retain the [Steward 2.1.2 stable ZIP](https://github.com/glichtenthal/ai-project-steward/releases/download/v2.1.2/ai-project-steward-2.1.2.zip). Frontend 1.3.2 has bounded Codex validation; Claude compatibility is not established by this release. For other supported skill ZIPs, upload through your account's Skills settings, enable them, and start a fresh chat. Chat attachments alone do not install skills. Replace older copies of the same supported skill; no separate Design Craft installation is needed.
+**Claude Code:** Steward [v2.1.3-claude](https://github.com/glichtenthal/ai-project-steward/releases/tag/v2.1.3-claude) is a published, approved Claude Code CLI release, with bounded testing exceptions (10/10 behavioral PASS, 3/4 composition PASS, one cross-platform case not run). Verify its checksum, back up any active Steward installation outside skill discovery, and install one authoritative `ai-project-steward/` folder into the configured Claude Code skills location (normally `~/.claude/skills/`). Test in a fresh session. The instructions are byte-identical to the Codex v2.1.3 skill, but the distribution metadata is Claude Code-scoped.
+
+**Native Claude (claude.ai):** The v2.1.3 Claude Code release is **not validated for claude.ai**. Keep an existing native-Claude installation unchanged until separately evaluated; the [historical Steward 2.1.2 ZIP](https://github.com/glichtenthal/ai-project-steward/releases/download/v2.1.2/ai-project-steward-2.1.2.zip) remains available for its previously tested scope. For skills supported in native Claude, upload the ZIP through Skills settings rather than attaching it to a chat. Frontend 1.3.2 has bounded Codex validation only; Claude compatibility is not established by its release. No separate Design Craft installation is needed.
 
 **Codex:** Use your skill installer with the linked skill folders above and Steward's canonical repository. The catalog shell installer supports Steward and Frontend as explicit options; it does not install Director. The default suite remains the four core judgment skills. If you use the optional GTM Product Experience plugin, avoid duplicate enabled copies of the same roles.
 
@@ -43,7 +46,7 @@ After installation, ask the agent to confirm the loaded skill names, versions fr
 
 ## Distribution
 
-Stable versions: Steward 2.1.3 (Codex only; 2.1.2 remains the published Claude-tested version); standalone Director 1.3.2; standalone Engineer 1.3.2. Each individual ZIP contains one named folder with SKILL.md at its root. The optional GTM Product Experience plugin still packages Director and Engineer at 1.3.1; install Steward separately. If you use standalone Director or Engineer 1.3.2 alongside the plugin in Codex, exclude only the corresponding older plugin skill rather than disabling unrelated roles. The installer does not manage those settings.
+Stable versions: Steward 2.1.3 for Codex and separately authorized Claude Code; standalone Director 1.3.2; standalone Engineer 1.3.2. Native claude.ai validation of Steward 2.1.3 is not yet established; Steward 2.1.2 retains its historical validation scope. Each individual ZIP contains one named folder with SKILL.md at its root. The optional GTM Product Experience plugin still packages Director and Engineer at 1.3.1; install Steward separately. If you use standalone Director or Engineer 1.3.2 alongside the plugin in Codex, exclude only the corresponding older plugin skill rather than disabling unrelated roles. The installer does not manage those settings.
 
 Do not upload the plugin archive as an individual Claude skill. Uploading an archive into a chat does not install it.
 
@@ -55,4 +58,4 @@ Bounded evaluation of unchanged candidate instructions: Codex local build with 1
 
 Historical Steward evaluations retain their original version scope. The saved app test results demonstrate the tested scenarios, not absence of defects or universal skill reliability. The paragraph above is historical collection evidence, not certification of Frontend 1.3.2. See the [Frontend 1.3.2 bounded evidence](https://github.com/glichtenthal/agent-skills/blob/production-frontend-engineer-v1.3.2/release-preparation/frontend-1.3.2/EVIDENCE.md) for its scope and retained limitations.
 
-Download [Director 1.3.2](https://github.com/glichtenthal/agent-skills/releases/tag/product-design-director-v1.3.2), [Engineer 1.3.2](https://github.com/glichtenthal/agent-skills/releases/tag/production-frontend-engineer-v1.3.2), the [optional 1.3.1 plugin](https://github.com/glichtenthal/agent-skills/releases/tag/product-experience-v1.3.1), and [Steward 2.1.3 (Codex only)](https://github.com/glichtenthal/ai-project-steward/releases/tag/v2.1.3).
+Download [Director 1.3.2](https://github.com/glichtenthal/agent-skills/releases/tag/product-design-director-v1.3.2), [Engineer 1.3.2](https://github.com/glichtenthal/agent-skills/releases/tag/production-frontend-engineer-v1.3.2), the [optional 1.3.1 plugin](https://github.com/glichtenthal/agent-skills/releases/tag/product-experience-v1.3.1), and Steward 2.1.3 for [Codex](https://github.com/glichtenthal/ai-project-steward/releases/tag/v2.1.3) or [Claude Code](https://github.com/glichtenthal/ai-project-steward/releases/tag/v2.1.3-claude).
