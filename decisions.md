@@ -1,5 +1,13 @@
 # Decisions
 
+## 2026-11-15 — Publish standalone Production Frontend Engineer 1.3.2
+
+- **Status:** Accepted for finalization, source push, standalone tag and GitHub publication by explicit user approval after the exact RC archive and native desktop loading checks.
+- **Context/options:** Retain a local RC; publish the mixed collection; or publish Frontend alone with unchanged tested instructions and bounded evidence. Publish Frontend alone; do not merge held Design or Backend development work.
+- **Decision:** Preserve the five reviewed nonmetadata runtime files; finalize stable 1.3.2 metadata with publication approval and separate installation scope. Build/extract/compare the exact six-file artifact before publication. Tag the verified release commit `production-frontend-engineer-v1.3.2` and publish its standalone ZIP and checksum without replacing existing releases or the collection's Latest designation.
+- **Consequences:** Final metadata changes the archive digest, not skill behavior. One explicit native sample is not universal routing or platform certification. Design, Backend, collection metadata/assets, installers and site files remain unchanged. This release operation does not update active installations or plugin configuration.
+- **Recovery/reconsideration:** Stop on unexpected instruction, membership, source, CI or remote-state drift. Preserve original evidence and prior release assets. Report before deleting/replacing a release or tag; use a reviewed revert rather than force-pushing a problematic source commit.
+
 ## 2026-09-02 — Shared visual layer for Judgment Infrastructure pages
 
 - **Status:** Accepted

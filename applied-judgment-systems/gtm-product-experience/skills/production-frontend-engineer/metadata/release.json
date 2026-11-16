@@ -1,13 +1,25 @@
 {
   "name": "production-frontend-engineer",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "status": "stable",
-  "date": "2026-09-18",
+  "date": "2026-11-15",
+  "scope": "Standalone Frontend release; validation claims are limited to the tested Codex scope",
   "source": {
-    "authoring_location": "GTM Agent OS Project/plugins/gtm-product-experience/skills/production-frontend-engineer",
-    "base_plugin_version": "1.3.0"
+    "repository": "https://github.com/glichtenthal/agent-skills",
+    "base_commit": "aeebfa3522fcc21bbad7ca251551caccdeb5af96",
+    "instruction_identity": "skill_sha256 identifies unchanged reviewed 1.3.2-dev.3 and tested 1.3.2-rc.1 instructions; the standalone release tag identifies the final source commit",
+    "instruction_overlay_base": "9a3b8f892cdd7903926f85c6e2575b36162ed41e"
   },
-  "skill_sha256": "180c7aa9942bcc94d9dcd066e4b65dd634331e72e847cc4f3d955ed88c1e20f6",
-  "validation_scope": "Bounded evaluation of unchanged candidate instructions: Codex local build with 10 local and 15 browser checks; Claude Cowork build with 19 passing checks and native browser zoom not run after application fixes; fresh-session continuity with 7 focused passes and a 19-pass suite rerun. Saved evidence and selected cases independently inspected. One prompted project, no controlled baseline or proof of automatic routing. Screen-reader behavior and other browser engines untested. Claude after-work skill hashes were not retained. Validation applies to the unchanged candidate instruction payload; publication and installation receipts are maintained separately.",
-  "promoted_from": "1.3.1-rc.1"
+  "skill_sha256": "881a39c57534cc0d246b7a46f55f011d7a7bcab3f31b953591ffdfee9c5e9cad",
+  "validation_scope": "Unchanged reviewed instructions and references. Bounded Codex approval/handoff cases and paired asynchronous repairs passed; both prior stable and candidate passed the paired recovery, so no general superiority is claimed. A connected composition passed after an owner-authorized manual correction to the disposable app. The exact RC archive passed a fresh explicit CLI review; one subsequent native Codex Desktop bare-name invocation loaded its complete instructions and both references. Core source-description review criteria passed with a retained minor response-length miss. Final stable metadata is separately rebuilt and byte-verified. No universal routing, manual picker, Claude/ChatGPT, real-provider, comprehensive accessibility/security, cross-browser, aesthetics or production-readiness certification.",
+  "stable_release": "1.3.2",
+  "publication_status": "approved_for_publication",
+  "release_approved": true,
+  "installation_approved": false,
+  "validation_status": "User explicitly approved standalone v1.3.2 source push and publication after local archive and native loading checks. Stable-archive installation is not part of this release operation; earlier RC test installation is recorded separately.",
+  "baseline": {
+    "version": "1.3.1",
+    "skill_sha256": "180c7aa9942bcc94d9dcd066e4b65dd634331e72e847cc4f3d955ed88c1e20f6"
+  },
+  "evidence_summary": "release-preparation/frontend-1.3.2/EVIDENCE.md in source repository; not a runtime dependency"
 }

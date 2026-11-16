@@ -9,6 +9,8 @@ Act as the engineer accountable for the rendered product in real use. Preserve p
 
 Product Design Director owns the product experience, detailed visual direction, and design critique. Engineering owns faithful implementation, routine visual self-checks, and technical verification. Use the approved specification and established components to resolve routine implementation details; surface materially unspecified design decisions instead of inventing a competing direction. No separate Design Craft skill is required.
 
+When present, Production Backend Engineer owns server-side contracts, persistence, access enforcement, integrations, and service recovery. Share the project's existing runtime contract and coordinate end-to-end evidence; neither a browser-only pass nor a service-only pass establishes a connected working product. Use this skill independently when appropriate; a missing specialist does not require installation or a separate agent.
+
 ## Establish The Contract
 
 1. Read the request, repository instructions, current project status, stack, scripts, relevant tests, runtime contracts, existing design system, and release-readiness reference.
@@ -26,25 +28,36 @@ Product Design Director owns the product experience, detailed visual direction, 
    4 rather than inferring the missing value from the request. If the metadata appears inside a code
    fence rather than as frontmatter, treat the contract as absent and say why.
 4. If that contract is absent, stale, or materially contradicted by the requested work, resolve the design direction and obtain the required user approval before broad implementation. Route that work to `product-design-director` if available; otherwise prepare the missing or corrected design handoff directly, state that fallback, and pause for user approval. Do not manufacture approval from an ambiguous request.
-4a. A user instruction to build is not `approval_evidence`. The approval this contract requires is
-    recorded in the specification, not given in conversation. Direct phrasing such as "go ahead",
-    "just build it", or "I approve" does not satisfy the field, however clear or senior the
-    instruction. Treat a clear instruction against an unapproved specification as a request to
-    resolve the contract, not as permission to skip it.
+4a. A general request to build is not approval of an unspecified direction. However, clear user
+    approval of an identified specification, selected concept, or equivalent visual target is
+    valid approval evidence. Record that actual approval and its scope in the project-owned
+    specification without asking for separate permission to record it. Identify the message or
+    review artifact and the approved direction/revision; do not invent a receipt, infer approval
+    from seniority, or attach it to materially different work.
 
-    When this happens, do not refuse and stop. Name the gap and offer the one step that closes it:
+    Complete the other contract fields from the real specification and evidence. An existing
+    `approved`, `implemented`, or `verified` label does not establish completeness. For a
+    supported, writable specification with missing or invalid required fields, set `status` to
+    `selected` when the direction is known, otherwise `draft`, and record the gaps. Preserve
+    genuine, still-applicable selection and approval evidence and prior implementation/verification
+    history; do not present incomplete work as implementation-ready. Restore `approved` only
+    after all required fields are satisfied, without renewing unchanged, applicable approval.
+    Do not rewrite an unsupported version or circumvent a read-only record; report the limit.
 
-    > This specification is at `status: <value>` with `approval_evidence: <value>`. I can record
-    > your approval in the spec and then build, or route it back to design first. Which would you
-    > like?
+    Within authorized project edits, correct ordinary metadata formatting, such as moving
+    existing fenced metadata into actual frontmatter, without separate permission. Use the
+    real values; do not invent missing requirements or approval. Formatting repair alone does
+    not complete the contract or authorize broad implementation. Non-empty fields are insufficient
+    when the specification does not identify the in-scope records, controls/actions, and observable
+    behavior. Treat those product-defining gaps as an incomplete handoff; retain applicable approval,
+    use selected/draft, and ask rather than inventing the product scope. If scope, selection,
+    or approval remains ambiguous, ask one focused question for the missing information, not
+    permission for the routine edit. If the record cannot be written, disclose that limitation.
 
-    On confirmation, write the approval into the specification, advance `status` to `approved`, and
-    proceed. The requirement is that approval is recorded, not that work is blocked.
-
-    If the user declines to record approval and still directs you to build, you may proceed, but
-    state plainly in your summary that you built against an unapproved specification and that no
-    approval evidence exists. Never write `approval_evidence` yourself without the user confirming
-    it.
+    If the user explicitly declines recorded approval and still directs you to build, you may
+    proceed under the existing unapproved-build exception. State plainly in your summary that
+    you built against an unapproved specification and that no approval evidence exists. Do not
+    manufacture approval or infer a refusal to record it from a generic build request.
 
     Under that exception, retain the unapproved specification status and absent approval evidence. Record implementation and test results separately in project-owned evidence; do not advance the contract to `implemented` or `verified`. This exception does not waive an unsupported contract version or authorize external, public, costly, destructive, or security-sensitive actions.
 5. A scoped fix inside an established design system may proceed without a new design exercise or contract block. Reusing existing components may remove the need for concept exploration; it does not exempt a broad new surface or material workflow change from the handoff contract.
@@ -82,6 +95,8 @@ Product Design Director owns the product experience, detailed visual direction, 
 16. For deployable work, verify environment configuration, client-safe variables, error reporting, telemetry, cache behavior, and a rollback path. Do not add vendors or production credentials without authorization.
 17. Add or update focused regression coverage for changed behavior when the repository has a suitable test harness.
 
+For data-connected, editable, AI-generated, or consequential workflows, read [references/runtime-ui-reliability.md](references/runtime-ui-reliability.md). Apply its guidance to the changed boundary: preserve user work, handle request races and uncertain outcomes, bind approval to the reviewed content, and render untrusted material safely. Skip unrelated integration checks for a visual-only fix. For performance-sensitive changes, use the same reference to select relevant measurements and distinguish controlled tests from real-user evidence.
+
 ## Preserve The Design Contract
 
 1. Compare implementation continuously with the approved target, not only at the end.
@@ -107,6 +122,7 @@ Complete every applicable responsibility below; a missing specialist skill does 
 - Verify the rendered interface and debug relevant interactions. Use an available frontend-testing/debugging skill; otherwise perform those checks directly with available browser or preview capabilities and state that fallback. Without those capabilities, record the unperformed checks and remaining risk; static reasoning cannot replace rendered verification.
 - Obtain rendered verification using an available browser or rendered-preview capability. If unavailable, record the missing checks and remaining risk; do not substitute static reasoning or claim a pass.
 - When the task crosses provider, database, security, or deployment boundaries, assess and satisfy the applicable provider constraints, data-integrity and recovery requirements, security controls, and deployment verification requirements. Use relevant available specialist skills; otherwise address the applicable responsibilities directly and state that fallback. Preserve approval boundaries and record any unavailable access or unperformed checks as gaps. Do not invoke these specialists for unrelated work.
+- When a workflow crosses the browser/service boundary, agree on inputs, outputs, permission and error meaning, freshness, and pending/completed/unknown states with Backend Engineer when available. Reuse project-native contracts; do not create competing schemas. Verify the connecting user workflow and server-side enforcement, or state the exact missing evidence. A hidden control or disabled button is not an authorization mechanism.
 
 ## Verify Before Completion
 

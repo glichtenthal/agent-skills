@@ -47,6 +47,21 @@ Escalate the tier when uncertain. A missing tool may be recorded as a gap; it do
 - Supported browsers checked when required by risk
 - Slow, failed, empty, and unauthorized responses checked when relevant
 
+## Connected And Editable Workflows
+
+For the changed boundaries, apply `references/runtime-ui-reliability.md` from the skill root:
+
+- Client/server contract meaning checked, with linked browser and service evidence for relevant end-to-end flows; simulations clearly separated from live integration
+- Obsolete responses cannot overwrite the current selection or newer work
+- Failed saves and refreshes do not silently discard edits; persistence and navigation behavior match the approved privacy/recovery design
+- Duplicate activation, partial failure and unknown completion reconciled with the real service contract; no unsafe blind retries
+- Executed content matches the reviewed/approved version; editing or regenerating content does not inherit stale approval
+- Permissions enforced by the service, with relevant account/tenant cache isolation checked in the interface
+- External/generated rich text, Markdown, URLs and embeds use applicable safe rendering protections
+- Relevant performance measurements identify route/state, conditions, baseline/budget when available, and lab versus field evidence; no automatic telemetry installation
+
+These are conditional checks, not additional sign-offs for visual-only changes. Report unavailable critical evidence as a readiness limit rather than a pass.
+
 ## Deployment And Operations
 
 - Build and runtime environment variables are documented and client-safe
