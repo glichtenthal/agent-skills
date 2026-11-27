@@ -609,6 +609,123 @@
         margin-right: 0;
       }
     }
+    .needs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+    }
+
+    .route.need {
+      --fam: #005fcc;
+      display: grid;
+      align-content: start;
+      gap: 6px;
+      border-top: 4px solid var(--fam);
+    }
+
+    .route.need-build { --fam: #2f6f5e; }
+
+    .need .need-family {
+      color: var(--fam);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .need p { text-wrap: balance; }
+
+    .path {
+      --fam: #005fcc;
+      --fam-soft: #eaf2fd;
+      margin-top: 22px;
+      border: 1px solid var(--line);
+      border-left: 6px solid var(--fam);
+      border-radius: 10px;
+      background: #fffdf8;
+    }
+
+    .path-build {
+      --fam: #2f6f5e;
+      --fam-soft: #e8f2ee;
+    }
+
+    .path summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      column-gap: 18px;
+      row-gap: 4px;
+      padding: 22px 24px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .path summary::-webkit-details-marker { display: none; }
+
+    .path summary:hover { background: var(--fam-soft); }
+
+    .path summary:focus-visible {
+      outline: 3px solid #005fcc;
+      outline-offset: -3px;
+    }
+
+    .path-label {
+      grid-column: 1;
+      color: var(--fam);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .path-title {
+      grid-column: 1;
+      color: var(--fam);
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    .path-desc {
+      grid-column: 1;
+      max-width: 680px;
+      color: var(--muted);
+      text-wrap: balance;
+    }
+
+    .path-cue {
+      grid-column: 2;
+      grid-row: 1 / span 3;
+      align-self: center;
+      width: 34px;
+      height: 34px;
+      border: 1.5px solid var(--fam);
+      border-radius: 50%;
+      background:
+        linear-gradient(var(--fam), var(--fam)) center / 14px 2px no-repeat,
+        linear-gradient(var(--fam), var(--fam)) center / 2px 14px no-repeat;
+    }
+
+    .path[open] .path-cue {
+      background: linear-gradient(var(--fam), var(--fam)) center / 14px 2px no-repeat;
+    }
+
+    .path-body {
+      display: grid;
+      gap: 22px;
+      padding: 4px 24px 26px;
+    }
+
+    .path-body .workflow,
+    .path-body .start { margin-bottom: 0; }
+
+    .path-build .product-role { border-top-color: var(--role-color, #2f6f5e); }
+
+    @media (max-width: 760px) {
+      .path summary { padding: 18px 16px; }
+      .path-body { padding: 4px 16px 22px; }
+      .path-title { font-size: 1.3rem; }
+    }
   </style>
   <link rel="stylesheet" href="assets/judgment-infrastructure.css?v=20260919-balanced-copy">
 </head>
@@ -618,38 +735,65 @@
       <p class="eyebrow">Portable judgment infrastructure</p>
       <h1>Judgment Infrastructure for <span class="no-wrap">Human-Led AI</span></h1>
       <p>Portable agent skills that help people keep context, critique, trade-offs, and evidence visible while working with AI.</p>
-      <p class="mechanism">Make the context legible. Challenge the thinking. Deliberate consequential choices. Create evidence before commitment.</p>
+      <p class="mechanism">Two families of skills, each independent: one for thinking and deciding, one for building.</p>
       <div class="actions">
-        <a class="button primary" href="start-here/">Start here</a>
-        <a class="button secondary" href="judgment-infrastructure/">Browse the four core skills</a>
-        <a class="button secondary" href="use-cases/">Use cases</a>
+        <a class="button primary" href="#start-heading">Find your starting point</a>
+        <a class="button secondary" href="start-here/">Guided workflow</a>
         <a class="button secondary" href="demo/">See a full demo</a>
         <a class="button secondary" href="manifesto/">Read the thesis</a>
       </div>
     </header>
 
     <section class="start" aria-labelledby="start-heading">
-      <h2 id="start-heading">Start Here</h2>
-      <div class="start-grid">
-        <article class="route">
+      <h2 id="start-heading">What do you need right now?</h2>
+      <p class="workflow-intro">Pick the situation closest to yours. Each skill works on its own, and each links to its own page.</p>
+      <div class="needs-grid">
+        <article class="route need need-judgment">
+          <span class="need-family">Think and decide</span>
           <strong>Messy context?</strong>
-          <p>Use <a href="briefing-room/">The Briefing Room</a> to turn notes, transcripts, research, and fragments into a brief.</p>
+          <p><a href="briefing-room/">The Briefing Room</a> turns notes, transcripts, and fragments into a brief.</p>
         </article>
-        <article class="route">
+        <article class="route need need-judgment">
+          <span class="need-family">Think and decide</span>
           <strong>A claim or plan?</strong>
-          <p>Use <a href="ground-truth/">Ground Truth</a> to pressure-test the thinking before you act on it.</p>
+          <p><a href="ground-truth/">Ground Truth</a> pressure-tests the thinking before you act on it.</p>
         </article>
-        <article class="route">
+        <article class="route need need-judgment">
+          <span class="need-family">Think and decide</span>
           <strong>A consequential decision?</strong>
-          <p>Use <a href="the-quorum/">The Quorum</a> to deliberate trade-offs through multiple expert lenses.</p>
+          <p><a href="the-quorum/">The Quorum</a> deliberates trade-offs through multiple expert lenses.</p>
         </article>
-        <article class="route">
-          <strong>An idea, claim, or decision?</strong>
-          <p>Use <a href="test-drive/">Test Drive</a> to turn it into the smallest credible test.</p>
+        <article class="route need need-judgment">
+          <span class="need-family">Think and decide</span>
+          <strong>An idea to validate?</strong>
+          <p><a href="test-drive/">Test Drive</a> turns it into the smallest credible test.</p>
+        </article>
+        <article class="route need need-build">
+          <span class="need-family">Build</span>
+          <strong>Building with AI?</strong>
+          <p><a href="product-development/#steward">AI Project Steward</a> keeps scope, decisions, and approvals visible.</p>
+        </article>
+        <article class="route need need-build">
+          <span class="need-family">Build</span>
+          <strong>An experience to define?</strong>
+          <p><a href="product-development/#director">Product Design Director</a> shapes the workflow, interaction, and visual direction.</p>
+        </article>
+        <article class="route need need-build">
+          <span class="need-family">Build</span>
+          <strong>An interface to ship?</strong>
+          <p><a href="product-development/#engineer">Production Frontend Engineer</a> implements it and checks behavior and fidelity.</p>
         </article>
       </div>
     </section>
 
+    <details class="path path-judgment" id="judgment-path">
+      <summary>
+        <span class="path-label">Family one</span>
+        <span class="path-title">Judgment skills</span>
+        <span class="path-desc">Make context legible, challenge thinking, deliberate decisions, and create evidence. Four skills, with use cases and a repeatable loop.</span>
+        <span class="path-cue" aria-hidden="true"></span>
+      </summary>
+      <div class="path-body">
     <section class="workflow" aria-labelledby="workflow-heading">
       <p class="eyebrow">A repeatable operating flow</p>
       <h2 id="workflow-heading">The Judgment Loop</h2>
@@ -680,7 +824,7 @@
         <a class="button secondary" href="start-here/">Use the guided workflow</a>
         <a class="button secondary" href="demo/">Open the flagship demo</a>
       </div>
-      <p class="workflow-intro"><strong>Ready to build?</strong> Explore the <a href="#product-development">product development skills</a> for project stewardship, product design, and frontend implementation. Use each independently or combine them as needed.</p>
+      <p class="workflow-intro"><strong>Ready to build?</strong> Explore the <a href="#product-development">product development skills</a> for project stewardship, product design, and frontend implementation.</p>
     </section>
 
     <section class="start" aria-labelledby="use-cases-heading">
@@ -774,43 +918,48 @@
         </div>
       </article>
     </section>
-
-    <section class="start applied" aria-labelledby="applied-heading">
-      <h2 id="applied-heading">Applied Judgment Systems</h2>
-      <p class="workflow-intro">These skills and applications bring human-led judgment into a specific kind of work.</p>
-      <div class="product-intro" id="product-development">
-        <h3>Product development</h3>
-        <p>Use any of these three skills on its own, or combine them for a coordinated build. Choose the roles your task needs.</p>
       </div>
-      <div class="product-roles">
-        <article class="product-role steward">
-          <p class="role-label">Project stewardship</p>
-          <h4>AI Project Steward</h4>
-          <p>Bring your ideas to life with AI, while your judgment shapes what gets built. Navigate technical tradeoffs, preserve decisions, and check the result.</p>
+    </details>
 
-          <a href="product-development/#steward" aria-label="Explore AI Project Steward">Explore the skill <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="product-role director">
-          <p class="role-label">Product & design</p>
-          <h4>Product Design Director</h4>
-          <p>Define the product experience, workflows, interaction design, and visual direction. Critique the rendered result.</p>
-
-          <a href="product-development/#director" aria-label="Explore Product Design Director">Explore the skill <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="product-role engineer">
-          <p class="role-label">Frontend engineering</p>
-          <h4>Production Frontend Engineer</h4>
-          <p>Implement the interface and check its behavior, visual fidelity, and technical readiness.</p>
-
-          <a href="product-development/#engineer" aria-label="Explore Production Frontend Engineer">Explore the skill <span aria-hidden="true">→</span></a>
-        </article>
+    <details class="path path-build" id="product-development">
+      <summary>
+        <span class="path-label">Family two</span>
+        <span class="path-title">Product development skills</span>
+        <span class="path-desc">Shape what gets built, design the experience, and implement it with checks. Three skills you can use alone or together.</span>
+        <span class="path-cue" aria-hidden="true"></span>
+      </summary>
+      <div class="path-body">
+        <div class="product-roles">
+          <article class="product-role steward">
+            <p class="role-label">Project stewardship</p>
+            <h4>AI Project Steward</h4>
+            <p>Bring your ideas to life with AI, while your judgment shapes what gets built. Navigate technical tradeoffs, preserve decisions, and check the result.</p>
+            <a href="product-development/#steward" aria-label="Explore AI Project Steward">Explore the skill <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="product-role director">
+            <p class="role-label">Product &amp; design</p>
+            <h4>Product Design Director</h4>
+            <p>Define the product experience, workflows, interaction design, and visual direction. Critique the rendered result.</p>
+            <a href="product-development/#director" aria-label="Explore Product Design Director">Explore the skill <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="product-role engineer">
+            <p class="role-label">Frontend engineering</p>
+            <h4>Production Frontend Engineer</h4>
+            <p>Implement the interface and check its behavior, visual fidelity, and technical readiness.</p>
+            <a href="product-development/#engineer" aria-label="Explore Production Frontend Engineer">Explore the skill <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+        <div class="product-example">
+          <h3>Example: a notification settings page</h3>
+          <p>Steward surfaces decisions about delivery services, data, and approval to send. Director defines the controls, defaults, and feedback. Engineer builds and checks the interface, including saving and error states. Use the roles that address what is still unresolved.</p>
+        </div>
+        <div class="actions">
+          <a class="button primary" href="product-development/">Explore product development</a>
+          <a class="button secondary" href="https://github.com/glichtenthal/agent-skills/tree/main/applied-judgment-systems">Installation instructions</a>
+        </div>
+        <p class="workflow-intro">Steward also supports automations, integrations, and other technical builds. Each skill works independently; using them together does not require separate agents.</p>
       </div>
-      <div class="actions">
-        <a class="button primary" href="product-development/">Explore product development</a>
-        <a class="button secondary" href="https://github.com/glichtenthal/agent-skills/tree/main/applied-judgment-systems">Installation instructions</a>
-      </div>
-      <p class="workflow-intro">Steward also supports automations, integrations, and other technical builds. Each skill works independently; using them together does not require separate agents.</p>
-    </section>
+    </details>
 
     <section class="faq" aria-labelledby="faq-heading">
       <h2 id="faq-heading">Frequently Asked Questions</h2>
@@ -840,5 +989,16 @@
       Designed for skills that explain what they do, when to use them, and where to install them.
     </footer>
   </main>
+  <script>
+    (function () {
+      function openForHash() {
+        var target = document.getElementById(location.hash.slice(1));
+        var path = target && target.closest("details.path");
+        if (path) { path.open = true; target.scrollIntoView(); }
+      }
+      window.addEventListener("hashchange", openForHash);
+      openForHash();
+    })();
+  </script>
 </body>
 </html>

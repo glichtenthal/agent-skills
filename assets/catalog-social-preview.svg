@@ -1,31 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <title>Judgment Infrastructure for Human-Led AI</title>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0B1F3A"/>
-      <stop offset="0.55" stop-color="#123C8C"/>
-      <stop offset="1" stop-color="#071B4A"/>
+      <stop offset="1" stop-color="#0E2F63"/>
     </linearGradient>
   </defs>
   <rect width="1280" height="640" fill="url(#bg)"/>
-  <rect x="62" y="62" width="1156" height="516" rx="28" fill="none" stroke="#9EE7FF" stroke-width="2" opacity="0.42"/>
-  <text x="104" y="156" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="800">Judgment Infrastructure</text>
-  <text x="104" y="226" fill="#E2F075" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700">for Human-Led AI</text>
-  <text x="108" y="320" fill="#D7F6FF" font-family="Arial, Helvetica, sans-serif" font-size="30">Portable skills by Greg Lichtenthal</text>
-  <text x="108" y="364" fill="#D7F6FF" font-family="Arial, Helvetica, sans-serif" font-size="30">for creativity, judgment, and agency.</text>
-  <g transform="translate(790 116)">
-    <rect x="0" y="0" width="316" height="78" rx="18" fill="#FFFFFF" opacity="0.14" stroke="#73E6FF" stroke-width="2"/>
-    <rect x="38" y="96" width="316" height="78" rx="18" fill="#FFFFFF" opacity="0.12" stroke="#E2F075" stroke-width="2"/>
-    <rect x="0" y="192" width="316" height="78" rx="18" fill="#FFFFFF" opacity="0.15" stroke="#9EE7FF" stroke-width="2"/>
-    <rect x="38" y="288" width="316" height="78" rx="18" fill="#FFFFFF" opacity="0.13" stroke="#74E6FF" stroke-width="2"/>
-    <text x="24" y="34" fill="#73E6FF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800">The Briefing Room</text>
-    <text x="24" y="60" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="16">Organize the mess</text>
-    <text x="62" y="130" fill="#E2F075" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800">Ground Truth</text>
-    <text x="62" y="156" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="16">Pressure-test thinking</text>
-    <text x="24" y="226" fill="#9EE7FF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800">The Quorum</text>
-    <text x="24" y="252" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="16">Deliberate decisions</text>
-    <text x="62" y="322" fill="#74E6FF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800">Test Drive</text>
-    <text x="62" y="348" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="16">Test before trusting</text>
+  <rect x="48" y="48" width="1184" height="544" rx="26" fill="none" stroke="#9EE7FF" stroke-width="2" opacity="0.35"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="96" y="130" fill="#9EE7FF" font-size="20" font-weight="700" letter-spacing="3">PORTABLE AGENT SKILLS</text>
+    <text x="96" y="228" fill="#FFFFFF" font-size="68" font-weight="800">Judgment</text>
+    <text x="96" y="304" fill="#FFFFFF" font-size="68" font-weight="800">Infrastructure</text>
+    <text x="96" y="376" fill="#E2F075" font-size="46" font-weight="700">for Human-Led AI</text>
+    <text x="96" y="450" fill="#D7F6FF" font-size="26">Think clearly. Decide deliberately.</text>
+    <text x="96" y="486" fill="#D7F6FF" font-size="26">Build with your judgment in charge.</text>
+    <rect x="96" y="520" width="360" height="40" rx="20" fill="#FFFFFF"/>
+    <text x="120" y="547" fill="#0B1F3A" font-size="20" font-weight="800">Claude + Codex agent skills</text>
+
+    <rect x="720" y="96" width="464" height="268" rx="20" fill="#FFFFFF" fill-opacity="0.1" stroke="#73B2FF" stroke-width="2"/>
+    <rect x="740" y="96" width="424" height="6" rx="3" fill="#4C9BFF"/>
+    <text x="748" y="146" fill="#9CC9FF" font-size="18" font-weight="700" letter-spacing="2">THINK AND DECIDE</text>
+    <text x="748" y="196" fill="#FFFFFF" font-size="28" font-weight="800">The Briefing Room</text>
+    <text x="748" y="236" fill="#FFFFFF" font-size="28" font-weight="800">Ground Truth</text>
+    <text x="748" y="276" fill="#FFFFFF" font-size="28" font-weight="800">The Quorum</text>
+    <text x="748" y="316" fill="#FFFFFF" font-size="28" font-weight="800">Test Drive</text>
+
+    <rect x="720" y="388" width="464" height="184" rx="20" fill="#FFFFFF" fill-opacity="0.1" stroke="#7FD3B6" stroke-width="2"/>
+    <rect x="740" y="388" width="424" height="6" rx="3" fill="#4FBF9A"/>
+    <text x="748" y="436" fill="#9FE3CB" font-size="18" font-weight="700" letter-spacing="2">BUILD</text>
+    <text x="748" y="482" fill="#FFFFFF" font-size="28" font-weight="800">AI Project Steward</text>
+    <text x="748" y="522" fill="#FFFFFF" font-size="28" font-weight="800">Product Design Director</text>
+    <text x="748" y="562" fill="#FFFFFF" font-size="28" font-weight="800">Production Frontend Engineer</text>
   </g>
-  <rect x="108" y="466" width="382" height="56" rx="28" fill="#FFFFFF"/>
-  <text x="134" y="504" fill="#0B1F3A" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800">Claude + Codex agent skills</text>
 </svg>
